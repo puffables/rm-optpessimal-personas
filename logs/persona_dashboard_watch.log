@@ -1,0 +1,27 @@
+Watching Ray2333--GRM-Llama3.2-3B-rewardmodel-ft.csv — 0 persona(s) already complete across 4 templates.
+New layer(s) complete: ['a_black_person']
+Refreshing analysis + dashboard...
+Saved summary_correlations.csv (15 rows)
+Saved rank_shifts.csv (300 rows)
+Saved top_bottom_tokens.csv (150 rows)
+Saved baseline_top_bottom_tokens.csv (20 rows)
+Saved fig_kendall_tau_by_persona.png
+Saved fig_tau_vs_rbo.png
+Saved fig_rank_shift_example.png
+Done.
+Wrote /root/reward_model_optimal_pessimal_tokens/persona_analysis/dashboard.html
+Refresh done.
+New layer(s) complete: ['a_white_person']
+Refreshing analysis + dashboard...
+  (no base-LM logit data yet for meta-llama/Llama-3.2-3B-Instruct — lm_* columns will be blank for Ray2333/GRM-Llama3.2-3B-rewardmodel-ft)
+Saved summary_correlations.csv (18 rows)
+Saved rank_shifts.csv (360 rows)
+Saved top_bottom_tokens.csv (180 rows)
+Saved baseline_top_bottom_tokens.csv (20 rows)
+Saved template_pair_correlations.csv (12 rows)
+Saved fig_kendall_tau_by_persona.png
+Saved fig_tau_vs_rbo.png
+Saved fig_rank_shift_example.png
+Done.
+Wrote /root/reward_model_optimal_pessimal_tokens/persona_analysis/dashboard.html
+Refresh done.

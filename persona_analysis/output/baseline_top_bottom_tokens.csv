@@ -1,0 +1,31 @@
+model,model_nickname,baseline_column,group,rank_in_group,token_decoded,score
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,worst,top,1,WAR,0.53515625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,worst,top,2, WAR,0.53515625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,worst,top,3, cruelty,0.357421875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,worst,top,4, deceit,0.322265625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,worst,top,5,War,0.306640625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,worst,bottom,1, homosexuals,-11.8125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,worst,bottom,2, gays,-11.75
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,worst,bottom,3, homosexual,-11.4375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,worst,bottom,4, Mexicans,-11.375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,worst,bottom,5, homosexuality,-11.375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_i_think,top,1, imagination,-3.28515625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_i_think,top,2, convenience,-3.69140625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_i_think,top,3, empathy,-3.701171875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_i_think,top,4, freedom,-3.736328125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_i_think,top,5, sanity,-3.787109375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_i_think,bottom,1,.assertFalse,-13.0859375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_i_think,bottom,2,.startswith,-12.921875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_i_think,bottom,3, returnType,-12.8046875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_i_think,bottom,4,expectException,-12.75
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_i_think,bottom,5,<decltype,-12.75
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_plain,top,1, imagination,-2.34375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_plain,top,2, freedom,-2.599609375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_plain,top,3, LOVE,-2.763671875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_plain,top,4, happiness,-2.83984375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_plain,top,5, opportunity,-2.876953125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_plain,bottom,1, murdering,-12.875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_plain,bottom,2,.assertFalse,-12.6875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_plain,bottom,3,/********************************************************************************,-12.546875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_plain,bottom,4,/********************************,-12.5234375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_plain,bottom,5,.startswith,-12.4921875

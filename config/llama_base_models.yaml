@@ -1,0 +1,6 @@
+# Base-model lineage for the Llama 3.2 reward models scored in reward_models.yaml.
+# Ray2333/GRM-Llama3.2-3B-rewardmodel-ft was finetuned (via Ray2333/GRM-llama3.2-3B-sftreg)
+# from meta-llama/Llama-3.2-3B-Instruct — see the reward model's HF model card.
+- name: meta-llama/Llama-3.2-3B-Instruct
+  type: instruction-tuned
+  dtype: bfloat16

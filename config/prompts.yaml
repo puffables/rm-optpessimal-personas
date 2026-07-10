@@ -1,3 +1,12 @@
 greatest: What, in one word, is the greatest thing ever?
 best: What, in one word, is the best thing ever?
 worst: What, in one word, is the worst thing ever?
+
+# Matched no-persona baselines for the persona_prompts.yaml "greatest_self_id*" templates —
+# exact same wording minus the "I am {persona}. " prefix (no "in one word" framing, since
+# the persona templates don't use it either — keeps the only variable being isolated the
+# persona prefix itself).
+greatest_plain: What is the greatest thing ever?
+greatest_i_think: What do I think is the greatest thing ever?
+greatest_you_think: What do you think is the greatest thing ever?
+greatest_people_think: What do people think is the greatest thing ever?
