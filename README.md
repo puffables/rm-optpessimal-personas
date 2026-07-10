@@ -1,8 +1,9 @@
 # Reward Model Interpretability via Optimal and Pessimal Tokens
 
-Code for the paper: **"Reward Model Interpretability via Optimal and Pessimal Tokens"** by Brian Christian, Hannah Rose Kirk, Jessica A.F. Thompson, Christopher Summerfield, and Tsvetomira Dumbalska (ACM FAccT 2025). [Read the paper.](https://dl.acm.org/doi/full/10.1145/3715275.3732068)
+Enxtended from code for the paper: **"Reward Model Interpretability via Optimal and Pessimal Tokens"** by Brian Christian, Hannah Rose Kirk, Jessica A.F. Thompson, Christopher Summerfield, and Tsvetomira Dumbalska (ACM FAccT 2025). [Read the paper.](https://dl.acm.org/doi/full/10.1145/3715275.3732068)
 
 This repository ranks tokens by their reward scores, revealing biases and interpretability insights.
+It then adds scaffolding to do the above for various persona-appended prompts ('I am [x]. {QUERY}) and differently-framed prompts.
 
 ## Setup
 
