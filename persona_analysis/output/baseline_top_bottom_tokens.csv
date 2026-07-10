@@ -1,4 +1,14 @@
 model,model_nickname,baseline_column,group,rank_in_group,token_decoded,score
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_you_think,top,1, imagination,-2.173828125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_you_think,top,2,peace,-2.888671875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_you_think,top,3, peace,-2.890625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_you_think,top,4, freedom,-2.90234375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_you_think,top,5, happiness,-2.9140625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_you_think,bottom,1, murdering,-13.28125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_you_think,bottom,2,.assertFalse,-13.0703125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_you_think,bottom,3,.startswith,-12.9921875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_you_think,bottom,4, Murder,-12.9765625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_you_think,bottom,5, stabbing,-12.7265625
 Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,worst,top,1,WAR,0.53515625
 Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,worst,top,2, WAR,0.53515625
 Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,worst,top,3, cruelty,0.357421875
@@ -29,3 +39,13 @@ Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_plain,bottom,2,.assertF
 Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_plain,bottom,3,/********************************************************************************,-12.546875
 Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_plain,bottom,4,/********************************,-12.5234375
 Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_plain,bottom,5,.startswith,-12.4921875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_people_think,top,1, LOVE,-3.58984375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_people_think,top,2, FAMILY,-3.650390625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_people_think,top,3, empathy,-3.73828125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_people_think,top,4, convenience,-3.86328125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_people_think,top,5, sanity,-3.888671875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_people_think,bottom,1, returnType,-12.859375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_people_think,bottom,2,.startswith,-12.859375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_people_think,bottom,3, incest,-12.7578125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_people_think,bottom,4,<center,-12.703125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,greatest_people_think,bottom,5, murdering,-12.671875

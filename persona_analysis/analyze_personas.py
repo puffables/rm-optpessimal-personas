@@ -78,6 +78,30 @@ def slugify(text):
     return text.strip("_")
 
 
+def format_token_label(token_decoded):
+    """Make a decoded token safe/legible as a plot or table label.
+
+    Distinct tokens frequently decode to strings that differ only in leading/
+    trailing whitespace (e.g. BPE's "Ġ"-prefixed space marker) — real, distinct
+    tokens that are kept separate everywhere upstream (joins are on token_id,
+    dedup is on the exact token_decoded string), but whitespace collapses
+    invisibly in both matplotlib labels and HTML, making them look like
+    duplicate rows. Render whitespace visibly instead of stripping it.
+    """
+    if pd.isna(token_decoded):
+        return '<NA>'
+    s = str(token_decoded)
+    if s == '':
+        return '<empty>'
+    if s.strip(' ') == '':
+        return '␣' * len(s)
+    leading = len(s) - len(s.lstrip(' '))
+    trailing = len(s) - len(s.rstrip(' '))
+    core = s[leading:len(s) - trailing] if trailing else s[leading:]
+    core = core.replace('\n', '\\n').replace('\t', '\\t').replace('\r', '\\r')
+    return ('␣' * leading) + core + ('␣' * trailing)
+
+
 for p in personas:
     persona_by_slug[slugify(p['name'])] = p
 
@@ -450,7 +474,7 @@ example = rank_shift_df[
 
 fig, ax = plt.subplots(figsize=(8, 8))
 colors = ['#4575B4' if d < 0 else '#D73027' for d in example['rank_diff']]
-ax.barh(example['token_decoded'], example['rank_diff'], color=colors)
+ax.barh(example['token_decoded'].apply(format_token_label), example['rank_diff'], color=colors)
 ax.axvline(0, color='black', linewidth=1)
 ax.set_xlabel(f"Rank shift (persona rank − baseline rank)\n{worst_row['model_nickname']}, {worst_row['template']}, persona: \"{worst_row['persona']}\"")
 ax.set_title("Tokens whose rank moved the most under this persona")

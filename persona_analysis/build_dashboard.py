@@ -12,6 +12,24 @@ import pandas as pd
 OUTPUT_DIR = Path(__file__).parent / 'output'
 
 
+def format_token_label(token_decoded):
+    """Make a decoded token safe/legible as a table label — see analyze_personas.py's
+    copy of this function for why (whitespace-only differences between distinct
+    tokens collapse invisibly in HTML otherwise)."""
+    if pd.isna(token_decoded):
+        return '<NA>'
+    s = str(token_decoded)
+    if s == '':
+        return '<empty>'
+    if s.strip(' ') == '':
+        return '␣' * len(s)
+    leading = len(s) - len(s.lstrip(' '))
+    trailing = len(s) - len(s.rstrip(' '))
+    core = s[leading:len(s) - trailing] if trailing else s[leading:]
+    core = core.replace('\n', '\\n').replace('\t', '\\t').replace('\r', '\\r')
+    return ('␣' * leading) + core + ('␣' * trailing)
+
+
 def safe_read_csv(path, columns):
     """A checkpointed analyze_personas.py run can produce a CSV with no columns at
     all (just a blank line) when nothing was available to score yet (e.g. baseline
@@ -53,6 +71,10 @@ template_pair_rank_shift_df = safe_read_csv(OUTPUT_DIR / 'template_pair_rank_shi
     'model_nickname', 'question_group', 'template_a', 'template_b', 'persona', 'persona_category',
     'direction', 'token_decoded', 'template_a_rank', 'template_b_rank', 'rank_diff',
 ])
+
+for _df in (rank_shift_df, top_bottom_df, baseline_top_bottom_df, template_pair_rank_shift_df):
+    if 'token_decoded' in _df.columns and not _df.empty:
+        _df['token_decoded'] = _df['token_decoded'].apply(format_token_label)
 
 import yaml
 ROOT = Path(__file__).parent.parent
