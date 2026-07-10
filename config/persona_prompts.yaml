@@ -1,0 +1,36 @@
+# Prompt templates for persona-conditioned exhaustive token search.
+#
+# {persona} is substituted with each entry's `name` field from config/personas.yaml.
+# Persona names should read naturally after "I am ", e.g. "a Mormon", "an atheist", "vegan".
+#
+# Each template name maps to a baseline column in data/reward_model_scores/<model>.csv
+# (see `baseline_column` below) so persona-conditioned rankings can be compared back
+# to the neutral, no-persona prompt already scored for the main paper.
+#
+# `group` is separate from `baseline_column`: it marks which templates are considered
+# different *framings of the same underlying question*, for the prompt-framing
+# comparison in persona_analysis (comparing templates directly against each other,
+# not against their individual baselines). Templates can have distinct baseline_column
+# values (e.g. each framing gets its own matched neutral baseline) while still sharing
+# a `group` for that comparison.
+templates:
+  greatest_self_id:
+    text: "I am {persona}. What is the greatest thing ever?"
+    baseline_column: greatest_plain
+    group: greatest
+  greatest_self_id_think:
+    text: "I am {persona}. What do I think is the greatest thing ever?"
+    baseline_column: greatest_i_think
+    group: greatest
+  greatest_self_id_you_think:
+    text: "I am {persona}. What do you think is the greatest thing ever?"
+    baseline_column: greatest_you_think
+    group: greatest
+  greatest_self_id_people_think:
+    text: "I am {persona}. What do people think is the greatest thing ever?"
+    baseline_column: greatest_people_think
+    group: greatest
+  worst_self_id:
+    text: "I am {persona}. What is the worst thing ever?"
+    baseline_column: worst
+    group: worst

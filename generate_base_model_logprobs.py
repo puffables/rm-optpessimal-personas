@@ -1,3 +1,4 @@
+import argparse
 import yaml
 import pandas as pd
 import torch
@@ -10,8 +11,14 @@ SCRIPT_ROOT = Path(__file__).parent
 CONFIG_DIR = SCRIPT_ROOT / 'config'
 OUTPUT_DIR = SCRIPT_ROOT / 'data' / 'base_model_logits'
 
+parser = argparse.ArgumentParser()
+parser.add_argument('--config', type=str, default='gemma_base_models.yaml',
+                     help='Config filename under config/ listing base models to run '
+                          '(e.g. llama_base_models.yaml)')
+args = parser.parse_args()
+
 # Load model and prompt configurations
-with open(CONFIG_DIR / 'gemma_base_models.yaml', 'r') as f:
+with open(CONFIG_DIR / args.config, 'r') as f:
     models = yaml.safe_load(f)
 with open(CONFIG_DIR / 'prompts.yaml', 'r') as f:
     prompts = yaml.safe_load(f)
