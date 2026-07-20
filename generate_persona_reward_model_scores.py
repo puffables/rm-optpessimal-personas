@@ -43,6 +43,9 @@ parser.add_argument('--personas', type=str, default=None,
                      help='Comma-separated persona slugs to run (default: all in personas.yaml)')
 parser.add_argument('--max-personas', type=int, default=None,
                      help='Only run the first N personas (for quick pilots)')
+parser.add_argument('--batch-size', type=int, default=PERSONA_BATCH_SIZE,
+                     help=f'Token batch size for scoring (default: {PERSONA_BATCH_SIZE}, tuned for a '
+                          '97GB GPU — lower this on smaller GPUs, e.g. 128 on a 16GB T4)')
 args = parser.parse_args()
 
 
@@ -117,7 +120,7 @@ for model_info in models:
             'token_decoded': token_decoded,
         })
 
-    batch_size = PERSONA_BATCH_SIZE
+    batch_size = args.batch_size
 
     for template_name, persona, col in pending:
         prompt_text = prompt_templates[template_name]['text'].format(persona=persona['name'])
