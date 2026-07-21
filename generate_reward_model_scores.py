@@ -30,6 +30,10 @@ parser.add_argument('--models', type=str, default=None,
                      help='Comma-separated model names or nicknames to run (default: all in reward_models.yaml)')
 parser.add_argument('--prompts', type=str, default=None,
                      help='Comma-separated prompt names to run (default: all in prompts.yaml)')
+parser.add_argument('--batch-size', type=int, default=None,
+                     help='Token batch size for scoring (default: each model\'s configured '
+                          'batch_size in reward_models.yaml, tuned conservatively — raise this '
+                          'on bigger GPUs, e.g. an A100)')
 args = parser.parse_args()
 
 # Load configs
@@ -83,7 +87,7 @@ for model_info in models:
         })
 
     # Score each pending prompt
-    batch_size = reward_model.default_batch_size
+    batch_size = args.batch_size or reward_model.default_batch_size
     for prompt_name, prompt_text in pending.items():
         print(f"  Prompt: {prompt_name}")
         all_scores = []
