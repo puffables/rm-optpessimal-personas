@@ -4,3 +4,8 @@ __pycache__/
 *.db
 .ipynb_checkpoints/
 .env*
+
+# Large CSVs are too big for GitHub's 100MB limit; only the split parts
+# under data/persona_reward_model_scores/parts/ are tracked. The full file
+# is reconstructed locally by data/persona_reward_model_scores/reassemble.py
+data/persona_reward_model_scores/*.csv
