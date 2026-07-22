@@ -53,6 +53,10 @@ DATA_DIR = ROOT / 'data'
 OUTPUT_DIR = Path(__file__).parent / 'output'
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
+sys.path.insert(0, str(DATA_DIR / 'persona_reward_model_scores'))
+import reassemble
+reassemble.ensure_all()
+
 with open(CONFIG_DIR / 'reward_models.yaml') as f:
     model_configs = yaml.safe_load(f)
 
