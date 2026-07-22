@@ -118,7 +118,7 @@ for model_info in models:
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
-        dtype=DTYPE_MAP[model_info['dtype']],
+        torch_dtype=DTYPE_MAP[model_info['dtype']],
         device_map='auto'
     ).eval()
     device = model.get_input_embeddings().weight.device
