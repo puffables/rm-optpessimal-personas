@@ -9,3 +9,10 @@ __pycache__/
 # under data/persona_reward_model_scores/parts/ are tracked. The full file
 # is reconstructed locally by data/persona_reward_model_scores/reassemble.py
 data/persona_reward_model_scores/*.csv
+
+# Persona base-model logits also exceed the 100MB limit; regenerate locally
+# with generate_persona_base_model_logprobs.py
+data/persona_base_model_logits/*.csv
+
+# Local, timestamped analysis backups — not part of the repo
+persona_analysis/backup_*/

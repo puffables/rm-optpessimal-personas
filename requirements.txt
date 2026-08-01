@@ -1,9 +1,18 @@
+# --- Core: model scoring and analysis ---
 torch
 transformers>=4.45,<4.50
 accelerate
 pandas
 numpy
-matplotlib
-seaborn
+scipy              # kendalltau / spearmanr in persona_analysis
+scikit-learn       # sklearn.manifold.MDS in analysis_support.py
+tqdm               # progress bars in the generate_* scripts
 pyyaml
 python-dotenv
+
+# --- Figures and tables ---
+matplotlib
+seaborn
+adjustText         # outlier-label repulsion in personaFigures/gen_figures.ipynb
+dataframe_image    # PNG export of styled tables (personaFigures)
+ipython            # display() in personaFigures/gen_figures.ipynb

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Critical Review — rm-optpessimal-personas</title>
+  <style>
+
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">body{max-width:820px;margin:2rem auto;padding:0 1.25rem;font:16px/1.6 -apple-system,Helvetica,Arial,sans-serif;color:#1a1a1a}
+h1,h2,h3{line-height:1.25}h1{border-bottom:2px solid #333;padding-bottom:.3rem}
+h2{margin-top:2.2rem;border-bottom:1px solid #ddd;padding-bottom:.2rem}
+code{background:#f2f2f2;padding:.1em .3em;border-radius:3px;font-size:.9em}
+table{border-collapse:collapse;width:100%}th,td{border:1px solid #ccc;padding:.4rem .6rem;text-align:left}
+th{background:#f2f2f2}blockquote{border-left:3px solid #ccc;margin:0;padding-left:1rem;color:#555}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Critical Review — rm-optpessimal-personas</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#critical-review-rm-optpessimal-personas" id="toc-critical-review-rm-optpessimal-personas">Critical Review —
+<code>rm-optpessimal-personas</code></a>
+<ul>
+<li><a href="#critical-methodological" id="toc-critical-methodological">Critical / methodological</a>
+<ul>
+<li><a href="#all-persona-findings-rest-on-a-single-reward-model" id="toc-all-persona-findings-rest-on-a-single-reward-model">1. All
+persona findings rest on a single reward model</a></li>
+<li><a href="#the-rmlm-comparison-is-n-1-and-conceptually-asymmetric" id="toc-the-rmlm-comparison-is-n-1-and-conceptually-asymmetric">2. The
+RM↔︎LM comparison is n = 1 and conceptually asymmetric</a></li>
+<li><a href="#no-inferential-test-for-the-actual-research-claim" id="toc-no-inferential-test-for-the-actual-research-claim">3. No
+inferential test for the actual research claim</a></li>
+<li><a href="#single-token-responses-are-a-degenerate-unit-of-analysis" id="toc-single-token-responses-are-a-degenerate-unit-of-analysis">4.
+Single-token “responses” are a degenerate unit of analysis</a></li>
+<li><a href="#two-incompatible-taxonomies-are-merged-into-uneven-categories" id="toc-two-incompatible-taxonomies-are-merged-into-uneven-categories">5.
+Two incompatible taxonomies are merged into uneven “categories”</a></li>
+<li><a href="#persona-confounds-are-only-partially-controlled" id="toc-persona-confounds-are-only-partially-controlled">6. Persona
+confounds are only partially controlled</a></li>
+</ul></li>
+<li><a href="#statistical" id="toc-statistical">Statistical</a>
+<ul>
+<li><a href="#reported-p-values-are-vacuous-and-potentially-misleading" id="toc-reported-p-values-are-vacuous-and-potentially-misleading">7.
+Reported p-values are vacuous and potentially misleading</a></li>
+<li><a href="#degenerate-identity-rows-are-shipped-in-the-output" id="toc-degenerate-identity-rows-are-shipped-in-the-output">8.
+Degenerate identity rows are shipped in the output</a></li>
+<li><a href="#ties-in-ranking-are-unhandled-for-rbo" id="toc-ties-in-ranking-are-unhandled-for-rbo">9. Ties in ranking are
+unhandled for RBO</a></li>
+</ul></li>
+<li><a href="#implementation" id="toc-implementation">Implementation</a>
+<ul>
+<li><a href="#token-round-trip-is-lossy" id="toc-token-round-trip-is-lossy">10. Token round-trip is
+lossy</a></li>
+<li><a href="#reassemble.ensure_all-never-detects-stale-reassembly" id="toc-reassemble.ensure_all-never-detects-stale-reassembly">11.
+<code>reassemble.ensure_all()</code> never detects stale
+reassembly</a></li>
+<li><a href="#redundant-double-batching" id="toc-redundant-double-batching">12. Redundant
+double-batching</a></li>
+</ul></li>
+<li><a href="#performance" id="toc-performance">Performance</a>
+<ul>
+<li><a href="#pure-python-rbo-at-full-depth" id="toc-pure-python-rbo-at-full-depth">13. Pure-Python RBO at full
+depth</a></li>
+<li><a href="#persona_batch_size-1024-is-hardcoded-to-a-97-gb-gpu" id="toc-persona_batch_size-1024-is-hardcoded-to-a-97-gb-gpu">14.
+<code>PERSONA_BATCH_SIZE = 1024</code> is hardcoded to a 97 GB
+GPU</a></li>
+</ul></li>
+<li><a href="#reproducibility-hygiene" id="toc-reproducibility-hygiene">Reproducibility &amp; hygiene</a></li>
+<li><a href="#whats-done-well" id="toc-whats-done-well">What’s done
+well</a></li>
+<li><a href="#priority-summary" id="toc-priority-summary">Priority
+summary</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="critical-review-rm-optpessimal-personas">Critical Review —
+<code>rm-optpessimal-personas</code></h1>
+<p><strong>Scope:</strong> Persona-conditioning extension to the FAccT
+2025 paper <em>“Reward Model Interpretability via Optimal and Pessimal
+Tokens.”</em> The extension prepends <code>&quot;I am {persona}. &quot;</code> to
+prompts, scores every vocabulary token as a one-token reward-model
+response, and compares the resulting rankings against neutral/control
+baselines via Kendall’s τ, Spearman’s ρ, and Rank-Biased Overlap
+(RBO).</p>
+<p><strong>Overall:</strong> The engineering is clean, resumable, and
+well-commented. The main risks are <strong>methodological and
+statistical</strong>, not bugs. In priority order, the three issues that
+most affect whether the conclusions hold are: (1) all findings rest on a
+single reward model; (2) there is no noise baseline and the reported
+p-values are vacuous; (3) degenerate self-comparison rows are shipped in
+the output.</p>
+<hr />
+<h2 id="critical-methodological">Critical / methodological</h2>
+<h3 id="all-persona-findings-rest-on-a-single-reward-model">1. All
+persona findings rest on a single reward model</h3>
+<p><code>config/reward_models.yaml</code> has 9 of 10 models commented
+out; only <code>Ray2333/GRM-Llama3.2-3B</code> is active
+(<code>reward_bench_rank: 19</code> — the smallest model and among the
+lowest-ranked in the set).
+<code>data/persona_reward_model_scores/</code> contains exactly one
+file. The parent paper’s core strength was cross-model comparison; the
+persona extension currently generalizes from <strong>n = 1
+model</strong>. Any claim of the form “reward models are biased by
+persona” is really “one small, mid-tier RM is.” This is the single
+biggest limitation.</p>
+<h3 id="the-rmlm-comparison-is-n-1-and-conceptually-asymmetric">2. The
+RM↔︎LM comparison is n = 1 and conceptually asymmetric</h3>
+<p>The entire <code>lm_*</code> apparatus in
+<code>analyze_personas.py</code> (lines ~252–324) exists to separate
+pretraining-inherited shifts from RM-induced ones, but only
+<code>Llama-3.2-3B-Instruct</code> logits exist, so it fires for one
+pair. The comment calls the two “directly comparable,” but they measure
+different things:</p>
+<ul>
+<li>The <strong>RM</strong> scores a <em>complete assistant turn</em>
+wrapping one token (chat template adds role headers + end-of-turn).</li>
+<li>The <strong>LM</strong> logit
+(<code>generate_persona_base_model_logprobs.py:149–151</code>) is the
+<em>first next-token</em> after
+<code>add_generation_prompt=True</code>.</li>
+</ul>
+<p>Related, but not the same quantity — the “directly comparable”
+framing overstates it.</p>
+<h3 id="no-inferential-test-for-the-actual-research-claim">3. No
+inferential test for the actual research claim</h3>
+<p>The pipeline is entirely descriptive: it reports τ/ρ/RBO and
+top/bottom movers, but there is no null model establishing that observed
+shifts exceed noise. Reward scoring in float16 has run-to-run variance;
+without a permutation or bootstrap baseline (e.g. re-scoring the neutral
+prompt twice, or shuffling persona labels), there is no way to know
+whether a τ of 0.85 for “a Satanist” is meaningfully lower than 0.92 for
+“a Catholic,” or just sampling jitter. For a bias paper this is the key
+missing piece.</p>
+<h3 id="single-token-responses-are-a-degenerate-unit-of-analysis">4.
+Single-token “responses” are a degenerate unit of analysis</h3>
+<p>Inherited from the parent paper, but it compounds under personas: the
+RM scores how good it is for the assistant to answer <em>“I am a Black
+person. What is the greatest thing ever?”</em> with the single token
+<code>&quot; the&quot;</code>. Whatever these rankings measure, it is not response
+quality, and the persona framing invites over-interpreting token-level
+artifacts as identity bias. Worth stating explicitly as a limitation
+rather than leaving it implicit.</p>
+<h3 id="two-incompatible-taxonomies-are-merged-into-uneven-categories">5.
+Two incompatible taxonomies are merged into uneven “categories”</h3>
+<p><code>config/personas.yaml</code> combines Wang et al.’s demographic
+axes with KillBench’s religion (16) and political (16) lists. Category
+sizes are wildly imbalanced — race = 3, intersectional = 4, disability =
+3 vs. religion = 16, political = 16. Figure 1
+(<code>gen_figures.ipynb</code>, cell 4) computes per-category mean ±
+s.d.; a standard deviation over 3 points is nearly meaningless, and the
+outlier-labeling threshold (<code>&gt; 1 s.d.</code>) behaves very
+differently across category sizes. Cross-category comparisons are not on
+equal footing.</p>
+<h3 id="persona-confounds-are-only-partially-controlled">6. Persona
+confounds are only partially controlled</h3>
+<p>The <code>&quot;a person&quot;</code> control isolates “any prefix” from “an
+identity prefix” — good. But it does <strong>not</strong> control for
+<em>persona-phrase length or token frequency</em>:
+<code>&quot;a member of generation Z&quot;</code> vs. <code>&quot;a man&quot;</code> differ
+in length and lexical frequency, which can drive rank shifts independent
+of semantic identity. Shift magnitude may correlate with phrase length
+rather than identity content.</p>
+<hr />
+<h2 id="statistical">Statistical</h2>
+<h3 id="reported-p-values-are-vacuous-and-potentially-misleading">7.
+Reported p-values are vacuous and potentially misleading</h3>
+<p>With n ≈ 128k tokens, every <code>kendall_p</code> /
+<code>spearman_p</code> in <code>summary_correlations.csv</code> is
+literally <code>0.0</code> (min = median = max = 0.0, verified). These
+columns are emitted alongside the correlations as if informative; at
+this n, “significance” is guaranteed and conveys nothing about effect
+size. Either drop them or annotate that they are vacuous. There is also
+no multiple-comparisons handling (490 summary rows × several tests
+each).</p>
+<h3 id="degenerate-identity-rows-are-shipped-in-the-output">8.
+Degenerate identity rows are shipped in the output</h3>
+<p>Under <code>baseline_type=&#39;control&#39;</code>, the control persona
+(<code>&quot;a person&quot;</code>) is compared against itself —
+<code>analyze_personas.py:220–223</code> sources the control baseline
+from the same <code>persona_df</code> column. Verified: all 5 such rows
+have τ = ρ = RBO = <strong>exactly 1.0</strong>. These self-comparisons
+sit in <code>summary_correlations.csv</code> and would contaminate any
+“control” category aggregate when the dashboard’s control toggle is
+used.</p>
+<h3 id="ties-in-ranking-are-unhandled-for-rbo">9. Ties in ranking are
+unhandled for RBO</h3>
+<p><code>sort_values</code> breaks score ties arbitrarily (but
+deterministically), and the RBO in <code>analyze_personas.py:123</code>
+is order-sensitive. Continuous RM scores rarely tie, but base-LM logits
+(and any quantized outputs) can, injecting spurious rank churn into RBO
+and rank-shift tables. τ/ρ handle ties; RBO does not.</p>
+<hr />
+<h2 id="implementation">Implementation</h2>
+<h3 id="token-round-trip-is-lossy">10. Token round-trip is lossy</h3>
+<p><code>reward_model_support.py:195</code> does
+<code>decode([token_id])</code> → puts the string into the chat template
+→ re-tokenizes. Byte-fallback fragments, partial-UTF-8 pieces, and
+special tokens do not round-trip; the re-tokenized response may not be
+the original token (or may become the replacement character). A
+meaningful fraction of the 131k-token sweep may be scoring something
+other than the intended token. Inherited from the parent code, but it
+interacts with the whitespace/dedup handling added here and deserves a
+known-caveat note.</p>
+<h3 id="reassemble.ensure_all-never-detects-stale-reassembly">11.
+<code>reassemble.ensure_all()</code> never detects stale reassembly</h3>
+<p><code>reassemble.py:51–57</code> only rebuilds when the full CSV is
+<em>absent</em>. If <code>parts/</code> are regenerated but a stale full
+CSV exists, analysis silently reads the old data. A cheap mtime/checksum
+check would prevent a confusing reproducibility failure.</p>
+<h3 id="redundant-double-batching">12. Redundant double-batching</h3>
+<p><code>generate_persona_reward_model_scores.py:130–133</code> chunks
+<code>token_ids</code> by <code>batch_size</code>, then passes
+<code>batch_size</code> again as <code>max_gpu_batch</code> into
+<code>get_reward_scores_from_response_token_ids</code>, which re-chunks
+identically. Harmless but confusing; the inner loop is dead work.</p>
+<hr />
+<h2 id="performance">Performance</h2>
+<h3 id="pure-python-rbo-at-full-depth">13. Pure-Python RBO at full
+depth</h3>
+<p><code>analyze_personas.py:123–148</code> loops over all ~128k depths
+in Python for every (model, template, persona, baseline, p) — hundreds
+of calls. The original <code>analysis_support.py:346</code> vectorizes
+with NumPy and truncates at a weight threshold (<code>1e-6</code>).
+Results match to negligible tolerance, but this reimplementation is
+orders of magnitude slower for no benefit; it could reuse the existing
+vectorized routine.</p>
+<h3 id="persona_batch_size-1024-is-hardcoded-to-a-97-gb-gpu">14.
+<code>PERSONA_BATCH_SIZE = 1024</code> is hardcoded to a 97 GB GPU</h3>
+<p><code>generate_persona_reward_model_scores.py:35</code>. The default
+overrides the per-model <code>batch_size</code> in the config (128 for
+this model). It is CLI-overridable, but the default will OOM on typical
+hardware and silently diverges from the config’s tuned values.</p>
+<hr />
+<h2 id="reproducibility-hygiene">Reproducibility &amp; hygiene</h2>
+<ul>
+<li><strong>Loosely pinned deps.</strong> <code>requirements.txt</code>
+pins only <code>transformers</code>; <code>torch</code>,
+<code>pandas</code>, <code>numpy</code> are unpinned. Notebook-only deps
+(<code>dataframe_image</code>, <code>adjustText</code>,
+<code>IPython</code>, and its Playwright/Chromium chain) are not all
+listed, so <code>gen_figures.ipynb</code> will not run from a clean
+<code>pip install -r</code>.</li>
+<li><strong>float16 non-determinism.</strong> The seeding in
+<code>_set_deterministic_mode</code> does not make fp16 matmuls
+bitwise-reproducible across GPUs; rank-based metrics are fairly robust,
+but exact top/bottom token tables may not reproduce.</li>
+<li><strong>Committed artifacts:</strong> <code>data/.DS_Store</code>,
+<code>data/persona_reward_model_scores/__pycache__/</code>, and a 6.8 MB
+<code>persona_analysis/backup_2026-07-28/</code> (including
+<code>analyze_personas.py.bak</code>) are in the tree despite
+<code>.gitignore</code> covering <code>.DS_Store</code> /
+<code>__pycache__</code>. The dated backup directory duplicates outputs
+and should live outside the repo.</li>
+<li><strong>README drift.</strong> The README lists reward-score columns
+as
+<code>token_id, token_name, token_decoded, greatest, best, worst</code>,
+but the actual baseline CSVs also carry
+<code>greatest_plain, greatest_i_think, greatest_you_think, greatest_people_think</code>
+(which the persona <code>baseline_column</code> mappings depend on). It
+also references <code>data/corpora/</code> and <code>data/elo/</code>,
+which are not present.</li>
+</ul>
+<hr />
+<h2 id="whats-done-well">What’s done well</h2>
+<ul>
+<li>Checkpoint-per-column, resumable generation (both scripts skip
+already-scored columns).</li>
+<li>The <code>token_id</code> join with an explicit rationale against
+<code>token_decoded</code> joins.</li>
+<li>Visible-whitespace token rendering (<code>format_token_label</code>)
+so BPE whitespace variants don’t look like duplicate rows.</li>
+<li>The neutral-vs-control dual baseline, computed up front without
+extra generation.</li>
+<li>The deferred, guarded <code>lm_*</code> path that degrades cleanly
+when base-LM data is absent.</li>
+<li>Genuinely helpful explanatory comments throughout.</li>
+</ul>
+<hr />
+<h2 id="priority-summary">Priority summary</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Issue</th>
+<th>Type</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Single reward model</td>
+<td>Methodology</td>
+<td><strong>High</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td>No noise baseline / null model</td>
+<td>Statistics</td>
+<td><strong>High</strong></td>
+</tr>
+<tr>
+<td>7</td>
+<td>Vacuous p-values</td>
+<td>Statistics</td>
+<td><strong>High</strong></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Degenerate control-vs-control rows</td>
+<td>Correctness</td>
+<td><strong>High</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td>RM↔︎LM comparison n=1 &amp; asymmetric</td>
+<td>Methodology</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Imbalanced merged taxonomies</td>
+<td>Methodology</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Uncontrolled persona length/frequency</td>
+<td>Methodology</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Single-token response unit</td>
+<td>Framing</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Lossy token round-trip</td>
+<td>Correctness</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>9</td>
+<td>RBO tie sensitivity</td>
+<td>Correctness</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Stale reassembly</td>
+<td>Robustness</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Slow pure-Python RBO</td>
+<td>Performance</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Hardcoded batch size</td>
+<td>Performance</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Redundant double-batching</td>
+<td>Cleanliness</td>
+<td>Low</td>
+</tr>
+<tr>
+<td>—</td>
+<td>Repo hygiene / README drift</td>
+<td>Hygiene</td>
+<td>Low</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
