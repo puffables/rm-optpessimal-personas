@@ -23,7 +23,7 @@ from reward_model_registry import *  # registers all models
 
 SCRIPT_ROOT = Path(__file__).parent
 CONFIG_DIR = SCRIPT_ROOT / 'config'
-OUTPUT_DIR = SCRIPT_ROOT / 'data' / 'reward_model_scores'
+DEFAULT_OUTPUT_DIR = SCRIPT_ROOT / 'data' / 'reward_model_scores'
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--models', type=str, default=None,
@@ -38,7 +38,13 @@ parser.add_argument('--kv-cache', action='store_true',
                      help='Cache the shared prompt prefix once per prompt instead of '
                           're-tokenizing and re-running it through the model for every '
                           'candidate token (much faster; only supports single-GPU models).')
+parser.add_argument('--output-dir', type=str, default=None,
+                     help='Where to write per-model CSVs (default: data/reward_model_scores). '
+                          'Override this to compare a --kv-cache run against the default-path '
+                          'output without the checkpoint-skip logic treating already-scored '
+                          'prompt columns as done.')
 args = parser.parse_args()
+OUTPUT_DIR = Path(args.output_dir) if args.output_dir else DEFAULT_OUTPUT_DIR
 
 # Load configs
 with open(CONFIG_DIR / 'prompts.yaml') as f:
