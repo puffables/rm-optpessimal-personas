@@ -34,6 +34,10 @@ parser.add_argument('--batch-size', type=int, default=None,
                      help='Token batch size for scoring (default: each model\'s configured '
                           'batch_size in reward_models.yaml, tuned conservatively — raise this '
                           'on bigger GPUs, e.g. an A100)')
+parser.add_argument('--kv-cache', action='store_true',
+                     help='Cache the shared prompt prefix once per prompt instead of '
+                          're-tokenizing and re-running it through the model for every '
+                          'candidate token (much faster; only supports single-GPU models).')
 args = parser.parse_args()
 
 # Load configs
@@ -73,6 +77,15 @@ for model_info in models:
     reward_model = RewardModel.create(model_name)
     tokenizer = reward_model.tokenizer
 
+    if args.kv_cache and reward_model.multi_gpu:
+        raise ValueError(
+            f"{model_name} is configured multi_gpu: true — KV-cached scoring only "
+            "supports the single-GPU path. Re-run without --kv-cache for this model."
+        )
+    score_fn = (reward_model.get_reward_scores_from_response_token_ids_kv_cached
+                if args.kv_cache else
+                reward_model.get_reward_scores_from_response_token_ids)
+
     # Build vocabulary (shared across prompts for this model)
     vocab = sorted(tokenizer.get_vocab().items(), key=lambda x: x[1])
     token_names, token_ids = zip(*vocab)
@@ -95,8 +108,7 @@ for model_info in models:
         for i in tqdm(range(0, len(token_ids), batch_size),
                        desc=f"  {prompt_name}"):
             batch_ids = list(token_ids[i:i + batch_size])
-            scores = reward_model.get_reward_scores_from_response_token_ids(
-                prompt_text, batch_ids, batch_size)
+            scores = score_fn(prompt_text, batch_ids, batch_size)
             all_scores.extend(scores)
 
         df[prompt_name] = all_scores

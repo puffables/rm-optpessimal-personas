@@ -206,3 +206,132 @@ class RewardModel:
             all_scores.extend(batch_scores)
 
         return all_scores
+
+    def get_reward_scores_from_response_token_ids_fixed(self, prompt, response_token_ids, max_gpu_batch):
+        """Same behavior as get_reward_scores_from_response_token_ids, with
+        the two tokenization bugs fixed but WITHOUT KV caching (full
+        sequence re-run per candidate, same as the original) — isolates the
+        effect of the tokenization fix alone, independent of caching.
+
+        Fixes:
+          1. add_special_tokens=False, so the already-chat-templated string
+             (which already contains a literal BOS) doesn't get a second BOS
+             prepended by the tokenizer.
+          2. Response tokens are appended as raw token IDs instead of being
+             decoded to text and the whole conversation re-tokenized, which
+             can silently substitute a different token for ~half the
+             vocabulary (BPE merges at the seam between the decoded text and
+             surrounding template text).
+        """
+        prefix_ids, suffix_ids = self._build_prefix_suffix_ids(prompt)
+        prefix_ids = prefix_ids.to(self.device)
+        suffix_ids = suffix_ids.to(self.device)
+
+        all_scores = []
+        for i in range(0, len(response_token_ids), max_gpu_batch):
+            batch_ids = response_token_ids[i:i + max_gpu_batch]
+            batch_size = len(batch_ids)
+
+            token_col = torch.tensor(batch_ids, device=self.device).unsqueeze(1)
+            full_ids = torch.cat([
+                prefix_ids.expand(batch_size, -1),
+                token_col,
+                suffix_ids.expand(batch_size, -1),
+            ], dim=1)
+
+            with torch.no_grad():
+                outputs = self.model(input_ids=full_ids, attention_mask=torch.ones_like(full_ids))
+                batch_scores = self._extract_scores_from_outputs(outputs)
+            all_scores.extend(batch_scores)
+
+        return all_scores
+
+    def _build_prefix_suffix_ids(self, prompt):
+        """Split the chat-templated conversation into the tokens before and
+        after the assistant response, by templating with a sentinel string
+        and splitting on it at the text level (not by concatenating
+        separately-tokenized fragments, which risks BPE merges at the seam).
+        """
+        sentinel = "RM_KV_CACHE_SENTINEL"
+        conversation = [
+            {"role": "user", "content": prompt},
+            {"role": "assistant", "content": sentinel},
+        ]
+        full_text = self.tokenizer.apply_chat_template(conversation, tokenize=False)
+        prefix_text, suffix_text = full_text.split(sentinel)
+
+        prefix_ids = self.tokenizer(prefix_text, add_special_tokens=False, return_tensors="pt").input_ids
+        suffix_ids = self.tokenizer(suffix_text, add_special_tokens=False, return_tensors="pt").input_ids
+        return prefix_ids, suffix_ids
+
+    def get_reward_scores_from_response_token_ids_kv_cached(self, prompt, response_token_ids, max_gpu_batch,
+                                                             reproduce_bos_bug=False):
+        """KV-cache variant of get_reward_scores_from_response_token_ids.
+
+        Encodes the (identical) prompt prefix once, caches its key/value
+        states, and for each candidate response token only runs that one new
+        token (plus the fixed template suffix) through the model, reusing the
+        cached prefix attention instead of recomputing it per candidate.
+        Only supports the single-device path (multi_gpu=False models).
+
+        reproduce_bos_bug: if True, prepends an extra BOS token to the prefix,
+        matching the double-BOS artifact in get_reward_scores_from_response_token_ids
+        (which tokenizes the already-chat-templated string with
+        add_special_tokens=True). Lets you isolate the caching speedup from
+        that specific tokenization bug. Note there is no equivalent toggle for
+        the decode()-then-re-tokenize round-trip corruption in the baseline
+        method — that bug is structurally incompatible with caching (it
+        depends on re-tokenizing variable-length text per candidate, which
+        caching replaces by construction with appending known token IDs).
+        """
+        from transformers.cache_utils import DynamicCache
+
+        prefix_ids, suffix_ids = self._build_prefix_suffix_ids(prompt)
+        prefix_ids = prefix_ids.to(self.device)
+        suffix_ids = suffix_ids.to(self.device)
+
+        if reproduce_bos_bug:
+            extra_bos = torch.tensor([[self.tokenizer.bos_token_id]], device=self.device)
+            prefix_ids = torch.cat([extra_bos, prefix_ids], dim=1)
+
+        prefix_len = prefix_ids.shape[1]
+
+        with torch.no_grad():
+            prefix_out = self.model(
+                input_ids=prefix_ids,
+                attention_mask=torch.ones_like(prefix_ids),
+                past_key_values=DynamicCache(),
+                use_cache=True,
+            )
+        prefix_cache = prefix_out.past_key_values
+
+        all_scores = []
+        for i in range(0, len(response_token_ids), max_gpu_batch):
+            batch_ids = response_token_ids[i:i + max_gpu_batch]
+            batch_size = len(batch_ids)
+
+            token_col = torch.tensor(batch_ids, device=self.device).unsqueeze(1)
+            new_ids = torch.cat([token_col, suffix_ids.expand(batch_size, -1)], dim=1)
+            new_len = new_ids.shape[1]
+
+            expanded_cache = DynamicCache()
+            expanded_cache.key_cache = [k.repeat_interleave(batch_size, dim=0) for k in prefix_cache.key_cache]
+            expanded_cache.value_cache = [v.repeat_interleave(batch_size, dim=0) for v in prefix_cache.value_cache]
+            expanded_cache._seen_tokens = prefix_cache._seen_tokens
+
+            attention_mask = torch.ones(batch_size, prefix_len + new_len, device=self.device)
+            position_ids = torch.arange(prefix_len, prefix_len + new_len, device=self.device)
+            position_ids = position_ids.unsqueeze(0).expand(batch_size, -1)
+
+            with torch.no_grad():
+                outputs = self.model(
+                    input_ids=new_ids,
+                    attention_mask=attention_mask,
+                    past_key_values=expanded_cache,
+                    position_ids=position_ids,
+                    use_cache=False,
+                )
+                batch_scores = self._extract_scores_from_outputs(outputs)
+            all_scores.extend(batch_scores)
+
+        return all_scores
