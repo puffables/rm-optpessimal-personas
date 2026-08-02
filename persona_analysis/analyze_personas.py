@@ -109,6 +109,16 @@ def format_token_label(token_decoded):
 for p in personas:
     persona_by_slug[slugify(p['name'])] = p
 
+# The "control" persona ("a person") isolates the effect of *any* "I am X" prefix
+# from the effect of a specific identity — used as an alternative baseline (toggle
+# in the dashboard) alongside the plain no-persona neutral prompt.
+_control_personas = [p for p in personas if p['category'] == 'control']
+if len(_control_personas) != 1:
+    raise ValueError(
+        f"Expected exactly one 'control' category persona in personas.yaml, found {len(_control_personas)}")
+CONTROL_PERSONA_NAME = _control_personas[0]['name']
+CONTROL_PERSONA_SLUG = slugify(CONTROL_PERSONA_NAME)
+
 
 def rbo(list1, list2, p=0.9, depth=None):
     """Rank-Biased Overlap between two ranked lists (already sorted best-first).
@@ -145,6 +155,13 @@ summary_rows = []
 rank_shift_rows = []
 top_bottom_rows = []
 baseline_top_bottom_rows = []
+# Same shape as rank_shift_rows/top_bottom_rows (reuses the field names 'score',
+# 'baseline_rank', 'persona_rank', 'rank_diff') but computed from the base LM's own
+# persona-conditioned logits vs. its own baseline, for the dashboard's base-LM
+# token-level-detail panel — mirrors the reward-model detail panel, not a
+# token-by-token cross-reference against it.
+lm_rank_shift_rows = []
+lm_top_bottom_rows = []
 template_pair_rows = []
 template_pair_rank_shift_rows = []
 
@@ -189,120 +206,215 @@ for model_info in model_configs:
         if template_name not in templates or persona_slug not in persona_by_slug:
             continue
 
-        baseline_col = templates[template_name]['baseline_column']
-        if baseline_col not in baseline_df.columns:
-            if baseline_col not in warned_missing_baseline_cols:
-                print(f"  Skipping template '{template_name}' — baseline column "
-                      f"'{baseline_col}' not yet in {baseline_path.name}")
-                warned_missing_baseline_cols.add(baseline_col)
-            continue
-
         persona_meta = persona_by_slug[persona_slug]
+        baseline_col = templates[template_name]['baseline_column']
+        control_col = f"{template_name}__{CONTROL_PERSONA_SLUG}"
 
-        # Join on token_id (unique per tokenizer), not token_decoded — many
-        # distinct token_ids can decode to the same string (e.g. whitespace
-        # variants), which would silently blow up a token_decoded join.
-        merged = baseline_df[['token_id', 'token_decoded', baseline_col]].merge(
-            persona_df[['token_id', col]], on='token_id'
-        ).dropna()
+        # Two baselines to compare each persona-conditioned ranking against:
+        # 'neutral' — the plain no-persona prompt; 'control' — the same template
+        # with the control persona ("a person") substituted in, isolating the
+        # effect of a *specific* identity from the effect of any "I am X" prefix
+        # at all. Toggled in the dashboard; computed for both up front here since
+        # the control persona's columns are already in persona_df (no new
+        # generation needed).
+        for baseline_type, base_source_df, base_col in (
+            ('neutral', baseline_df, baseline_col),
+            ('control', persona_df, control_col),
+        ):
+            if base_col not in base_source_df.columns:
+                if baseline_type == 'neutral' and base_col not in warned_missing_baseline_cols:
+                    print(f"  Skipping template '{template_name}' — baseline column "
+                          f"'{base_col}' not yet in {baseline_path.name}")
+                    warned_missing_baseline_cols.add(base_col)
+                continue
 
-        tau, tau_p = kendalltau(merged[baseline_col], merged[col])
-        rho, rho_p = spearmanr(merged[baseline_col], merged[col])
-
-        baseline_ranked = merged.sort_values(baseline_col, ascending=False)['token_decoded'].tolist()
-        persona_ranked = merged.sort_values(col, ascending=False)['token_decoded'].tolist()
-
-        rbo_scores = {p: rbo(baseline_ranked, persona_ranked, p=p) for p in (0.9, 0.95, 0.99)}
-
-        # --- Base-LM counterpart: same persona-shift computation, but between the
-        # base LM's own persona-conditioned logits and its own neutral baseline,
-        # so it's directly comparable to the reward model's tau/rho/RBO above.
-        lm_tau = lm_tau_p = lm_rho = lm_rho_p = lm_n_tokens = None
-        lm_rbo_scores = {0.9: None, 0.95: None, 0.99: None}
-        if (lm_persona_df is not None and lm_baseline_df is not None
-                and col in lm_persona_df.columns and baseline_col in lm_baseline_df.columns):
-            lm_merged = lm_baseline_df[['token_id', baseline_col]].merge(
-                lm_persona_df[['token_id', col]], on='token_id'
+            # Join on token_id (unique per tokenizer), not token_decoded — many
+            # distinct token_ids can decode to the same string (e.g. whitespace
+            # variants), which would silently blow up a token_decoded join.
+            # Columns renamed to generic names (rather than reused base_col/col)
+            # since the 'control' baseline can equal col itself (the control
+            # persona compared against itself), which would otherwise collide.
+            merged = base_source_df[['token_id', 'token_decoded', base_col]].rename(
+                columns={base_col: 'baseline_value'}
+            ).merge(
+                persona_df[['token_id', col]].rename(columns={col: 'persona_value'}),
+                on='token_id'
             ).dropna()
-            if not lm_merged.empty:
-                lm_tau, lm_tau_p = kendalltau(lm_merged[baseline_col], lm_merged[col])
-                lm_rho, lm_rho_p = spearmanr(lm_merged[baseline_col], lm_merged[col])
-                lm_baseline_ranked = lm_merged.sort_values(baseline_col, ascending=False)['token_id'].tolist()
-                lm_persona_ranked = lm_merged.sort_values(col, ascending=False)['token_id'].tolist()
-                lm_rbo_scores = {p: rbo(lm_baseline_ranked, lm_persona_ranked, p=p) for p in (0.9, 0.95, 0.99)}
-                lm_n_tokens = len(lm_merged)
 
-        summary_rows.append({
-            'model': model_name,
-            'model_nickname': nickname,
-            'template': template_name,
-            'persona': persona_meta['name'],
-            'persona_category': persona_meta['category'],
-            'n_tokens': len(merged),
-            'kendall_tau': tau,
-            'kendall_p': tau_p,
-            'spearman_rho': rho,
-            'spearman_p': rho_p,
-            'rbo_p0.90': rbo_scores[0.9],
-            'rbo_p0.95': rbo_scores[0.95],
-            'rbo_p0.99': rbo_scores[0.99],
-            'lm_available': lm_tau is not None,
-            'lm_n_tokens': lm_n_tokens,
-            'lm_kendall_tau': lm_tau,
-            'lm_kendall_p': lm_tau_p,
-            'lm_spearman_rho': lm_rho,
-            'lm_spearman_p': lm_rho_p,
-            'lm_rbo_p0.90': lm_rbo_scores[0.9],
-            'lm_rbo_p0.95': lm_rbo_scores[0.95],
-            'lm_rbo_p0.99': lm_rbo_scores[0.99],
-        })
+            tau, tau_p = kendalltau(merged['baseline_value'], merged['persona_value'])
+            rho, rho_p = spearmanr(merged['baseline_value'], merged['persona_value'])
 
-        # --- Rank-shift analysis (Fig 5 style) ---
-        # Many distinct token_ids decode to the same display string (whitespace
-        # variants etc.) — dedupe by token_decoded for presentation so the same
-        # string doesn't appear to repeat itself in a "top movers" list.
-        merged['baseline_rank'] = merged[baseline_col].rank(ascending=False, method='average')
-        merged['persona_rank'] = merged[col].rank(ascending=False, method='average')
-        merged['rank_diff'] = merged['persona_rank'] - merged['baseline_rank']
-        deduped = merged.drop_duplicates(subset='token_decoded', keep='first')
+            baseline_ranked = merged.sort_values('baseline_value', ascending=False)['token_id'].tolist()
+            persona_ranked = merged.sort_values('persona_value', ascending=False)['token_id'].tolist()
 
-        moved_up = deduped.sort_values('rank_diff').head(10)      # better rank under persona
-        moved_down = deduped.sort_values('rank_diff', ascending=False).head(10)  # worse rank under persona
+            rbo_scores = {p: rbo(baseline_ranked, persona_ranked, p=p) for p in (0.9, 0.95, 0.99)}
 
-        for direction, group in (('up', moved_up), ('down', moved_down)):
-            for _, row in group.iterrows():
-                rank_shift_rows.append({
-                    'model': model_name,
-                    'model_nickname': nickname,
-                    'template': template_name,
-                    'persona': persona_meta['name'],
-                    'persona_category': persona_meta['category'],
-                    'direction': direction,
-                    'token_decoded': row['token_decoded'],
-                    'baseline_rank': row['baseline_rank'],
-                    'persona_rank': row['persona_rank'],
-                    'rank_diff': row['rank_diff'],
-                })
+            # --- Base-LM counterpart: same persona-shift computation, but between the
+            # base LM's own persona-conditioned logits and its own matching baseline
+            # (neutral or control, mirroring the RM comparison above), so it's directly
+            # comparable to the reward model's tau/rho/RBO above.
+            lm_tau = lm_tau_p = lm_rho = lm_rho_p = lm_n_tokens = None
+            lm_rbo_scores = {0.9: None, 0.95: None, 0.99: None}
+            # Kept (with per-token ranks added below) so the rank-shift/top-bottom tables
+            # can show each displayed token's base-LM movement alongside the RM's — lets
+            # the dashboard distinguish shifts inherited from pretraining vs. introduced
+            # by reward-model fine-tuning. None when unavailable/empty for this model.
+            lm_merged = None
+            lm_base_source_df = lm_baseline_df if baseline_type == 'neutral' else lm_persona_df
+            if (lm_persona_df is not None and lm_base_source_df is not None
+                    and col in lm_persona_df.columns and base_col in lm_base_source_df.columns):
+                lm_merged = lm_base_source_df[['token_id', 'token_decoded', base_col]].rename(
+                    columns={base_col: 'lm_baseline_value'}
+                ).merge(
+                    lm_persona_df[['token_id', col]].rename(columns={col: 'lm_persona_value'}),
+                    on='token_id'
+                ).dropna()
+                if not lm_merged.empty:
+                    lm_tau, lm_tau_p = kendalltau(lm_merged['lm_baseline_value'], lm_merged['lm_persona_value'])
+                    lm_rho, lm_rho_p = spearmanr(lm_merged['lm_baseline_value'], lm_merged['lm_persona_value'])
+                    lm_baseline_ranked = lm_merged.sort_values('lm_baseline_value', ascending=False)['token_id'].tolist()
+                    lm_persona_ranked = lm_merged.sort_values('lm_persona_value', ascending=False)['token_id'].tolist()
+                    lm_rbo_scores = {p: rbo(lm_baseline_ranked, lm_persona_ranked, p=p) for p in (0.9, 0.95, 0.99)}
+                    lm_n_tokens = len(lm_merged)
+                    lm_merged['lm_baseline_rank'] = lm_merged['lm_baseline_value'].rank(ascending=False, method='average')
+                    lm_merged['lm_persona_rank'] = lm_merged['lm_persona_value'].rank(ascending=False, method='average')
+                    lm_merged['lm_rank_diff'] = lm_merged['lm_persona_rank'] - lm_merged['lm_baseline_rank']
 
-        # --- Top-5 / bottom-5 raw tokens under this persona's prompt (Table 2/3 style) ---
-        deduped_by_score = merged.drop_duplicates(subset='token_decoded', keep='first').sort_values(col, ascending=False)
-        top5 = deduped_by_score.head(5)
-        bottom5 = deduped_by_score.tail(5).iloc[::-1]  # worst-first
+                    # --- Base LM's own rank-shift / top-bottom tables (Fig 5 style, mirrors
+                    # the RM's rank-shift/top-bottom analysis below but from lm_merged) —
+                    # feeds the dashboard's base-LM token-level-detail panel. Field names
+                    # match the RM tables ('score', 'baseline_rank', 'persona_rank',
+                    # 'rank_diff') so the same rendering code can be reused for both.
+                    lm_deduped = lm_merged.drop_duplicates(subset='token_decoded', keep='first')
+                    lm_moved_up = lm_deduped.sort_values('lm_rank_diff').head(10)
+                    lm_moved_down = lm_deduped.sort_values('lm_rank_diff', ascending=False).head(10)
+                    for direction, group in (('up', lm_moved_up), ('down', lm_moved_down)):
+                        for _, row in group.iterrows():
+                            lm_rank_shift_rows.append({
+                                'model': model_name,
+                                'model_nickname': nickname,
+                                'template': template_name,
+                                'persona': persona_meta['name'],
+                                'persona_category': persona_meta['category'],
+                                'baseline_type': baseline_type,
+                                'direction': direction,
+                                'token_decoded': row['token_decoded'],
+                                'baseline_rank': row['lm_baseline_rank'],
+                                'persona_rank': row['lm_persona_rank'],
+                                'rank_diff': row['lm_rank_diff'],
+                            })
 
-        for group_name, group in (('top', top5), ('bottom', bottom5)):
-            for rank_in_group, (_, row) in enumerate(group.iterrows(), start=1):
-                top_bottom_rows.append({
-                    'model': model_name,
-                    'model_nickname': nickname,
-                    'template': template_name,
-                    'persona': persona_meta['name'],
-                    'persona_category': persona_meta['category'],
-                    'group': group_name,
-                    'rank_in_group': rank_in_group,
-                    'token_decoded': row['token_decoded'],
-                    'score': row[col],
-                    'baseline_rank': row['baseline_rank'],
-                })
+                    lm_deduped_by_score = lm_deduped.sort_values('lm_persona_value', ascending=False)
+                    lm_top5 = lm_deduped_by_score.head(5)
+                    lm_bottom5 = lm_deduped_by_score.tail(5).iloc[::-1]
+                    for group_name, group in (('top', lm_top5), ('bottom', lm_bottom5)):
+                        for rank_in_group, (_, row) in enumerate(group.iterrows(), start=1):
+                            lm_top_bottom_rows.append({
+                                'model': model_name,
+                                'model_nickname': nickname,
+                                'template': template_name,
+                                'persona': persona_meta['name'],
+                                'persona_category': persona_meta['category'],
+                                'baseline_type': baseline_type,
+                                'group': group_name,
+                                'rank_in_group': rank_in_group,
+                                'token_decoded': row['token_decoded'],
+                                'score': row['lm_persona_value'],
+                                'baseline_rank': row['lm_baseline_rank'],
+                            })
+                else:
+                    lm_merged = None
+
+            summary_rows.append({
+                'model': model_name,
+                'model_nickname': nickname,
+                'template': template_name,
+                'persona': persona_meta['name'],
+                'persona_category': persona_meta['category'],
+                'baseline_type': baseline_type,
+                'n_tokens': len(merged),
+                'kendall_tau': tau,
+                'kendall_p': tau_p,
+                'spearman_rho': rho,
+                'spearman_p': rho_p,
+                'rbo_p0.90': rbo_scores[0.9],
+                'rbo_p0.95': rbo_scores[0.95],
+                'rbo_p0.99': rbo_scores[0.99],
+                'lm_available': lm_tau is not None,
+                'lm_n_tokens': lm_n_tokens,
+                'lm_kendall_tau': lm_tau,
+                'lm_kendall_p': lm_tau_p,
+                'lm_spearman_rho': lm_rho,
+                'lm_spearman_p': lm_rho_p,
+                'lm_rbo_p0.90': lm_rbo_scores[0.9],
+                'lm_rbo_p0.95': lm_rbo_scores[0.95],
+                'lm_rbo_p0.99': lm_rbo_scores[0.99],
+            })
+
+            # --- Rank-shift analysis (Fig 5 style) ---
+            # Many distinct token_ids decode to the same display string (whitespace
+            # variants etc.) — dedupe by token_decoded for presentation so the same
+            # string doesn't appear to repeat itself in a "top movers" list.
+            merged['baseline_rank'] = merged['baseline_value'].rank(ascending=False, method='average')
+            merged['persona_rank'] = merged['persona_value'].rank(ascending=False, method='average')
+            merged['rank_diff'] = merged['persona_rank'] - merged['baseline_rank']
+            if lm_merged is not None:
+                merged = merged.merge(
+                    lm_merged[['token_id', 'lm_baseline_rank', 'lm_persona_rank']], on='token_id', how='left')
+                merged['lm_rank_diff'] = merged['lm_persona_rank'] - merged['lm_baseline_rank']
+            else:
+                merged['lm_baseline_rank'] = float('nan')
+                merged['lm_persona_rank'] = float('nan')
+                merged['lm_rank_diff'] = float('nan')
+            deduped = merged.drop_duplicates(subset='token_decoded', keep='first')
+
+            moved_up = deduped.sort_values('rank_diff').head(10)      # better rank under persona
+            moved_down = deduped.sort_values('rank_diff', ascending=False).head(10)  # worse rank under persona
+
+            for direction, group in (('up', moved_up), ('down', moved_down)):
+                for _, row in group.iterrows():
+                    rank_shift_rows.append({
+                        'model': model_name,
+                        'model_nickname': nickname,
+                        'template': template_name,
+                        'persona': persona_meta['name'],
+                        'persona_category': persona_meta['category'],
+                        'baseline_type': baseline_type,
+                        'direction': direction,
+                        'token_decoded': row['token_decoded'],
+                        'baseline_rank': row['baseline_rank'],
+                        'persona_rank': row['persona_rank'],
+                        'rank_diff': row['rank_diff'],
+                        'lm_baseline_rank': row['lm_baseline_rank'],
+                        'lm_persona_rank': row['lm_persona_rank'],
+                        'lm_rank_diff': row['lm_rank_diff'],
+                    })
+
+            # --- Top-5 / bottom-5 raw tokens under this persona's prompt (Table 2/3 style) ---
+            deduped_by_score = merged.drop_duplicates(subset='token_decoded', keep='first').sort_values('persona_value', ascending=False)
+            top5 = deduped_by_score.head(5)
+            bottom5 = deduped_by_score.tail(5).iloc[::-1]  # worst-first
+
+            for group_name, group in (('top', top5), ('bottom', bottom5)):
+                for rank_in_group, (_, row) in enumerate(group.iterrows(), start=1):
+                    top_bottom_rows.append({
+                        'model': model_name,
+                        'model_nickname': nickname,
+                        'template': template_name,
+                        'persona': persona_meta['name'],
+                        'persona_category': persona_meta['category'],
+                        'baseline_type': baseline_type,
+                        'group': group_name,
+                        'rank_in_group': rank_in_group,
+                        'token_decoded': row['token_decoded'],
+                        'score': row['persona_value'],
+                        'baseline_rank': row['baseline_rank'],
+                        'persona_rank': row['persona_rank'],
+                        'rank_diff': row['rank_diff'],
+                        'lm_baseline_rank': row['lm_baseline_rank'],
+                        'lm_persona_rank': row['lm_persona_rank'],
+                        'lm_rank_diff': row['lm_rank_diff'],
+                    })
 
     # --- Template-pair correlations (prompt-framing comparison) ---
     # Compares two templates' persona-conditioned rankings directly against each
@@ -375,9 +487,11 @@ for model_info in model_configs:
                             'rank_diff': row['rank_diff'],
                         })
 
-    # --- Baseline (no-persona) top-5/bottom-5 tokens, for direct comparison ---
-    # One per baseline_column actually used by a template (e.g. 'greatest', 'worst'),
-    # independent of any persona — this is what the model prefers with no prefix at all.
+    # --- Reference top-5/bottom-5 tokens for each baseline, for the dashboard's
+    # reference panel — independent of any target persona, this is what the model
+    # prefers under the baseline itself. 'neutral' is keyed by baseline_column
+    # (shared across templates using the same neutral prompt); 'control' is keyed
+    # by template_name (the control persona's column is template-specific).
     used_baseline_cols = {t['baseline_column'] for t in templates.values()}
     for baseline_col in used_baseline_cols:
         if baseline_col not in baseline_df.columns:
@@ -391,11 +505,33 @@ for model_info in model_configs:
                 baseline_top_bottom_rows.append({
                     'model': model_name,
                     'model_nickname': nickname,
-                    'baseline_column': baseline_col,
+                    'baseline_type': 'neutral',
+                    'reference_key': baseline_col,
                     'group': group_name,
                     'rank_in_group': rank_in_group,
                     'token_decoded': row['token_decoded'],
                     'score': row[baseline_col],
+                })
+
+    for template_name in templates:
+        control_col = f"{template_name}__{CONTROL_PERSONA_SLUG}"
+        if control_col not in persona_df.columns:
+            continue
+        deduped_control = persona_df[['token_decoded', control_col]].dropna() \
+            .drop_duplicates(subset='token_decoded', keep='first').sort_values(control_col, ascending=False)
+        top5 = deduped_control.head(5)
+        bottom5 = deduped_control.tail(5).iloc[::-1]
+        for group_name, group in (('top', top5), ('bottom', bottom5)):
+            for rank_in_group, (_, row) in enumerate(group.iterrows(), start=1):
+                baseline_top_bottom_rows.append({
+                    'model': model_name,
+                    'model_nickname': nickname,
+                    'baseline_type': 'control',
+                    'reference_key': template_name,
+                    'group': group_name,
+                    'rank_in_group': rank_in_group,
+                    'token_decoded': row['token_decoded'],
+                    'score': row[control_col],
                 })
 
 summary_df = pd.DataFrame(summary_rows)
@@ -404,6 +540,8 @@ top_bottom_df = pd.DataFrame(top_bottom_rows)
 baseline_top_bottom_df = pd.DataFrame(baseline_top_bottom_rows)
 template_pair_df = pd.DataFrame(template_pair_rows)
 template_pair_rank_shift_df = pd.DataFrame(template_pair_rank_shift_rows)
+lm_rank_shift_df = pd.DataFrame(lm_rank_shift_rows)
+lm_top_bottom_df = pd.DataFrame(lm_top_bottom_rows)
 
 summary_df.to_csv(OUTPUT_DIR / 'summary_correlations.csv', index=False)
 rank_shift_df.to_csv(OUTPUT_DIR / 'rank_shifts.csv', index=False)
@@ -411,12 +549,16 @@ top_bottom_df.to_csv(OUTPUT_DIR / 'top_bottom_tokens.csv', index=False)
 baseline_top_bottom_df.to_csv(OUTPUT_DIR / 'baseline_top_bottom_tokens.csv', index=False)
 template_pair_df.to_csv(OUTPUT_DIR / 'template_pair_correlations.csv', index=False)
 template_pair_rank_shift_df.to_csv(OUTPUT_DIR / 'template_pair_rank_shifts.csv', index=False)
+lm_rank_shift_df.to_csv(OUTPUT_DIR / 'lm_rank_shifts.csv', index=False)
+lm_top_bottom_df.to_csv(OUTPUT_DIR / 'lm_top_bottom_tokens.csv', index=False)
 print(f"Saved summary_correlations.csv ({len(summary_df)} rows)")
 print(f"Saved rank_shifts.csv ({len(rank_shift_df)} rows)")
 print(f"Saved top_bottom_tokens.csv ({len(top_bottom_df)} rows)")
 print(f"Saved baseline_top_bottom_tokens.csv ({len(baseline_top_bottom_df)} rows)")
 print(f"Saved template_pair_correlations.csv ({len(template_pair_df)} rows)")
 print(f"Saved template_pair_rank_shifts.csv ({len(template_pair_rank_shift_df)} rows)")
+print(f"Saved lm_rank_shifts.csv ({len(lm_rank_shift_df)} rows)")
+print(f"Saved lm_top_bottom_tokens.csv ({len(lm_top_bottom_df)} rows)")
 
 if summary_df.empty:
     print("No data available yet — run generate_persona_reward_model_scores.py first.")
