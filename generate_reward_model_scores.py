@@ -38,12 +38,22 @@ parser.add_argument('--kv-cache', action='store_true',
                      help='Cache the shared prompt prefix once per prompt instead of '
                           're-tokenizing and re-running it through the model for every '
                           'candidate token (much faster; only supports single-GPU models).')
+parser.add_argument('--fixed', action='store_true',
+                     help='Fix the duplicate-BOS and decode-then-re-tokenize round-trip '
+                          'issues in the original scoring path, without KV-caching (full '
+                          'forward pass per candidate token, same cost as the original — '
+                          'use this to isolate the effect of the tokenization fix alone, '
+                          'independent of caching). Mutually exclusive with --kv-cache, '
+                          'which already includes both fixes.')
 parser.add_argument('--output-dir', type=str, default=None,
                      help='Where to write per-model CSVs (default: data/reward_model_scores). '
-                          'Override this to compare a --kv-cache run against the default-path '
-                          'output without the checkpoint-skip logic treating already-scored '
-                          'prompt columns as done.')
+                          'Override this to compare a --kv-cache/--fixed run against the '
+                          'default-path output without the checkpoint-skip logic treating '
+                          'already-scored prompt columns as done.')
 args = parser.parse_args()
+if args.kv_cache and args.fixed:
+    raise ValueError("--kv-cache already includes the tokenization fixes --fixed applies "
+                      "without caching — pass only one.")
 OUTPUT_DIR = Path(args.output_dir) if args.output_dir else DEFAULT_OUTPUT_DIR
 
 # Load configs
@@ -88,9 +98,12 @@ for model_info in models:
             f"{model_name} is configured multi_gpu: true — KV-cached scoring only "
             "supports the single-GPU path. Re-run without --kv-cache for this model."
         )
-    score_fn = (reward_model.get_reward_scores_from_response_token_ids_kv_cached
-                if args.kv_cache else
-                reward_model.get_reward_scores_from_response_token_ids)
+    if args.kv_cache:
+        score_fn = reward_model.get_reward_scores_from_response_token_ids_kv_cached
+    elif args.fixed:
+        score_fn = reward_model.get_reward_scores_from_response_token_ids_fixed
+    else:
+        score_fn = reward_model.get_reward_scores_from_response_token_ids
 
     # Build vocabulary (shared across prompts for this model)
     vocab = sorted(tokenizer.get_vocab().items(), key=lambda x: x[1])
