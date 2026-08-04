@@ -26,7 +26,7 @@ from reward_model_registry import *  # registers all models
 
 SCRIPT_ROOT = Path(__file__).parent
 CONFIG_DIR = SCRIPT_ROOT / 'config'
-OUTPUT_DIR = SCRIPT_ROOT / 'data' / 'persona_reward_model_scores'
+DEFAULT_OUTPUT_DIR = SCRIPT_ROOT / 'data' / 'persona_reward_model_scores'
 
 # Empirically, these small reward models comfortably fit much larger batches
 # than the config batch_size (which was tuned conservatively for the original
@@ -46,7 +46,25 @@ parser.add_argument('--max-personas', type=int, default=None,
 parser.add_argument('--batch-size', type=int, default=PERSONA_BATCH_SIZE,
                      help=f'Token batch size for scoring (default: {PERSONA_BATCH_SIZE}, tuned for a '
                           '97GB GPU — lower this on smaller GPUs, e.g. 128 on a 16GB T4)')
+parser.add_argument('--kv-cache', action='store_true',
+                     help='Cache the shared prompt prefix once per (template, persona) instead of '
+                          're-tokenizing and re-running it through the model for every candidate '
+                          'token (much faster; only supports single-GPU models).')
+parser.add_argument('--fixed', action='store_true',
+                     help='Fix the duplicate-BOS and decode-then-re-tokenize round-trip issues '
+                          'without KV-caching (same cost as the original — isolates the '
+                          'tokenization fix alone). Mutually exclusive with --kv-cache, which '
+                          'already includes both fixes.')
+parser.add_argument('--output-dir', type=str, default=None,
+                     help='Where to write per-model CSVs (default: data/persona_reward_model_scores). '
+                          'Override this to compare a --kv-cache/--fixed run against the '
+                          'default-path output without the checkpoint-skip logic treating '
+                          'already-scored columns as done.')
 args = parser.parse_args()
+if args.kv_cache and args.fixed:
+    raise ValueError("--kv-cache already includes the tokenization fixes --fixed applies "
+                      "without caching — pass only one.")
+OUTPUT_DIR = Path(args.output_dir) if args.output_dir else DEFAULT_OUTPUT_DIR
 
 
 def slugify(text):
@@ -108,6 +126,18 @@ for model_info in models:
     reward_model = RewardModel.create(model_name)
     tokenizer = reward_model.tokenizer
 
+    if args.kv_cache and reward_model.multi_gpu:
+        raise ValueError(
+            f"{model_name} is configured multi_gpu: true — KV-cached scoring only "
+            "supports the single-GPU path. Re-run without --kv-cache for this model."
+        )
+    if args.kv_cache:
+        score_fn = reward_model.get_reward_scores_from_response_token_ids_kv_cached
+    elif args.fixed:
+        score_fn = reward_model.get_reward_scores_from_response_token_ids_fixed
+    else:
+        score_fn = reward_model.get_reward_scores_from_response_token_ids
+
     vocab = sorted(tokenizer.get_vocab().items(), key=lambda x: x[1])
     token_names, token_ids = zip(*vocab)
     token_decoded = tokenizer.batch_decode([[tid] for tid in token_ids],
@@ -129,12 +159,11 @@ for model_info in models:
 
         for i in tqdm(range(0, len(token_ids), batch_size), desc=f"  {col}"):
             batch_ids = list(token_ids[i:i + batch_size])
-            scores = reward_model.get_reward_scores_from_response_token_ids(
-                prompt_text, batch_ids, batch_size)
+            scores = score_fn(prompt_text, batch_ids, batch_size)
             all_scores.extend(scores)
 
         df[col] = all_scores
-        df.to_csv(output_path, index=False)  # checkpoint after every persona/template
+        df.to_csv(output_path, index=False, escapechar='\\')  # checkpoint after every persona/template
 
     print(f"Saved {safe_name}.csv")
 
