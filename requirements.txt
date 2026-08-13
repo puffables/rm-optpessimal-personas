@@ -16,3 +16,10 @@ seaborn
 adjustText         # outlier-label repulsion in personaFigures/gen_figures.ipynb
 dataframe_image    # PNG export of styled tables (personaFigures)
 ipython            # display() in personaFigures/gen_figures.ipynb
+
+# --- Dictionary labelling ---
+# Only needed to regenerate data/dictionaries/mfd2.0_typed.csv and re-draw the
+# `sampled` substitutions. Both outputs are committed, so a run of the scoring
+# pipeline (including the Colab notebooks) does not need this.
+nltk               # WordNet lexicon in generate_typed_dictionary.py; also needs
+                   # the corpus: python -c "import nltk; nltk.download('wordnet')"
