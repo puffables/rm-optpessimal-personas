@@ -1,0 +1,7 @@
+metric,variant,n_categories,mean_of_cat_means,sd_across_cats
+Kendall's tau,what do I think,8,0.8302222656821324,0.029565478627652565
+Kendall's tau,what do you think,8,0.8609487551418384,0.014017604975695477
+Kendall's tau,what do people think,8,0.7818019928898388,0.02454863242387806
+RBO (p=0.95),what do I think,8,0.5101247193122675,0.07050371174201865
+RBO (p=0.95),what do you think,8,0.6872204338279964,0.043280743048513516
+RBO (p=0.95),what do people think,8,0.4280022748862191,0.0785089786115635

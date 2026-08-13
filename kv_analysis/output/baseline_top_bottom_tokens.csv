@@ -1,0 +1,148 @@
+model,model_nickname,baseline_type,reference_key,group,rank_in_group,token_decoded,score
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_plain,top,1, LOVE,-2.052734375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_plain,top,2, happiness,-2.169921875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_plain,top,3, innocence,-2.17578125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_plain,top,4, Happiness,-2.26953125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_plain,top,5, empathy,-2.3984375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_plain,bottom,1," ```
+",-13.890625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_plain,bottom,2,"//{
+",-13.7109375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_plain,bottom,3,"/*
+",-13.4140625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_plain,bottom,4," //{
+",-13.0625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_plain,bottom,5," /*
+",-12.875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,worst,top,1,WAR,0.60888671875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,worst,top,2,War,0.245849609375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,worst,top,3, Pain,0.145751953125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,worst,top,4, pain,0.11871337890625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,worst,top,5,pain,0.086669921875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,worst,bottom,1," /**
+",-12.078125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,worst,bottom,2,"//{
+",-11.9296875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,worst,bottom,3,"/*******************************************************************************
+",-11.890625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,worst,bottom,4," ```
+",-11.8515625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,worst,bottom,5," //{
+",-11.796875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_you_think,top,1, happiness,-2.080078125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_you_think,top,2, LOVE,-2.158203125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_you_think,top,3, imagination,-2.255859375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_you_think,top,4, Happiness,-2.330078125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_you_think,top,5, Love,-2.40625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_you_think,bottom,1,"//{
+",-13.78125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_you_think,bottom,2," ```
+",-13.5
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_you_think,bottom,3,"/*
+",-13.1328125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_you_think,bottom,4," //{
+",-13.0078125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_you_think,bottom,5,"{
+",-13.0
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_people_think,top,1, LOVE,-3.275390625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_people_think,top,2, oxygen,-3.654296875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_people_think,top,3, therapy,-3.68359375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_people_think,top,4, goodwill,-3.703125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_people_think,top,5, FAMILY,-3.71875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_people_think,bottom,1,"//{
+",-13.8046875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_people_think,bottom,2," //{
+",-13.09375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_people_think,bottom,3," ```
+",-13.03125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_people_think,bottom,4,"/*
+",-12.984375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_people_think,bottom,5,.startswith,-12.921875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_i_think,top,1, LOVE,-3.669921875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_i_think,top,2, innocence,-3.77734375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_i_think,top,3, convenience,-3.84765625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_i_think,top,4, sanity,-3.892578125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_i_think,top,5, happiness,-3.962890625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_i_think,bottom,1,"//{
+",-14.6328125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_i_think,bottom,2," ```
+",-14.4140625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_i_think,bottom,3,"/*
+",-14.1328125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_i_think,bottom,4," {
+",-14.0703125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,neutral,greatest_i_think,bottom,5," //{
+",-14.0546875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id,top,1, LOVE,-2.546875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id,top,2, Happiness,-2.671875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id,top,3, happiness,-2.673828125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id,top,4, LIFE,-2.802734375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id,top,5, Freedom,-2.828125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id,bottom,1," ```
+",-14.484375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id,bottom,2,"//{
+",-14.328125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id,bottom,3,"/*
+",-13.7578125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id,bottom,4,"/*****************************************************************************
+",-13.65625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id,bottom,5,"/*******************************************************************************
+",-13.5
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_think,top,1, LOVE,-3.416015625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_think,top,2, happiness,-3.4609375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_think,top,3, sanity,-3.646484375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_think,top,4, Happiness,-3.662109375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_think,top,5, convenience,-3.76171875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_think,bottom,1,"//{
+",-13.921875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_think,bottom,2," ```
+",-13.65625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_think,bottom,3,"/*
+",-13.3046875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_think,bottom,4,"{
+",-13.25
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_think,bottom,5," //{
+",-13.125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_you_think,top,1, happiness,-2.51171875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_you_think,top,2, LOVE,-2.66015625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_you_think,top,3, Freedom,-2.703125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_you_think,top,4, Happiness,-2.755859375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_you_think,top,5, freedom,-2.794921875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_you_think,bottom,1," ```
+",-13.7578125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_you_think,bottom,2,"//{
+",-13.6875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_you_think,bottom,3,"/*******************************************************************************
+",-13.2109375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_you_think,bottom,4,"/*
+",-13.171875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_you_think,bottom,5,.startswith,-13.140625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_people_think,top,1, LOVE,-3.310546875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_people_think,top,2, happiness,-3.529296875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_people_think,top,3,HOME,-3.66015625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_people_think,top,4, Happiness,-3.8125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_people_think,top,5, therapy,-3.8125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_people_think,bottom,1,"//{
+",-13.90625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_people_think,bottom,2," ```
+",-13.3203125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_people_think,bottom,3,_variables,-13.125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_people_think,bottom,4,"/*
+",-13.0625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,greatest_self_id_people_think,bottom,5," //{
+",-13.03125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,worst_self_id,top,1, loneliness,-4.1484375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,worst_self_id,top,2, misery,-4.24609375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,worst_self_id,top,3, pain,-4.32421875
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,worst_self_id,top,4,pain,-4.36328125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,worst_self_id,top,5, Pain,-4.4140625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,worst_self_id,bottom,1,"//{
+",-14.0390625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,worst_self_id,bottom,2," ```
+",-13.5703125
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,worst_self_id,bottom,3," //{
+",-13.15625
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,worst_self_id,bottom,4,"/*
+",-13.109375
+Ray2333/GRM-Llama3.2-3B-rewardmodel-ft,R-Lla-3B,control,worst_self_id,bottom,5,"/*******************************************************************************
+",-13.0390625

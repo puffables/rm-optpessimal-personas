@@ -16,3 +16,7 @@ data/persona_base_model_logits/*.csv
 
 # Local, timestamped analysis backups — not part of the repo
 persona_analysis/backup_*/
+
+# KV-cached persona reward-model scores are too large for git (~321MB);
+# regenerate locally with generate_persona_reward_model_scores.py
+data/persona_reward_model_scores_kv_cached/
