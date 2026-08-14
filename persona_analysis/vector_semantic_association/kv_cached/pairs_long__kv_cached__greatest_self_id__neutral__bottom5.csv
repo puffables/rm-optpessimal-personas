@@ -1,0 +1,1618 @@
+source_persona,source_category,rank_in_group,token,target_persona,target_category,pair_type,cosine
+a Black person,race,3,_variables,a Black person,race,same persona,0.0838594951215398
+a Black person,race,3,_variables,a white person,race,"different persona, within category",0.08427144273117304
+a Black person,race,3,_variables,an Asian person,race,"different persona, within category",0.09602447811361259
+a Black person,race,3,_variables,a woman,gender,"different persona, across category",-0.026884858301016775
+a Black person,race,3,_variables,a man,gender,"different persona, across category",-0.030777320068550974
+a Black person,race,3,_variables,a non-binary person,gender,"different persona, across category",0.3116860955080448
+a Black person,race,3,_variables,a Black woman,intersectional,"different persona, across category",-0.014729232473570171
+a Black person,race,3,_variables,a Black man,intersectional,"different persona, across category",-0.015352214205819985
+a Black person,race,3,_variables,a white woman,intersectional,"different persona, across category",-0.015573449968561078
+a Black person,race,3,_variables,a white man,intersectional,"different persona, across category",-0.016732907804283517
+a Black person,race,3,_variables,a baby-boomer,age,"different persona, across category",0.080628985038727
+a Black person,race,3,_variables,a millennial,age,"different persona, across category",0.10964966650772766
+a Black person,race,3,_variables,a member of generation Z,age,"different persona, across category",0.058477821878367406
+a Black person,race,3,_variables,a person with ADD or ADHD,disability,"different persona, across category",0.17998949035148928
+a Black person,race,3,_variables,a person with impaired vision,disability,"different persona, across category",0.07895377692265736
+a Black person,race,3,_variables,a person without disabilities,disability,"different persona, across category",0.13596159568988953
+a Black person,race,3,_variables,a person,control,"different persona, across category",0.1234902432139105
+a Black person,race,3,_variables,an Anglican,religion,"different persona, across category",-0.01251540474275645
+a Black person,race,3,_variables,an Atheist,religion,"different persona, across category",-0.05824824802463443
+a Black person,race,3,_variables,a Buddhist,religion,"different persona, across category",-0.043870839398135235
+a Black person,race,3,_variables,a Catholic,religion,"different persona, across category",-0.015192832929880017
+a Black person,race,3,_variables,a Copt,religion,"different persona, across category",-0.024408776531156504
+a Black person,race,3,_variables,a Hindu,religion,"different persona, across category",-0.006053648726422612
+a Black person,race,3,_variables,a Jehovah's Witness,religion,"different persona, across category",-0.027055657150693642
+a Black person,race,3,_variables,a Jewish person,religion,"different persona, across category",0.09618109948278536
+a Black person,race,3,_variables,a Mormon,religion,"different persona, across category",0.025572142255749226
+a Black person,race,3,_variables,an Orthodox Christian,religion,"different persona, across category",0.014722478533587121
+a Black person,race,3,_variables,a Protestant,religion,"different persona, across category",-0.05148641682921189
+a Black person,race,3,_variables,a Satanist,religion,"different persona, across category",-0.05829728018259008
+a Black person,race,3,_variables,a Scientologist,religion,"different persona, across category",0.059765706048054784
+a Black person,race,3,_variables,a Shia Muslim,religion,"different persona, across category",0.007913847322416253
+a Black person,race,3,_variables,a Sikh,religion,"different persona, across category",-0.02312118629840306
+a Black person,race,3,_variables,a Sunni Muslim,religion,"different persona, across category",0.02252321777671227
+a Black person,race,3,_variables,an anarchist,political,"different persona, across category",-0.011089443260321952
+a Black person,race,3,_variables,a centrist,political,"different persona, across category",0.01066920918952604
+a Black person,race,3,_variables,a communist,political,"different persona, across category",-0.00214192864506476
+a Black person,race,3,_variables,a conservative,political,"different persona, across category",0.05416655096055285
+a Black person,race,3,_variables,a Democrat,political,"different persona, across category",0.01105566831540399
+a Black person,race,3,_variables,a far-left person,political,"different persona, across category",0.12881281966495717
+a Black person,race,3,_variables,a far-right person,political,"different persona, across category",0.1845716142098227
+a Black person,race,3,_variables,a Green Party supporter,political,"different persona, across category",-0.0856994931203062
+a Black person,race,3,_variables,an Islamist,political,"different persona, across category",0.03303753910368258
+a Black person,race,3,_variables,a liberal,political,"different persona, across category",0.025071559810055117
+a Black person,race,3,_variables,a libertarian,political,"different persona, across category",0.029236369544828576
+a Black person,race,3,_variables,a nationalist,political,"different persona, across category",-0.04727723724993992
+a Black person,race,3,_variables,a Republican,political,"different persona, across category",0.04360506017688215
+a Black person,race,3,_variables,a social democrat,political,"different persona, across category",0.11523239753969249
+a Black person,race,3,_variables,a socialist,political,"different persona, across category",0.004012885123941218
+a Black person,race,3,_variables,a Zionist,political,"different persona, across category",0.0786023317334455
+an Asian person,race,5,<center,a Black person,race,"different persona, within category",0.040521172218213754
+an Asian person,race,5,<center,a white person,race,"different persona, within category",0.04314407642807734
+an Asian person,race,5,<center,an Asian person,race,same persona,0.021958438710060396
+an Asian person,race,5,<center,a woman,gender,"different persona, across category",0.07690478989691786
+an Asian person,race,5,<center,a man,gender,"different persona, across category",0.13485935988433226
+an Asian person,race,5,<center,a non-binary person,gender,"different persona, across category",0.03957496772570832
+an Asian person,race,5,<center,a Black woman,intersectional,"different persona, across category",0.06816390366653934
+an Asian person,race,5,<center,a Black man,intersectional,"different persona, across category",0.10036892939502491
+an Asian person,race,5,<center,a white woman,intersectional,"different persona, across category",0.06862987509344229
+an Asian person,race,5,<center,a white man,intersectional,"different persona, across category",0.10343726653747662
+an Asian person,race,5,<center,a baby-boomer,age,"different persona, across category",0.04161810723762186
+an Asian person,race,5,<center,a millennial,age,"different persona, across category",0.03913943052181384
+an Asian person,race,5,<center,a member of generation Z,age,"different persona, across category",0.028115955251030035
+an Asian person,race,5,<center,a person with ADD or ADHD,disability,"different persona, across category",0.017391129679006936
+an Asian person,race,5,<center,a person with impaired vision,disability,"different persona, across category",0.07481135332436685
+an Asian person,race,5,<center,a person without disabilities,disability,"different persona, across category",0.1100217109274122
+an Asian person,race,5,<center,a person,control,"different persona, across category",0.03618157389584138
+an Asian person,race,5,<center,an Anglican,religion,"different persona, across category",0.01158029412310242
+an Asian person,race,5,<center,an Atheist,religion,"different persona, across category",0.010764942318186749
+an Asian person,race,5,<center,a Buddhist,religion,"different persona, across category",0.06332846331002256
+an Asian person,race,5,<center,a Catholic,religion,"different persona, across category",0.0960247398487662
+an Asian person,race,5,<center,a Copt,religion,"different persona, across category",0.0689745552751431
+an Asian person,race,5,<center,a Hindu,religion,"different persona, across category",0.01948062468374032
+an Asian person,race,5,<center,a Jehovah's Witness,religion,"different persona, across category",0.024770577407509695
+an Asian person,race,5,<center,a Jewish person,religion,"different persona, across category",0.1078256350502139
+an Asian person,race,5,<center,a Mormon,religion,"different persona, across category",-0.016559786190829533
+an Asian person,race,5,<center,an Orthodox Christian,religion,"different persona, across category",0.07002846098601233
+an Asian person,race,5,<center,a Protestant,religion,"different persona, across category",-0.0032968630627145897
+an Asian person,race,5,<center,a Satanist,religion,"different persona, across category",-0.036181922287868006
+an Asian person,race,5,<center,a Scientologist,religion,"different persona, across category",0.02220783130008754
+an Asian person,race,5,<center,a Shia Muslim,religion,"different persona, across category",0.04494334408914699
+an Asian person,race,5,<center,a Sikh,religion,"different persona, across category",0.045242311692213065
+an Asian person,race,5,<center,a Sunni Muslim,religion,"different persona, across category",0.041606306540150066
+an Asian person,race,5,<center,an anarchist,political,"different persona, across category",-0.006720940520505034
+an Asian person,race,5,<center,a centrist,political,"different persona, across category",0.0821599690276975
+an Asian person,race,5,<center,a communist,political,"different persona, across category",0.05056864759556246
+an Asian person,race,5,<center,a conservative,political,"different persona, across category",0.08266101936288145
+an Asian person,race,5,<center,a Democrat,political,"different persona, across category",0.03943312482597188
+an Asian person,race,5,<center,a far-left person,political,"different persona, across category",0.17625308934805
+an Asian person,race,5,<center,a far-right person,political,"different persona, across category",0.1643804668714857
+an Asian person,race,5,<center,a Green Party supporter,political,"different persona, across category",0.12566017275015254
+an Asian person,race,5,<center,an Islamist,political,"different persona, across category",0.03599114886649445
+an Asian person,race,5,<center,a liberal,political,"different persona, across category",0.008676350165582686
+an Asian person,race,5,<center,a libertarian,political,"different persona, across category",-0.004919510411478715
+an Asian person,race,5,<center,a nationalist,political,"different persona, across category",0.015852059897586843
+an Asian person,race,5,<center,a Republican,political,"different persona, across category",0.015620546704519917
+an Asian person,race,5,<center,a social democrat,political,"different persona, across category",0.0885787165591874
+an Asian person,race,5,<center,a socialist,political,"different persona, across category",0.008742790104604607
+an Asian person,race,5,<center,a Zionist,political,"different persona, across category",-0.007693736146172681
+a woman,gender,3,_modules,a Black person,race,"different persona, across category",-0.02212062114565581
+a woman,gender,3,_modules,a white person,race,"different persona, across category",0.03278348771820131
+a woman,gender,3,_modules,an Asian person,race,"different persona, across category",0.020026126413592988
+a woman,gender,3,_modules,a woman,gender,same persona,-0.05429345246181842
+a woman,gender,3,_modules,a man,gender,"different persona, within category",-0.050235053191224344
+a woman,gender,3,_modules,a non-binary person,gender,"different persona, within category",0.2700607506243948
+a woman,gender,3,_modules,a Black woman,intersectional,"different persona, across category",-0.07220268676216487
+a woman,gender,3,_modules,a Black man,intersectional,"different persona, across category",-0.0680450075815876
+a woman,gender,3,_modules,a white woman,intersectional,"different persona, across category",-0.02253619765861647
+a woman,gender,3,_modules,a white man,intersectional,"different persona, across category",-0.01664000400323373
+a woman,gender,3,_modules,a baby-boomer,age,"different persona, across category",-0.0058957096461640405
+a woman,gender,3,_modules,a millennial,age,"different persona, across category",-0.003971817111232817
+a woman,gender,3,_modules,a member of generation Z,age,"different persona, across category",0.17080767339411382
+a woman,gender,3,_modules,a person with ADD or ADHD,disability,"different persona, across category",0.08864591802645527
+a woman,gender,3,_modules,a person with impaired vision,disability,"different persona, across category",0.043888767120692826
+a woman,gender,3,_modules,a person without disabilities,disability,"different persona, across category",0.041174309875114626
+a woman,gender,3,_modules,a person,control,"different persona, across category",0.02550792296706332
+a woman,gender,3,_modules,an Anglican,religion,"different persona, across category",0.060378706604769565
+a woman,gender,3,_modules,an Atheist,religion,"different persona, across category",0.024586328538330465
+a woman,gender,3,_modules,a Buddhist,religion,"different persona, across category",0.09335888230834016
+a woman,gender,3,_modules,a Catholic,religion,"different persona, across category",-0.016603740894646984
+a woman,gender,3,_modules,a Copt,religion,"different persona, across category",0.036383731358907136
+a woman,gender,3,_modules,a Hindu,religion,"different persona, across category",0.13002474250160712
+a woman,gender,3,_modules,a Jehovah's Witness,religion,"different persona, across category",-0.07231653215599032
+a woman,gender,3,_modules,a Jewish person,religion,"different persona, across category",0.03465485568176523
+a woman,gender,3,_modules,a Mormon,religion,"different persona, across category",0.00610127194920452
+a woman,gender,3,_modules,an Orthodox Christian,religion,"different persona, across category",0.0009324065799479572
+a woman,gender,3,_modules,a Protestant,religion,"different persona, across category",0.0849753278408088
+a woman,gender,3,_modules,a Satanist,religion,"different persona, across category",0.07801248625340736
+a woman,gender,3,_modules,a Scientologist,religion,"different persona, across category",0.05023800859459633
+a woman,gender,3,_modules,a Shia Muslim,religion,"different persona, across category",0.07902127062205093
+a woman,gender,3,_modules,a Sikh,religion,"different persona, across category",0.09968579325353089
+a woman,gender,3,_modules,a Sunni Muslim,religion,"different persona, across category",0.08101137759820431
+a woman,gender,3,_modules,an anarchist,political,"different persona, across category",0.02741613949173432
+a woman,gender,3,_modules,a centrist,political,"different persona, across category",0.025641528913989867
+a woman,gender,3,_modules,a communist,political,"different persona, across category",0.07171558892056136
+a woman,gender,3,_modules,a conservative,political,"different persona, across category",0.009267154289316088
+a woman,gender,3,_modules,a Democrat,political,"different persona, across category",-0.027755126142159425
+a woman,gender,3,_modules,a far-left person,political,"different persona, across category",-0.01956903936037176
+a woman,gender,3,_modules,a far-right person,political,"different persona, across category",-0.012327595466385366
+a woman,gender,3,_modules,a Green Party supporter,political,"different persona, across category",-0.05939475612340162
+a woman,gender,3,_modules,an Islamist,political,"different persona, across category",0.1083219020565761
+a woman,gender,3,_modules,a liberal,political,"different persona, across category",0.03391644639874876
+a woman,gender,3,_modules,a libertarian,political,"different persona, across category",0.05572050163070101
+a woman,gender,3,_modules,a nationalist,political,"different persona, across category",0.0545886595568427
+a woman,gender,3,_modules,a Republican,political,"different persona, across category",0.021235506227004833
+a woman,gender,3,_modules,a social democrat,political,"different persona, across category",-0.01507297480486124
+a woman,gender,3,_modules,a socialist,political,"different persona, across category",0.030244154782631757
+a woman,gender,3,_modules,a Zionist,political,"different persona, across category",0.1435404155534475
+a Black woman,intersectional,2,_variables,a Black person,race,"different persona, across category",0.0838594951215398
+a Black woman,intersectional,2,_variables,a white person,race,"different persona, across category",0.08427144273117304
+a Black woman,intersectional,2,_variables,an Asian person,race,"different persona, across category",0.09602447811361259
+a Black woman,intersectional,2,_variables,a woman,gender,"different persona, across category",-0.026884858301016775
+a Black woman,intersectional,2,_variables,a man,gender,"different persona, across category",-0.030777320068550974
+a Black woman,intersectional,2,_variables,a non-binary person,gender,"different persona, across category",0.3116860955080448
+a Black woman,intersectional,2,_variables,a Black woman,intersectional,same persona,-0.014729232473570171
+a Black woman,intersectional,2,_variables,a Black man,intersectional,"different persona, within category",-0.015352214205819985
+a Black woman,intersectional,2,_variables,a white woman,intersectional,"different persona, within category",-0.015573449968561078
+a Black woman,intersectional,2,_variables,a white man,intersectional,"different persona, within category",-0.016732907804283517
+a Black woman,intersectional,2,_variables,a baby-boomer,age,"different persona, across category",0.080628985038727
+a Black woman,intersectional,2,_variables,a millennial,age,"different persona, across category",0.10964966650772766
+a Black woman,intersectional,2,_variables,a member of generation Z,age,"different persona, across category",0.058477821878367406
+a Black woman,intersectional,2,_variables,a person with ADD or ADHD,disability,"different persona, across category",0.17998949035148928
+a Black woman,intersectional,2,_variables,a person with impaired vision,disability,"different persona, across category",0.07895377692265736
+a Black woman,intersectional,2,_variables,a person without disabilities,disability,"different persona, across category",0.13596159568988953
+a Black woman,intersectional,2,_variables,a person,control,"different persona, across category",0.1234902432139105
+a Black woman,intersectional,2,_variables,an Anglican,religion,"different persona, across category",-0.01251540474275645
+a Black woman,intersectional,2,_variables,an Atheist,religion,"different persona, across category",-0.05824824802463443
+a Black woman,intersectional,2,_variables,a Buddhist,religion,"different persona, across category",-0.043870839398135235
+a Black woman,intersectional,2,_variables,a Catholic,religion,"different persona, across category",-0.015192832929880017
+a Black woman,intersectional,2,_variables,a Copt,religion,"different persona, across category",-0.024408776531156504
+a Black woman,intersectional,2,_variables,a Hindu,religion,"different persona, across category",-0.006053648726422612
+a Black woman,intersectional,2,_variables,a Jehovah's Witness,religion,"different persona, across category",-0.027055657150693642
+a Black woman,intersectional,2,_variables,a Jewish person,religion,"different persona, across category",0.09618109948278536
+a Black woman,intersectional,2,_variables,a Mormon,religion,"different persona, across category",0.025572142255749226
+a Black woman,intersectional,2,_variables,an Orthodox Christian,religion,"different persona, across category",0.014722478533587121
+a Black woman,intersectional,2,_variables,a Protestant,religion,"different persona, across category",-0.05148641682921189
+a Black woman,intersectional,2,_variables,a Satanist,religion,"different persona, across category",-0.05829728018259008
+a Black woman,intersectional,2,_variables,a Scientologist,religion,"different persona, across category",0.059765706048054784
+a Black woman,intersectional,2,_variables,a Shia Muslim,religion,"different persona, across category",0.007913847322416253
+a Black woman,intersectional,2,_variables,a Sikh,religion,"different persona, across category",-0.02312118629840306
+a Black woman,intersectional,2,_variables,a Sunni Muslim,religion,"different persona, across category",0.02252321777671227
+a Black woman,intersectional,2,_variables,an anarchist,political,"different persona, across category",-0.011089443260321952
+a Black woman,intersectional,2,_variables,a centrist,political,"different persona, across category",0.01066920918952604
+a Black woman,intersectional,2,_variables,a communist,political,"different persona, across category",-0.00214192864506476
+a Black woman,intersectional,2,_variables,a conservative,political,"different persona, across category",0.05416655096055285
+a Black woman,intersectional,2,_variables,a Democrat,political,"different persona, across category",0.01105566831540399
+a Black woman,intersectional,2,_variables,a far-left person,political,"different persona, across category",0.12881281966495717
+a Black woman,intersectional,2,_variables,a far-right person,political,"different persona, across category",0.1845716142098227
+a Black woman,intersectional,2,_variables,a Green Party supporter,political,"different persona, across category",-0.0856994931203062
+a Black woman,intersectional,2,_variables,an Islamist,political,"different persona, across category",0.03303753910368258
+a Black woman,intersectional,2,_variables,a liberal,political,"different persona, across category",0.025071559810055117
+a Black woman,intersectional,2,_variables,a libertarian,political,"different persona, across category",0.029236369544828576
+a Black woman,intersectional,2,_variables,a nationalist,political,"different persona, across category",-0.04727723724993992
+a Black woman,intersectional,2,_variables,a Republican,political,"different persona, across category",0.04360506017688215
+a Black woman,intersectional,2,_variables,a social democrat,political,"different persona, across category",0.11523239753969249
+a Black woman,intersectional,2,_variables,a socialist,political,"different persona, across category",0.004012885123941218
+a Black woman,intersectional,2,_variables,a Zionist,political,"different persona, across category",0.0786023317334455
+a Black man,intersectional,2,_variables,a Black person,race,"different persona, across category",0.0838594951215398
+a Black man,intersectional,2,_variables,a white person,race,"different persona, across category",0.08427144273117304
+a Black man,intersectional,2,_variables,an Asian person,race,"different persona, across category",0.09602447811361259
+a Black man,intersectional,2,_variables,a woman,gender,"different persona, across category",-0.026884858301016775
+a Black man,intersectional,2,_variables,a man,gender,"different persona, across category",-0.030777320068550974
+a Black man,intersectional,2,_variables,a non-binary person,gender,"different persona, across category",0.3116860955080448
+a Black man,intersectional,2,_variables,a Black woman,intersectional,"different persona, within category",-0.014729232473570171
+a Black man,intersectional,2,_variables,a Black man,intersectional,same persona,-0.015352214205819985
+a Black man,intersectional,2,_variables,a white woman,intersectional,"different persona, within category",-0.015573449968561078
+a Black man,intersectional,2,_variables,a white man,intersectional,"different persona, within category",-0.016732907804283517
+a Black man,intersectional,2,_variables,a baby-boomer,age,"different persona, across category",0.080628985038727
+a Black man,intersectional,2,_variables,a millennial,age,"different persona, across category",0.10964966650772766
+a Black man,intersectional,2,_variables,a member of generation Z,age,"different persona, across category",0.058477821878367406
+a Black man,intersectional,2,_variables,a person with ADD or ADHD,disability,"different persona, across category",0.17998949035148928
+a Black man,intersectional,2,_variables,a person with impaired vision,disability,"different persona, across category",0.07895377692265736
+a Black man,intersectional,2,_variables,a person without disabilities,disability,"different persona, across category",0.13596159568988953
+a Black man,intersectional,2,_variables,a person,control,"different persona, across category",0.1234902432139105
+a Black man,intersectional,2,_variables,an Anglican,religion,"different persona, across category",-0.01251540474275645
+a Black man,intersectional,2,_variables,an Atheist,religion,"different persona, across category",-0.05824824802463443
+a Black man,intersectional,2,_variables,a Buddhist,religion,"different persona, across category",-0.043870839398135235
+a Black man,intersectional,2,_variables,a Catholic,religion,"different persona, across category",-0.015192832929880017
+a Black man,intersectional,2,_variables,a Copt,religion,"different persona, across category",-0.024408776531156504
+a Black man,intersectional,2,_variables,a Hindu,religion,"different persona, across category",-0.006053648726422612
+a Black man,intersectional,2,_variables,a Jehovah's Witness,religion,"different persona, across category",-0.027055657150693642
+a Black man,intersectional,2,_variables,a Jewish person,religion,"different persona, across category",0.09618109948278536
+a Black man,intersectional,2,_variables,a Mormon,religion,"different persona, across category",0.025572142255749226
+a Black man,intersectional,2,_variables,an Orthodox Christian,religion,"different persona, across category",0.014722478533587121
+a Black man,intersectional,2,_variables,a Protestant,religion,"different persona, across category",-0.05148641682921189
+a Black man,intersectional,2,_variables,a Satanist,religion,"different persona, across category",-0.05829728018259008
+a Black man,intersectional,2,_variables,a Scientologist,religion,"different persona, across category",0.059765706048054784
+a Black man,intersectional,2,_variables,a Shia Muslim,religion,"different persona, across category",0.007913847322416253
+a Black man,intersectional,2,_variables,a Sikh,religion,"different persona, across category",-0.02312118629840306
+a Black man,intersectional,2,_variables,a Sunni Muslim,religion,"different persona, across category",0.02252321777671227
+a Black man,intersectional,2,_variables,an anarchist,political,"different persona, across category",-0.011089443260321952
+a Black man,intersectional,2,_variables,a centrist,political,"different persona, across category",0.01066920918952604
+a Black man,intersectional,2,_variables,a communist,political,"different persona, across category",-0.00214192864506476
+a Black man,intersectional,2,_variables,a conservative,political,"different persona, across category",0.05416655096055285
+a Black man,intersectional,2,_variables,a Democrat,political,"different persona, across category",0.01105566831540399
+a Black man,intersectional,2,_variables,a far-left person,political,"different persona, across category",0.12881281966495717
+a Black man,intersectional,2,_variables,a far-right person,political,"different persona, across category",0.1845716142098227
+a Black man,intersectional,2,_variables,a Green Party supporter,political,"different persona, across category",-0.0856994931203062
+a Black man,intersectional,2,_variables,an Islamist,political,"different persona, across category",0.03303753910368258
+a Black man,intersectional,2,_variables,a liberal,political,"different persona, across category",0.025071559810055117
+a Black man,intersectional,2,_variables,a libertarian,political,"different persona, across category",0.029236369544828576
+a Black man,intersectional,2,_variables,a nationalist,political,"different persona, across category",-0.04727723724993992
+a Black man,intersectional,2,_variables,a Republican,political,"different persona, across category",0.04360506017688215
+a Black man,intersectional,2,_variables,a social democrat,political,"different persona, across category",0.11523239753969249
+a Black man,intersectional,2,_variables,a socialist,political,"different persona, across category",0.004012885123941218
+a Black man,intersectional,2,_variables,a Zionist,political,"different persona, across category",0.0786023317334455
+a baby-boomer,age,3,<IEnumerable,a Black person,race,"different persona, across category",0.05928848951834823
+a baby-boomer,age,3,<IEnumerable,a white person,race,"different persona, across category",0.12863626602353437
+a baby-boomer,age,3,<IEnumerable,an Asian person,race,"different persona, across category",0.09455572963278268
+a baby-boomer,age,3,<IEnumerable,a woman,gender,"different persona, across category",-0.02074600736081031
+a baby-boomer,age,3,<IEnumerable,a man,gender,"different persona, across category",-0.04975113113547887
+a baby-boomer,age,3,<IEnumerable,a non-binary person,gender,"different persona, across category",0.45489921170828057
+a baby-boomer,age,3,<IEnumerable,a Black woman,intersectional,"different persona, across category",-0.019983272259040934
+a baby-boomer,age,3,<IEnumerable,a Black man,intersectional,"different persona, across category",-0.03708229520304224
+a baby-boomer,age,3,<IEnumerable,a white woman,intersectional,"different persona, across category",0.040059930706832426
+a baby-boomer,age,3,<IEnumerable,a white man,intersectional,"different persona, across category",0.02687321858647829
+a baby-boomer,age,3,<IEnumerable,a baby-boomer,age,same persona,0.05345320056619284
+a baby-boomer,age,3,<IEnumerable,a millennial,age,"different persona, within category",0.07728415149503337
+a baby-boomer,age,3,<IEnumerable,a member of generation Z,age,"different persona, within category",0.22784636505174521
+a baby-boomer,age,3,<IEnumerable,a person with ADD or ADHD,disability,"different persona, across category",0.20788772981153097
+a baby-boomer,age,3,<IEnumerable,a person with impaired vision,disability,"different persona, across category",0.11399687139746413
+a baby-boomer,age,3,<IEnumerable,a person without disabilities,disability,"different persona, across category",0.1031456292713018
+a baby-boomer,age,3,<IEnumerable,a person,control,"different persona, across category",0.10158244449967685
+a baby-boomer,age,3,<IEnumerable,an Anglican,religion,"different persona, across category",0.13359587758130756
+a baby-boomer,age,3,<IEnumerable,an Atheist,religion,"different persona, across category",0.1381760124775143
+a baby-boomer,age,3,<IEnumerable,a Buddhist,religion,"different persona, across category",0.1701437712940198
+a baby-boomer,age,3,<IEnumerable,a Catholic,religion,"different persona, across category",0.05598841582770362
+a baby-boomer,age,3,<IEnumerable,a Copt,religion,"different persona, across category",0.15269627568335875
+a baby-boomer,age,3,<IEnumerable,a Hindu,religion,"different persona, across category",0.18336947404111806
+a baby-boomer,age,3,<IEnumerable,a Jehovah's Witness,religion,"different persona, across category",0.03175678976516062
+a baby-boomer,age,3,<IEnumerable,a Jewish person,religion,"different persona, across category",0.15671175239225008
+a baby-boomer,age,3,<IEnumerable,a Mormon,religion,"different persona, across category",0.11575762607501434
+a baby-boomer,age,3,<IEnumerable,an Orthodox Christian,religion,"different persona, across category",0.11074414111448322
+a baby-boomer,age,3,<IEnumerable,a Protestant,religion,"different persona, across category",0.12264885356456234
+a baby-boomer,age,3,<IEnumerable,a Satanist,religion,"different persona, across category",0.10861115876793563
+a baby-boomer,age,3,<IEnumerable,a Scientologist,religion,"different persona, across category",0.06227980693474188
+a baby-boomer,age,3,<IEnumerable,a Shia Muslim,religion,"different persona, across category",0.1531101099853322
+a baby-boomer,age,3,<IEnumerable,a Sikh,religion,"different persona, across category",0.11337773650421291
+a baby-boomer,age,3,<IEnumerable,a Sunni Muslim,religion,"different persona, across category",0.17793192014374945
+a baby-boomer,age,3,<IEnumerable,an anarchist,political,"different persona, across category",0.20792917899543287
+a baby-boomer,age,3,<IEnumerable,a centrist,political,"different persona, across category",0.144039728770401
+a baby-boomer,age,3,<IEnumerable,a communist,political,"different persona, across category",0.10316287086651808
+a baby-boomer,age,3,<IEnumerable,a conservative,political,"different persona, across category",0.0650747133266776
+a baby-boomer,age,3,<IEnumerable,a Democrat,political,"different persona, across category",0.05494339388673095
+a baby-boomer,age,3,<IEnumerable,a far-left person,political,"different persona, across category",0.03171666573298296
+a baby-boomer,age,3,<IEnumerable,a far-right person,political,"different persona, across category",0.09510257392211677
+a baby-boomer,age,3,<IEnumerable,a Green Party supporter,political,"different persona, across category",0.04096454821036106
+a baby-boomer,age,3,<IEnumerable,an Islamist,political,"different persona, across category",0.21298128492407267
+a baby-boomer,age,3,<IEnumerable,a liberal,political,"different persona, across category",0.131198924335187
+a baby-boomer,age,3,<IEnumerable,a libertarian,political,"different persona, across category",0.16572645004056868
+a baby-boomer,age,3,<IEnumerable,a nationalist,political,"different persona, across category",0.11952028265396725
+a baby-boomer,age,3,<IEnumerable,a Republican,political,"different persona, across category",0.08913553040067089
+a baby-boomer,age,3,<IEnumerable,a social democrat,political,"different persona, across category",0.1617986190002984
+a baby-boomer,age,3,<IEnumerable,a socialist,political,"different persona, across category",0.18372935490559786
+a baby-boomer,age,3,<IEnumerable,a Zionist,political,"different persona, across category",0.2148856512477047
+a person with ADD or ADHD,disability,4,_variables,a Black person,race,"different persona, across category",0.0838594951215398
+a person with ADD or ADHD,disability,4,_variables,a white person,race,"different persona, across category",0.08427144273117304
+a person with ADD or ADHD,disability,4,_variables,an Asian person,race,"different persona, across category",0.09602447811361259
+a person with ADD or ADHD,disability,4,_variables,a woman,gender,"different persona, across category",-0.026884858301016775
+a person with ADD or ADHD,disability,4,_variables,a man,gender,"different persona, across category",-0.030777320068550974
+a person with ADD or ADHD,disability,4,_variables,a non-binary person,gender,"different persona, across category",0.3116860955080448
+a person with ADD or ADHD,disability,4,_variables,a Black woman,intersectional,"different persona, across category",-0.014729232473570171
+a person with ADD or ADHD,disability,4,_variables,a Black man,intersectional,"different persona, across category",-0.015352214205819985
+a person with ADD or ADHD,disability,4,_variables,a white woman,intersectional,"different persona, across category",-0.015573449968561078
+a person with ADD or ADHD,disability,4,_variables,a white man,intersectional,"different persona, across category",-0.016732907804283517
+a person with ADD or ADHD,disability,4,_variables,a baby-boomer,age,"different persona, across category",0.080628985038727
+a person with ADD or ADHD,disability,4,_variables,a millennial,age,"different persona, across category",0.10964966650772766
+a person with ADD or ADHD,disability,4,_variables,a member of generation Z,age,"different persona, across category",0.058477821878367406
+a person with ADD or ADHD,disability,4,_variables,a person with ADD or ADHD,disability,same persona,0.17998949035148928
+a person with ADD or ADHD,disability,4,_variables,a person with impaired vision,disability,"different persona, within category",0.07895377692265736
+a person with ADD or ADHD,disability,4,_variables,a person without disabilities,disability,"different persona, within category",0.13596159568988953
+a person with ADD or ADHD,disability,4,_variables,a person,control,"different persona, across category",0.1234902432139105
+a person with ADD or ADHD,disability,4,_variables,an Anglican,religion,"different persona, across category",-0.01251540474275645
+a person with ADD or ADHD,disability,4,_variables,an Atheist,religion,"different persona, across category",-0.05824824802463443
+a person with ADD or ADHD,disability,4,_variables,a Buddhist,religion,"different persona, across category",-0.043870839398135235
+a person with ADD or ADHD,disability,4,_variables,a Catholic,religion,"different persona, across category",-0.015192832929880017
+a person with ADD or ADHD,disability,4,_variables,a Copt,religion,"different persona, across category",-0.024408776531156504
+a person with ADD or ADHD,disability,4,_variables,a Hindu,religion,"different persona, across category",-0.006053648726422612
+a person with ADD or ADHD,disability,4,_variables,a Jehovah's Witness,religion,"different persona, across category",-0.027055657150693642
+a person with ADD or ADHD,disability,4,_variables,a Jewish person,religion,"different persona, across category",0.09618109948278536
+a person with ADD or ADHD,disability,4,_variables,a Mormon,religion,"different persona, across category",0.025572142255749226
+a person with ADD or ADHD,disability,4,_variables,an Orthodox Christian,religion,"different persona, across category",0.014722478533587121
+a person with ADD or ADHD,disability,4,_variables,a Protestant,religion,"different persona, across category",-0.05148641682921189
+a person with ADD or ADHD,disability,4,_variables,a Satanist,religion,"different persona, across category",-0.05829728018259008
+a person with ADD or ADHD,disability,4,_variables,a Scientologist,religion,"different persona, across category",0.059765706048054784
+a person with ADD or ADHD,disability,4,_variables,a Shia Muslim,religion,"different persona, across category",0.007913847322416253
+a person with ADD or ADHD,disability,4,_variables,a Sikh,religion,"different persona, across category",-0.02312118629840306
+a person with ADD or ADHD,disability,4,_variables,a Sunni Muslim,religion,"different persona, across category",0.02252321777671227
+a person with ADD or ADHD,disability,4,_variables,an anarchist,political,"different persona, across category",-0.011089443260321952
+a person with ADD or ADHD,disability,4,_variables,a centrist,political,"different persona, across category",0.01066920918952604
+a person with ADD or ADHD,disability,4,_variables,a communist,political,"different persona, across category",-0.00214192864506476
+a person with ADD or ADHD,disability,4,_variables,a conservative,political,"different persona, across category",0.05416655096055285
+a person with ADD or ADHD,disability,4,_variables,a Democrat,political,"different persona, across category",0.01105566831540399
+a person with ADD or ADHD,disability,4,_variables,a far-left person,political,"different persona, across category",0.12881281966495717
+a person with ADD or ADHD,disability,4,_variables,a far-right person,political,"different persona, across category",0.1845716142098227
+a person with ADD or ADHD,disability,4,_variables,a Green Party supporter,political,"different persona, across category",-0.0856994931203062
+a person with ADD or ADHD,disability,4,_variables,an Islamist,political,"different persona, across category",0.03303753910368258
+a person with ADD or ADHD,disability,4,_variables,a liberal,political,"different persona, across category",0.025071559810055117
+a person with ADD or ADHD,disability,4,_variables,a libertarian,political,"different persona, across category",0.029236369544828576
+a person with ADD or ADHD,disability,4,_variables,a nationalist,political,"different persona, across category",-0.04727723724993992
+a person with ADD or ADHD,disability,4,_variables,a Republican,political,"different persona, across category",0.04360506017688215
+a person with ADD or ADHD,disability,4,_variables,a social democrat,political,"different persona, across category",0.11523239753969249
+a person with ADD or ADHD,disability,4,_variables,a socialist,political,"different persona, across category",0.004012885123941218
+a person with ADD or ADHD,disability,4,_variables,a Zionist,political,"different persona, across category",0.0786023317334455
+a Buddhist,religion,2,_variables,a Black person,race,"different persona, across category",0.0838594951215398
+a Buddhist,religion,2,_variables,a white person,race,"different persona, across category",0.08427144273117304
+a Buddhist,religion,2,_variables,an Asian person,race,"different persona, across category",0.09602447811361259
+a Buddhist,religion,2,_variables,a woman,gender,"different persona, across category",-0.026884858301016775
+a Buddhist,religion,2,_variables,a man,gender,"different persona, across category",-0.030777320068550974
+a Buddhist,religion,2,_variables,a non-binary person,gender,"different persona, across category",0.3116860955080448
+a Buddhist,religion,2,_variables,a Black woman,intersectional,"different persona, across category",-0.014729232473570171
+a Buddhist,religion,2,_variables,a Black man,intersectional,"different persona, across category",-0.015352214205819985
+a Buddhist,religion,2,_variables,a white woman,intersectional,"different persona, across category",-0.015573449968561078
+a Buddhist,religion,2,_variables,a white man,intersectional,"different persona, across category",-0.016732907804283517
+a Buddhist,religion,2,_variables,a baby-boomer,age,"different persona, across category",0.080628985038727
+a Buddhist,religion,2,_variables,a millennial,age,"different persona, across category",0.10964966650772766
+a Buddhist,religion,2,_variables,a member of generation Z,age,"different persona, across category",0.058477821878367406
+a Buddhist,religion,2,_variables,a person with ADD or ADHD,disability,"different persona, across category",0.17998949035148928
+a Buddhist,religion,2,_variables,a person with impaired vision,disability,"different persona, across category",0.07895377692265736
+a Buddhist,religion,2,_variables,a person without disabilities,disability,"different persona, across category",0.13596159568988953
+a Buddhist,religion,2,_variables,a person,control,"different persona, across category",0.1234902432139105
+a Buddhist,religion,2,_variables,an Anglican,religion,"different persona, within category",-0.01251540474275645
+a Buddhist,religion,2,_variables,an Atheist,religion,"different persona, within category",-0.05824824802463443
+a Buddhist,religion,2,_variables,a Buddhist,religion,same persona,-0.043870839398135235
+a Buddhist,religion,2,_variables,a Catholic,religion,"different persona, within category",-0.015192832929880017
+a Buddhist,religion,2,_variables,a Copt,religion,"different persona, within category",-0.024408776531156504
+a Buddhist,religion,2,_variables,a Hindu,religion,"different persona, within category",-0.006053648726422612
+a Buddhist,religion,2,_variables,a Jehovah's Witness,religion,"different persona, within category",-0.027055657150693642
+a Buddhist,religion,2,_variables,a Jewish person,religion,"different persona, within category",0.09618109948278536
+a Buddhist,religion,2,_variables,a Mormon,religion,"different persona, within category",0.025572142255749226
+a Buddhist,religion,2,_variables,an Orthodox Christian,religion,"different persona, within category",0.014722478533587121
+a Buddhist,religion,2,_variables,a Protestant,religion,"different persona, within category",-0.05148641682921189
+a Buddhist,religion,2,_variables,a Satanist,religion,"different persona, within category",-0.05829728018259008
+a Buddhist,religion,2,_variables,a Scientologist,religion,"different persona, within category",0.059765706048054784
+a Buddhist,religion,2,_variables,a Shia Muslim,religion,"different persona, within category",0.007913847322416253
+a Buddhist,religion,2,_variables,a Sikh,religion,"different persona, within category",-0.02312118629840306
+a Buddhist,religion,2,_variables,a Sunni Muslim,religion,"different persona, within category",0.02252321777671227
+a Buddhist,religion,2,_variables,an anarchist,political,"different persona, across category",-0.011089443260321952
+a Buddhist,religion,2,_variables,a centrist,political,"different persona, across category",0.01066920918952604
+a Buddhist,religion,2,_variables,a communist,political,"different persona, across category",-0.00214192864506476
+a Buddhist,religion,2,_variables,a conservative,political,"different persona, across category",0.05416655096055285
+a Buddhist,religion,2,_variables,a Democrat,political,"different persona, across category",0.01105566831540399
+a Buddhist,religion,2,_variables,a far-left person,political,"different persona, across category",0.12881281966495717
+a Buddhist,religion,2,_variables,a far-right person,political,"different persona, across category",0.1845716142098227
+a Buddhist,religion,2,_variables,a Green Party supporter,political,"different persona, across category",-0.0856994931203062
+a Buddhist,religion,2,_variables,an Islamist,political,"different persona, across category",0.03303753910368258
+a Buddhist,religion,2,_variables,a liberal,political,"different persona, across category",0.025071559810055117
+a Buddhist,religion,2,_variables,a libertarian,political,"different persona, across category",0.029236369544828576
+a Buddhist,religion,2,_variables,a nationalist,political,"different persona, across category",-0.04727723724993992
+a Buddhist,religion,2,_variables,a Republican,political,"different persona, across category",0.04360506017688215
+a Buddhist,religion,2,_variables,a social democrat,political,"different persona, across category",0.11523239753969249
+a Buddhist,religion,2,_variables,a socialist,political,"different persona, across category",0.004012885123941218
+a Buddhist,religion,2,_variables,a Zionist,political,"different persona, across category",0.0786023317334455
+a Catholic,religion,2,_variables,a Black person,race,"different persona, across category",0.0838594951215398
+a Catholic,religion,2,_variables,a white person,race,"different persona, across category",0.08427144273117304
+a Catholic,religion,2,_variables,an Asian person,race,"different persona, across category",0.09602447811361259
+a Catholic,religion,2,_variables,a woman,gender,"different persona, across category",-0.026884858301016775
+a Catholic,religion,2,_variables,a man,gender,"different persona, across category",-0.030777320068550974
+a Catholic,religion,2,_variables,a non-binary person,gender,"different persona, across category",0.3116860955080448
+a Catholic,religion,2,_variables,a Black woman,intersectional,"different persona, across category",-0.014729232473570171
+a Catholic,religion,2,_variables,a Black man,intersectional,"different persona, across category",-0.015352214205819985
+a Catholic,religion,2,_variables,a white woman,intersectional,"different persona, across category",-0.015573449968561078
+a Catholic,religion,2,_variables,a white man,intersectional,"different persona, across category",-0.016732907804283517
+a Catholic,religion,2,_variables,a baby-boomer,age,"different persona, across category",0.080628985038727
+a Catholic,religion,2,_variables,a millennial,age,"different persona, across category",0.10964966650772766
+a Catholic,religion,2,_variables,a member of generation Z,age,"different persona, across category",0.058477821878367406
+a Catholic,religion,2,_variables,a person with ADD or ADHD,disability,"different persona, across category",0.17998949035148928
+a Catholic,religion,2,_variables,a person with impaired vision,disability,"different persona, across category",0.07895377692265736
+a Catholic,religion,2,_variables,a person without disabilities,disability,"different persona, across category",0.13596159568988953
+a Catholic,religion,2,_variables,a person,control,"different persona, across category",0.1234902432139105
+a Catholic,religion,2,_variables,an Anglican,religion,"different persona, within category",-0.01251540474275645
+a Catholic,religion,2,_variables,an Atheist,religion,"different persona, within category",-0.05824824802463443
+a Catholic,religion,2,_variables,a Buddhist,religion,"different persona, within category",-0.043870839398135235
+a Catholic,religion,2,_variables,a Catholic,religion,same persona,-0.015192832929880017
+a Catholic,religion,2,_variables,a Copt,religion,"different persona, within category",-0.024408776531156504
+a Catholic,religion,2,_variables,a Hindu,religion,"different persona, within category",-0.006053648726422612
+a Catholic,religion,2,_variables,a Jehovah's Witness,religion,"different persona, within category",-0.027055657150693642
+a Catholic,religion,2,_variables,a Jewish person,religion,"different persona, within category",0.09618109948278536
+a Catholic,religion,2,_variables,a Mormon,religion,"different persona, within category",0.025572142255749226
+a Catholic,religion,2,_variables,an Orthodox Christian,religion,"different persona, within category",0.014722478533587121
+a Catholic,religion,2,_variables,a Protestant,religion,"different persona, within category",-0.05148641682921189
+a Catholic,religion,2,_variables,a Satanist,religion,"different persona, within category",-0.05829728018259008
+a Catholic,religion,2,_variables,a Scientologist,religion,"different persona, within category",0.059765706048054784
+a Catholic,religion,2,_variables,a Shia Muslim,religion,"different persona, within category",0.007913847322416253
+a Catholic,religion,2,_variables,a Sikh,religion,"different persona, within category",-0.02312118629840306
+a Catholic,religion,2,_variables,a Sunni Muslim,religion,"different persona, within category",0.02252321777671227
+a Catholic,religion,2,_variables,an anarchist,political,"different persona, across category",-0.011089443260321952
+a Catholic,religion,2,_variables,a centrist,political,"different persona, across category",0.01066920918952604
+a Catholic,religion,2,_variables,a communist,political,"different persona, across category",-0.00214192864506476
+a Catholic,religion,2,_variables,a conservative,political,"different persona, across category",0.05416655096055285
+a Catholic,religion,2,_variables,a Democrat,political,"different persona, across category",0.01105566831540399
+a Catholic,religion,2,_variables,a far-left person,political,"different persona, across category",0.12881281966495717
+a Catholic,religion,2,_variables,a far-right person,political,"different persona, across category",0.1845716142098227
+a Catholic,religion,2,_variables,a Green Party supporter,political,"different persona, across category",-0.0856994931203062
+a Catholic,religion,2,_variables,an Islamist,political,"different persona, across category",0.03303753910368258
+a Catholic,religion,2,_variables,a liberal,political,"different persona, across category",0.025071559810055117
+a Catholic,religion,2,_variables,a libertarian,political,"different persona, across category",0.029236369544828576
+a Catholic,religion,2,_variables,a nationalist,political,"different persona, across category",-0.04727723724993992
+a Catholic,religion,2,_variables,a Republican,political,"different persona, across category",0.04360506017688215
+a Catholic,religion,2,_variables,a social democrat,political,"different persona, across category",0.11523239753969249
+a Catholic,religion,2,_variables,a socialist,political,"different persona, across category",0.004012885123941218
+a Catholic,religion,2,_variables,a Zionist,political,"different persona, across category",0.0786023317334455
+a Hindu,religion,3,_variables,a Black person,race,"different persona, across category",0.0838594951215398
+a Hindu,religion,3,_variables,a white person,race,"different persona, across category",0.08427144273117304
+a Hindu,religion,3,_variables,an Asian person,race,"different persona, across category",0.09602447811361259
+a Hindu,religion,3,_variables,a woman,gender,"different persona, across category",-0.026884858301016775
+a Hindu,religion,3,_variables,a man,gender,"different persona, across category",-0.030777320068550974
+a Hindu,religion,3,_variables,a non-binary person,gender,"different persona, across category",0.3116860955080448
+a Hindu,religion,3,_variables,a Black woman,intersectional,"different persona, across category",-0.014729232473570171
+a Hindu,religion,3,_variables,a Black man,intersectional,"different persona, across category",-0.015352214205819985
+a Hindu,religion,3,_variables,a white woman,intersectional,"different persona, across category",-0.015573449968561078
+a Hindu,religion,3,_variables,a white man,intersectional,"different persona, across category",-0.016732907804283517
+a Hindu,religion,3,_variables,a baby-boomer,age,"different persona, across category",0.080628985038727
+a Hindu,religion,3,_variables,a millennial,age,"different persona, across category",0.10964966650772766
+a Hindu,religion,3,_variables,a member of generation Z,age,"different persona, across category",0.058477821878367406
+a Hindu,religion,3,_variables,a person with ADD or ADHD,disability,"different persona, across category",0.17998949035148928
+a Hindu,religion,3,_variables,a person with impaired vision,disability,"different persona, across category",0.07895377692265736
+a Hindu,religion,3,_variables,a person without disabilities,disability,"different persona, across category",0.13596159568988953
+a Hindu,religion,3,_variables,a person,control,"different persona, across category",0.1234902432139105
+a Hindu,religion,3,_variables,an Anglican,religion,"different persona, within category",-0.01251540474275645
+a Hindu,religion,3,_variables,an Atheist,religion,"different persona, within category",-0.05824824802463443
+a Hindu,religion,3,_variables,a Buddhist,religion,"different persona, within category",-0.043870839398135235
+a Hindu,religion,3,_variables,a Catholic,religion,"different persona, within category",-0.015192832929880017
+a Hindu,religion,3,_variables,a Copt,religion,"different persona, within category",-0.024408776531156504
+a Hindu,religion,3,_variables,a Hindu,religion,same persona,-0.006053648726422612
+a Hindu,religion,3,_variables,a Jehovah's Witness,religion,"different persona, within category",-0.027055657150693642
+a Hindu,religion,3,_variables,a Jewish person,religion,"different persona, within category",0.09618109948278536
+a Hindu,religion,3,_variables,a Mormon,religion,"different persona, within category",0.025572142255749226
+a Hindu,religion,3,_variables,an Orthodox Christian,religion,"different persona, within category",0.014722478533587121
+a Hindu,religion,3,_variables,a Protestant,religion,"different persona, within category",-0.05148641682921189
+a Hindu,religion,3,_variables,a Satanist,religion,"different persona, within category",-0.05829728018259008
+a Hindu,religion,3,_variables,a Scientologist,religion,"different persona, within category",0.059765706048054784
+a Hindu,religion,3,_variables,a Shia Muslim,religion,"different persona, within category",0.007913847322416253
+a Hindu,religion,3,_variables,a Sikh,religion,"different persona, within category",-0.02312118629840306
+a Hindu,religion,3,_variables,a Sunni Muslim,religion,"different persona, within category",0.02252321777671227
+a Hindu,religion,3,_variables,an anarchist,political,"different persona, across category",-0.011089443260321952
+a Hindu,religion,3,_variables,a centrist,political,"different persona, across category",0.01066920918952604
+a Hindu,religion,3,_variables,a communist,political,"different persona, across category",-0.00214192864506476
+a Hindu,religion,3,_variables,a conservative,political,"different persona, across category",0.05416655096055285
+a Hindu,religion,3,_variables,a Democrat,political,"different persona, across category",0.01105566831540399
+a Hindu,religion,3,_variables,a far-left person,political,"different persona, across category",0.12881281966495717
+a Hindu,religion,3,_variables,a far-right person,political,"different persona, across category",0.1845716142098227
+a Hindu,religion,3,_variables,a Green Party supporter,political,"different persona, across category",-0.0856994931203062
+a Hindu,religion,3,_variables,an Islamist,political,"different persona, across category",0.03303753910368258
+a Hindu,religion,3,_variables,a liberal,political,"different persona, across category",0.025071559810055117
+a Hindu,religion,3,_variables,a libertarian,political,"different persona, across category",0.029236369544828576
+a Hindu,religion,3,_variables,a nationalist,political,"different persona, across category",-0.04727723724993992
+a Hindu,religion,3,_variables,a Republican,political,"different persona, across category",0.04360506017688215
+a Hindu,religion,3,_variables,a social democrat,political,"different persona, across category",0.11523239753969249
+a Hindu,religion,3,_variables,a socialist,political,"different persona, across category",0.004012885123941218
+a Hindu,religion,3,_variables,a Zionist,political,"different persona, across category",0.0786023317334455
+a Jehovah's Witness,religion,3,_variables,a Black person,race,"different persona, across category",0.0838594951215398
+a Jehovah's Witness,religion,3,_variables,a white person,race,"different persona, across category",0.08427144273117304
+a Jehovah's Witness,religion,3,_variables,an Asian person,race,"different persona, across category",0.09602447811361259
+a Jehovah's Witness,religion,3,_variables,a woman,gender,"different persona, across category",-0.026884858301016775
+a Jehovah's Witness,religion,3,_variables,a man,gender,"different persona, across category",-0.030777320068550974
+a Jehovah's Witness,religion,3,_variables,a non-binary person,gender,"different persona, across category",0.3116860955080448
+a Jehovah's Witness,religion,3,_variables,a Black woman,intersectional,"different persona, across category",-0.014729232473570171
+a Jehovah's Witness,religion,3,_variables,a Black man,intersectional,"different persona, across category",-0.015352214205819985
+a Jehovah's Witness,religion,3,_variables,a white woman,intersectional,"different persona, across category",-0.015573449968561078
+a Jehovah's Witness,religion,3,_variables,a white man,intersectional,"different persona, across category",-0.016732907804283517
+a Jehovah's Witness,religion,3,_variables,a baby-boomer,age,"different persona, across category",0.080628985038727
+a Jehovah's Witness,religion,3,_variables,a millennial,age,"different persona, across category",0.10964966650772766
+a Jehovah's Witness,religion,3,_variables,a member of generation Z,age,"different persona, across category",0.058477821878367406
+a Jehovah's Witness,religion,3,_variables,a person with ADD or ADHD,disability,"different persona, across category",0.17998949035148928
+a Jehovah's Witness,religion,3,_variables,a person with impaired vision,disability,"different persona, across category",0.07895377692265736
+a Jehovah's Witness,religion,3,_variables,a person without disabilities,disability,"different persona, across category",0.13596159568988953
+a Jehovah's Witness,religion,3,_variables,a person,control,"different persona, across category",0.1234902432139105
+a Jehovah's Witness,religion,3,_variables,an Anglican,religion,"different persona, within category",-0.01251540474275645
+a Jehovah's Witness,religion,3,_variables,an Atheist,religion,"different persona, within category",-0.05824824802463443
+a Jehovah's Witness,religion,3,_variables,a Buddhist,religion,"different persona, within category",-0.043870839398135235
+a Jehovah's Witness,religion,3,_variables,a Catholic,religion,"different persona, within category",-0.015192832929880017
+a Jehovah's Witness,religion,3,_variables,a Copt,religion,"different persona, within category",-0.024408776531156504
+a Jehovah's Witness,religion,3,_variables,a Hindu,religion,"different persona, within category",-0.006053648726422612
+a Jehovah's Witness,religion,3,_variables,a Jehovah's Witness,religion,same persona,-0.027055657150693642
+a Jehovah's Witness,religion,3,_variables,a Jewish person,religion,"different persona, within category",0.09618109948278536
+a Jehovah's Witness,religion,3,_variables,a Mormon,religion,"different persona, within category",0.025572142255749226
+a Jehovah's Witness,religion,3,_variables,an Orthodox Christian,religion,"different persona, within category",0.014722478533587121
+a Jehovah's Witness,religion,3,_variables,a Protestant,religion,"different persona, within category",-0.05148641682921189
+a Jehovah's Witness,religion,3,_variables,a Satanist,religion,"different persona, within category",-0.05829728018259008
+a Jehovah's Witness,religion,3,_variables,a Scientologist,religion,"different persona, within category",0.059765706048054784
+a Jehovah's Witness,religion,3,_variables,a Shia Muslim,religion,"different persona, within category",0.007913847322416253
+a Jehovah's Witness,religion,3,_variables,a Sikh,religion,"different persona, within category",-0.02312118629840306
+a Jehovah's Witness,religion,3,_variables,a Sunni Muslim,religion,"different persona, within category",0.02252321777671227
+a Jehovah's Witness,religion,3,_variables,an anarchist,political,"different persona, across category",-0.011089443260321952
+a Jehovah's Witness,religion,3,_variables,a centrist,political,"different persona, across category",0.01066920918952604
+a Jehovah's Witness,religion,3,_variables,a communist,political,"different persona, across category",-0.00214192864506476
+a Jehovah's Witness,religion,3,_variables,a conservative,political,"different persona, across category",0.05416655096055285
+a Jehovah's Witness,religion,3,_variables,a Democrat,political,"different persona, across category",0.01105566831540399
+a Jehovah's Witness,religion,3,_variables,a far-left person,political,"different persona, across category",0.12881281966495717
+a Jehovah's Witness,religion,3,_variables,a far-right person,political,"different persona, across category",0.1845716142098227
+a Jehovah's Witness,religion,3,_variables,a Green Party supporter,political,"different persona, across category",-0.0856994931203062
+a Jehovah's Witness,religion,3,_variables,an Islamist,political,"different persona, across category",0.03303753910368258
+a Jehovah's Witness,religion,3,_variables,a liberal,political,"different persona, across category",0.025071559810055117
+a Jehovah's Witness,religion,3,_variables,a libertarian,political,"different persona, across category",0.029236369544828576
+a Jehovah's Witness,religion,3,_variables,a nationalist,political,"different persona, across category",-0.04727723724993992
+a Jehovah's Witness,religion,3,_variables,a Republican,political,"different persona, across category",0.04360506017688215
+a Jehovah's Witness,religion,3,_variables,a social democrat,political,"different persona, across category",0.11523239753969249
+a Jehovah's Witness,religion,3,_variables,a socialist,political,"different persona, across category",0.004012885123941218
+a Jehovah's Witness,religion,3,_variables,a Zionist,political,"different persona, across category",0.0786023317334455
+a Jewish person,religion,2,_variables,a Black person,race,"different persona, across category",0.0838594951215398
+a Jewish person,religion,2,_variables,a white person,race,"different persona, across category",0.08427144273117304
+a Jewish person,religion,2,_variables,an Asian person,race,"different persona, across category",0.09602447811361259
+a Jewish person,religion,2,_variables,a woman,gender,"different persona, across category",-0.026884858301016775
+a Jewish person,religion,2,_variables,a man,gender,"different persona, across category",-0.030777320068550974
+a Jewish person,religion,2,_variables,a non-binary person,gender,"different persona, across category",0.3116860955080448
+a Jewish person,religion,2,_variables,a Black woman,intersectional,"different persona, across category",-0.014729232473570171
+a Jewish person,religion,2,_variables,a Black man,intersectional,"different persona, across category",-0.015352214205819985
+a Jewish person,religion,2,_variables,a white woman,intersectional,"different persona, across category",-0.015573449968561078
+a Jewish person,religion,2,_variables,a white man,intersectional,"different persona, across category",-0.016732907804283517
+a Jewish person,religion,2,_variables,a baby-boomer,age,"different persona, across category",0.080628985038727
+a Jewish person,religion,2,_variables,a millennial,age,"different persona, across category",0.10964966650772766
+a Jewish person,religion,2,_variables,a member of generation Z,age,"different persona, across category",0.058477821878367406
+a Jewish person,religion,2,_variables,a person with ADD or ADHD,disability,"different persona, across category",0.17998949035148928
+a Jewish person,religion,2,_variables,a person with impaired vision,disability,"different persona, across category",0.07895377692265736
+a Jewish person,religion,2,_variables,a person without disabilities,disability,"different persona, across category",0.13596159568988953
+a Jewish person,religion,2,_variables,a person,control,"different persona, across category",0.1234902432139105
+a Jewish person,religion,2,_variables,an Anglican,religion,"different persona, within category",-0.01251540474275645
+a Jewish person,religion,2,_variables,an Atheist,religion,"different persona, within category",-0.05824824802463443
+a Jewish person,religion,2,_variables,a Buddhist,religion,"different persona, within category",-0.043870839398135235
+a Jewish person,religion,2,_variables,a Catholic,religion,"different persona, within category",-0.015192832929880017
+a Jewish person,religion,2,_variables,a Copt,religion,"different persona, within category",-0.024408776531156504
+a Jewish person,religion,2,_variables,a Hindu,religion,"different persona, within category",-0.006053648726422612
+a Jewish person,religion,2,_variables,a Jehovah's Witness,religion,"different persona, within category",-0.027055657150693642
+a Jewish person,religion,2,_variables,a Jewish person,religion,same persona,0.09618109948278536
+a Jewish person,religion,2,_variables,a Mormon,religion,"different persona, within category",0.025572142255749226
+a Jewish person,religion,2,_variables,an Orthodox Christian,religion,"different persona, within category",0.014722478533587121
+a Jewish person,religion,2,_variables,a Protestant,religion,"different persona, within category",-0.05148641682921189
+a Jewish person,religion,2,_variables,a Satanist,religion,"different persona, within category",-0.05829728018259008
+a Jewish person,religion,2,_variables,a Scientologist,religion,"different persona, within category",0.059765706048054784
+a Jewish person,religion,2,_variables,a Shia Muslim,religion,"different persona, within category",0.007913847322416253
+a Jewish person,religion,2,_variables,a Sikh,religion,"different persona, within category",-0.02312118629840306
+a Jewish person,religion,2,_variables,a Sunni Muslim,religion,"different persona, within category",0.02252321777671227
+a Jewish person,religion,2,_variables,an anarchist,political,"different persona, across category",-0.011089443260321952
+a Jewish person,religion,2,_variables,a centrist,political,"different persona, across category",0.01066920918952604
+a Jewish person,religion,2,_variables,a communist,political,"different persona, across category",-0.00214192864506476
+a Jewish person,religion,2,_variables,a conservative,political,"different persona, across category",0.05416655096055285
+a Jewish person,religion,2,_variables,a Democrat,political,"different persona, across category",0.01105566831540399
+a Jewish person,religion,2,_variables,a far-left person,political,"different persona, across category",0.12881281966495717
+a Jewish person,religion,2,_variables,a far-right person,political,"different persona, across category",0.1845716142098227
+a Jewish person,religion,2,_variables,a Green Party supporter,political,"different persona, across category",-0.0856994931203062
+a Jewish person,religion,2,_variables,an Islamist,political,"different persona, across category",0.03303753910368258
+a Jewish person,religion,2,_variables,a liberal,political,"different persona, across category",0.025071559810055117
+a Jewish person,religion,2,_variables,a libertarian,political,"different persona, across category",0.029236369544828576
+a Jewish person,religion,2,_variables,a nationalist,political,"different persona, across category",-0.04727723724993992
+a Jewish person,religion,2,_variables,a Republican,political,"different persona, across category",0.04360506017688215
+a Jewish person,religion,2,_variables,a social democrat,political,"different persona, across category",0.11523239753969249
+a Jewish person,religion,2,_variables,a socialist,political,"different persona, across category",0.004012885123941218
+a Jewish person,religion,2,_variables,a Zionist,political,"different persona, across category",0.0786023317334455
+a Mormon,religion,2,_variables,a Black person,race,"different persona, across category",0.0838594951215398
+a Mormon,religion,2,_variables,a white person,race,"different persona, across category",0.08427144273117304
+a Mormon,religion,2,_variables,an Asian person,race,"different persona, across category",0.09602447811361259
+a Mormon,religion,2,_variables,a woman,gender,"different persona, across category",-0.026884858301016775
+a Mormon,religion,2,_variables,a man,gender,"different persona, across category",-0.030777320068550974
+a Mormon,religion,2,_variables,a non-binary person,gender,"different persona, across category",0.3116860955080448
+a Mormon,religion,2,_variables,a Black woman,intersectional,"different persona, across category",-0.014729232473570171
+a Mormon,religion,2,_variables,a Black man,intersectional,"different persona, across category",-0.015352214205819985
+a Mormon,religion,2,_variables,a white woman,intersectional,"different persona, across category",-0.015573449968561078
+a Mormon,religion,2,_variables,a white man,intersectional,"different persona, across category",-0.016732907804283517
+a Mormon,religion,2,_variables,a baby-boomer,age,"different persona, across category",0.080628985038727
+a Mormon,religion,2,_variables,a millennial,age,"different persona, across category",0.10964966650772766
+a Mormon,religion,2,_variables,a member of generation Z,age,"different persona, across category",0.058477821878367406
+a Mormon,religion,2,_variables,a person with ADD or ADHD,disability,"different persona, across category",0.17998949035148928
+a Mormon,religion,2,_variables,a person with impaired vision,disability,"different persona, across category",0.07895377692265736
+a Mormon,religion,2,_variables,a person without disabilities,disability,"different persona, across category",0.13596159568988953
+a Mormon,religion,2,_variables,a person,control,"different persona, across category",0.1234902432139105
+a Mormon,religion,2,_variables,an Anglican,religion,"different persona, within category",-0.01251540474275645
+a Mormon,religion,2,_variables,an Atheist,religion,"different persona, within category",-0.05824824802463443
+a Mormon,religion,2,_variables,a Buddhist,religion,"different persona, within category",-0.043870839398135235
+a Mormon,religion,2,_variables,a Catholic,religion,"different persona, within category",-0.015192832929880017
+a Mormon,religion,2,_variables,a Copt,religion,"different persona, within category",-0.024408776531156504
+a Mormon,religion,2,_variables,a Hindu,religion,"different persona, within category",-0.006053648726422612
+a Mormon,religion,2,_variables,a Jehovah's Witness,religion,"different persona, within category",-0.027055657150693642
+a Mormon,religion,2,_variables,a Jewish person,religion,"different persona, within category",0.09618109948278536
+a Mormon,religion,2,_variables,a Mormon,religion,same persona,0.025572142255749226
+a Mormon,religion,2,_variables,an Orthodox Christian,religion,"different persona, within category",0.014722478533587121
+a Mormon,religion,2,_variables,a Protestant,religion,"different persona, within category",-0.05148641682921189
+a Mormon,religion,2,_variables,a Satanist,religion,"different persona, within category",-0.05829728018259008
+a Mormon,religion,2,_variables,a Scientologist,religion,"different persona, within category",0.059765706048054784
+a Mormon,religion,2,_variables,a Shia Muslim,religion,"different persona, within category",0.007913847322416253
+a Mormon,religion,2,_variables,a Sikh,religion,"different persona, within category",-0.02312118629840306
+a Mormon,religion,2,_variables,a Sunni Muslim,religion,"different persona, within category",0.02252321777671227
+a Mormon,religion,2,_variables,an anarchist,political,"different persona, across category",-0.011089443260321952
+a Mormon,religion,2,_variables,a centrist,political,"different persona, across category",0.01066920918952604
+a Mormon,religion,2,_variables,a communist,political,"different persona, across category",-0.00214192864506476
+a Mormon,religion,2,_variables,a conservative,political,"different persona, across category",0.05416655096055285
+a Mormon,religion,2,_variables,a Democrat,political,"different persona, across category",0.01105566831540399
+a Mormon,religion,2,_variables,a far-left person,political,"different persona, across category",0.12881281966495717
+a Mormon,religion,2,_variables,a far-right person,political,"different persona, across category",0.1845716142098227
+a Mormon,religion,2,_variables,a Green Party supporter,political,"different persona, across category",-0.0856994931203062
+a Mormon,religion,2,_variables,an Islamist,political,"different persona, across category",0.03303753910368258
+a Mormon,religion,2,_variables,a liberal,political,"different persona, across category",0.025071559810055117
+a Mormon,religion,2,_variables,a libertarian,political,"different persona, across category",0.029236369544828576
+a Mormon,religion,2,_variables,a nationalist,political,"different persona, across category",-0.04727723724993992
+a Mormon,religion,2,_variables,a Republican,political,"different persona, across category",0.04360506017688215
+a Mormon,religion,2,_variables,a social democrat,political,"different persona, across category",0.11523239753969249
+a Mormon,religion,2,_variables,a socialist,political,"different persona, across category",0.004012885123941218
+a Mormon,religion,2,_variables,a Zionist,political,"different persona, across category",0.0786023317334455
+an Orthodox Christian,religion,2,_variables,a Black person,race,"different persona, across category",0.0838594951215398
+an Orthodox Christian,religion,2,_variables,a white person,race,"different persona, across category",0.08427144273117304
+an Orthodox Christian,religion,2,_variables,an Asian person,race,"different persona, across category",0.09602447811361259
+an Orthodox Christian,religion,2,_variables,a woman,gender,"different persona, across category",-0.026884858301016775
+an Orthodox Christian,religion,2,_variables,a man,gender,"different persona, across category",-0.030777320068550974
+an Orthodox Christian,religion,2,_variables,a non-binary person,gender,"different persona, across category",0.3116860955080448
+an Orthodox Christian,religion,2,_variables,a Black woman,intersectional,"different persona, across category",-0.014729232473570171
+an Orthodox Christian,religion,2,_variables,a Black man,intersectional,"different persona, across category",-0.015352214205819985
+an Orthodox Christian,religion,2,_variables,a white woman,intersectional,"different persona, across category",-0.015573449968561078
+an Orthodox Christian,religion,2,_variables,a white man,intersectional,"different persona, across category",-0.016732907804283517
+an Orthodox Christian,religion,2,_variables,a baby-boomer,age,"different persona, across category",0.080628985038727
+an Orthodox Christian,religion,2,_variables,a millennial,age,"different persona, across category",0.10964966650772766
+an Orthodox Christian,religion,2,_variables,a member of generation Z,age,"different persona, across category",0.058477821878367406
+an Orthodox Christian,religion,2,_variables,a person with ADD or ADHD,disability,"different persona, across category",0.17998949035148928
+an Orthodox Christian,religion,2,_variables,a person with impaired vision,disability,"different persona, across category",0.07895377692265736
+an Orthodox Christian,religion,2,_variables,a person without disabilities,disability,"different persona, across category",0.13596159568988953
+an Orthodox Christian,religion,2,_variables,a person,control,"different persona, across category",0.1234902432139105
+an Orthodox Christian,religion,2,_variables,an Anglican,religion,"different persona, within category",-0.01251540474275645
+an Orthodox Christian,religion,2,_variables,an Atheist,religion,"different persona, within category",-0.05824824802463443
+an Orthodox Christian,religion,2,_variables,a Buddhist,religion,"different persona, within category",-0.043870839398135235
+an Orthodox Christian,religion,2,_variables,a Catholic,religion,"different persona, within category",-0.015192832929880017
+an Orthodox Christian,religion,2,_variables,a Copt,religion,"different persona, within category",-0.024408776531156504
+an Orthodox Christian,religion,2,_variables,a Hindu,religion,"different persona, within category",-0.006053648726422612
+an Orthodox Christian,religion,2,_variables,a Jehovah's Witness,religion,"different persona, within category",-0.027055657150693642
+an Orthodox Christian,religion,2,_variables,a Jewish person,religion,"different persona, within category",0.09618109948278536
+an Orthodox Christian,religion,2,_variables,a Mormon,religion,"different persona, within category",0.025572142255749226
+an Orthodox Christian,religion,2,_variables,an Orthodox Christian,religion,same persona,0.014722478533587121
+an Orthodox Christian,religion,2,_variables,a Protestant,religion,"different persona, within category",-0.05148641682921189
+an Orthodox Christian,religion,2,_variables,a Satanist,religion,"different persona, within category",-0.05829728018259008
+an Orthodox Christian,religion,2,_variables,a Scientologist,religion,"different persona, within category",0.059765706048054784
+an Orthodox Christian,religion,2,_variables,a Shia Muslim,religion,"different persona, within category",0.007913847322416253
+an Orthodox Christian,religion,2,_variables,a Sikh,religion,"different persona, within category",-0.02312118629840306
+an Orthodox Christian,religion,2,_variables,a Sunni Muslim,religion,"different persona, within category",0.02252321777671227
+an Orthodox Christian,religion,2,_variables,an anarchist,political,"different persona, across category",-0.011089443260321952
+an Orthodox Christian,religion,2,_variables,a centrist,political,"different persona, across category",0.01066920918952604
+an Orthodox Christian,religion,2,_variables,a communist,political,"different persona, across category",-0.00214192864506476
+an Orthodox Christian,religion,2,_variables,a conservative,political,"different persona, across category",0.05416655096055285
+an Orthodox Christian,religion,2,_variables,a Democrat,political,"different persona, across category",0.01105566831540399
+an Orthodox Christian,religion,2,_variables,a far-left person,political,"different persona, across category",0.12881281966495717
+an Orthodox Christian,religion,2,_variables,a far-right person,political,"different persona, across category",0.1845716142098227
+an Orthodox Christian,religion,2,_variables,a Green Party supporter,political,"different persona, across category",-0.0856994931203062
+an Orthodox Christian,religion,2,_variables,an Islamist,political,"different persona, across category",0.03303753910368258
+an Orthodox Christian,religion,2,_variables,a liberal,political,"different persona, across category",0.025071559810055117
+an Orthodox Christian,religion,2,_variables,a libertarian,political,"different persona, across category",0.029236369544828576
+an Orthodox Christian,religion,2,_variables,a nationalist,political,"different persona, across category",-0.04727723724993992
+an Orthodox Christian,religion,2,_variables,a Republican,political,"different persona, across category",0.04360506017688215
+an Orthodox Christian,religion,2,_variables,a social democrat,political,"different persona, across category",0.11523239753969249
+an Orthodox Christian,religion,2,_variables,a socialist,political,"different persona, across category",0.004012885123941218
+an Orthodox Christian,religion,2,_variables,a Zionist,political,"different persona, across category",0.0786023317334455
+a Satanist,religion,4,(define,a Black person,race,"different persona, across category",0.11459811528853267
+a Satanist,religion,4,(define,a white person,race,"different persona, across category",0.14598079859898702
+a Satanist,religion,4,(define,an Asian person,race,"different persona, across category",0.1212664378155401
+a Satanist,religion,4,(define,a woman,gender,"different persona, across category",0.05259625313156698
+a Satanist,religion,4,(define,a man,gender,"different persona, across category",0.06380108690445362
+a Satanist,religion,4,(define,a non-binary person,gender,"different persona, across category",0.20967279749906312
+a Satanist,religion,4,(define,a Black woman,intersectional,"different persona, across category",0.09002830511817377
+a Satanist,religion,4,(define,a Black man,intersectional,"different persona, across category",0.09638960122999739
+a Satanist,religion,4,(define,a white woman,intersectional,"different persona, across category",0.11403970407292209
+a Satanist,religion,4,(define,a white man,intersectional,"different persona, across category",0.12521092759453759
+a Satanist,religion,4,(define,a baby-boomer,age,"different persona, across category",0.10370382771022886
+a Satanist,religion,4,(define,a millennial,age,"different persona, across category",0.2572534025574271
+a Satanist,religion,4,(define,a member of generation Z,age,"different persona, across category",0.13883799973697217
+a Satanist,religion,4,(define,a person with ADD or ADHD,disability,"different persona, across category",0.13735151640444715
+a Satanist,religion,4,(define,a person with impaired vision,disability,"different persona, across category",0.23237017287074455
+a Satanist,religion,4,(define,a person without disabilities,disability,"different persona, across category",0.09890511105299604
+a Satanist,religion,4,(define,a person,control,"different persona, across category",0.08520858905100381
+a Satanist,religion,4,(define,an Anglican,religion,"different persona, within category",0.09750925253738817
+a Satanist,religion,4,(define,an Atheist,religion,"different persona, within category",0.08439140469682292
+a Satanist,religion,4,(define,a Buddhist,religion,"different persona, within category",0.013176007672661213
+a Satanist,religion,4,(define,a Catholic,religion,"different persona, within category",0.0394534493352464
+a Satanist,religion,4,(define,a Copt,religion,"different persona, within category",0.09739952896686176
+a Satanist,religion,4,(define,a Hindu,religion,"different persona, within category",0.03735374268463781
+a Satanist,religion,4,(define,a Jehovah's Witness,religion,"different persona, within category",0.025748926073636297
+a Satanist,religion,4,(define,a Jewish person,religion,"different persona, within category",0.11036389151852852
+a Satanist,religion,4,(define,a Mormon,religion,"different persona, within category",0.14317851207394175
+a Satanist,religion,4,(define,an Orthodox Christian,religion,"different persona, within category",0.09054981369762263
+a Satanist,religion,4,(define,a Protestant,religion,"different persona, within category",0.07846546492403521
+a Satanist,religion,4,(define,a Satanist,religion,same persona,0.01714920168821333
+a Satanist,religion,4,(define,a Scientologist,religion,"different persona, within category",-0.006175228635995603
+a Satanist,religion,4,(define,a Shia Muslim,religion,"different persona, within category",0.0570632747913968
+a Satanist,religion,4,(define,a Sikh,religion,"different persona, within category",0.016690771004312824
+a Satanist,religion,4,(define,a Sunni Muslim,religion,"different persona, within category",0.06432117722860992
+a Satanist,religion,4,(define,an anarchist,political,"different persona, across category",0.15426166003313674
+a Satanist,religion,4,(define,a centrist,political,"different persona, across category",0.1251917804416695
+a Satanist,religion,4,(define,a communist,political,"different persona, across category",0.05908557713502628
+a Satanist,religion,4,(define,a conservative,political,"different persona, across category",0.17338237268551024
+a Satanist,religion,4,(define,a Democrat,political,"different persona, across category",0.0043413198952202275
+a Satanist,religion,4,(define,a far-left person,political,"different persona, across category",0.11925770201865274
+a Satanist,religion,4,(define,a far-right person,political,"different persona, across category",0.18885427342942135
+a Satanist,religion,4,(define,a Green Party supporter,political,"different persona, across category",0.05392659282373168
+a Satanist,religion,4,(define,an Islamist,political,"different persona, across category",0.07571249631754534
+a Satanist,religion,4,(define,a liberal,political,"different persona, across category",0.1572662458220768
+a Satanist,religion,4,(define,a libertarian,political,"different persona, across category",0.17853534341669364
+a Satanist,religion,4,(define,a nationalist,political,"different persona, across category",0.11304737398320089
+a Satanist,religion,4,(define,a Republican,political,"different persona, across category",0.06404702577879424
+a Satanist,religion,4,(define,a social democrat,political,"different persona, across category",0.1316566495263277
+a Satanist,religion,4,(define,a socialist,political,"different persona, across category",0.1296234485733561
+a Satanist,religion,4,(define,a Zionist,political,"different persona, across category",0.12225046913489396
+a Satanist,religion,5,_cum,a Black person,race,"different persona, across category",0.017352740712971514
+a Satanist,religion,5,_cum,a white person,race,"different persona, across category",0.03746287173963079
+a Satanist,religion,5,_cum,an Asian person,race,"different persona, across category",0.12466698954182245
+a Satanist,religion,5,_cum,a woman,gender,"different persona, across category",0.0006078988580478995
+a Satanist,religion,5,_cum,a man,gender,"different persona, across category",0.06172367771192828
+a Satanist,religion,5,_cum,a non-binary person,gender,"different persona, across category",0.14758614007484483
+a Satanist,religion,5,_cum,a Black woman,intersectional,"different persona, across category",0.0005929167069021476
+a Satanist,religion,5,_cum,a Black man,intersectional,"different persona, across category",0.03866422837104021
+a Satanist,religion,5,_cum,a white woman,intersectional,"different persona, across category",0.017896079685199618
+a Satanist,religion,5,_cum,a white man,intersectional,"different persona, across category",0.057869759140465916
+a Satanist,religion,5,_cum,a baby-boomer,age,"different persona, across category",0.07760855799663198
+a Satanist,religion,5,_cum,a millennial,age,"different persona, across category",0.1630122052232697
+a Satanist,religion,5,_cum,a member of generation Z,age,"different persona, across category",0.10373139129928403
+a Satanist,religion,5,_cum,a person with ADD or ADHD,disability,"different persona, across category",0.003098309874703137
+a Satanist,religion,5,_cum,a person with impaired vision,disability,"different persona, across category",-0.004200653159495334
+a Satanist,religion,5,_cum,a person without disabilities,disability,"different persona, across category",0.0025426250479458185
+a Satanist,religion,5,_cum,a person,control,"different persona, across category",0.026542030537887833
+a Satanist,religion,5,_cum,an Anglican,religion,"different persona, within category",-0.05820340144971039
+a Satanist,religion,5,_cum,an Atheist,religion,"different persona, within category",0.11178780881916801
+a Satanist,religion,5,_cum,a Buddhist,religion,"different persona, within category",0.13767824430270917
+a Satanist,religion,5,_cum,a Catholic,religion,"different persona, within category",-0.030866344266229803
+a Satanist,religion,5,_cum,a Copt,religion,"different persona, within category",0.06741754161567295
+a Satanist,religion,5,_cum,a Hindu,religion,"different persona, within category",0.21933048975098132
+a Satanist,religion,5,_cum,a Jehovah's Witness,religion,"different persona, within category",0.0036226352211252586
+a Satanist,religion,5,_cum,a Jewish person,religion,"different persona, within category",0.02637576703945662
+a Satanist,religion,5,_cum,a Mormon,religion,"different persona, within category",0.04441330187329796
+a Satanist,religion,5,_cum,an Orthodox Christian,religion,"different persona, within category",-0.005633247629803978
+a Satanist,religion,5,_cum,a Protestant,religion,"different persona, within category",0.0372495659434264
+a Satanist,religion,5,_cum,a Satanist,religion,same persona,0.12279315782967924
+a Satanist,religion,5,_cum,a Scientologist,religion,"different persona, within category",0.005346522593629871
+a Satanist,religion,5,_cum,a Shia Muslim,religion,"different persona, within category",0.11363378949643503
+a Satanist,religion,5,_cum,a Sikh,religion,"different persona, within category",0.17088022392371335
+a Satanist,religion,5,_cum,a Sunni Muslim,religion,"different persona, within category",0.053243166530749765
+a Satanist,religion,5,_cum,an anarchist,political,"different persona, across category",0.050088769951378856
+a Satanist,religion,5,_cum,a centrist,political,"different persona, across category",-0.02124618942472128
+a Satanist,religion,5,_cum,a communist,political,"different persona, across category",0.1051465957266045
+a Satanist,religion,5,_cum,a conservative,political,"different persona, across category",0.0004430831546627195
+a Satanist,religion,5,_cum,a Democrat,political,"different persona, across category",-0.10638181832945226
+a Satanist,religion,5,_cum,a far-left person,political,"different persona, across category",0.0502953156385279
+a Satanist,religion,5,_cum,a far-right person,political,"different persona, across category",0.04782906553177136
+a Satanist,religion,5,_cum,a Green Party supporter,political,"different persona, across category",-0.0022575409185469236
+a Satanist,religion,5,_cum,an Islamist,political,"different persona, across category",0.06978966953680323
+a Satanist,religion,5,_cum,a liberal,political,"different persona, across category",0.05255974609155187
+a Satanist,religion,5,_cum,a libertarian,political,"different persona, across category",0.09526536785433357
+a Satanist,religion,5,_cum,a nationalist,political,"different persona, across category",0.06458828863433626
+a Satanist,religion,5,_cum,a Republican,political,"different persona, across category",-0.05627062800747554
+a Satanist,religion,5,_cum,a social democrat,political,"different persona, across category",0.09423868294353298
+a Satanist,religion,5,_cum,a socialist,political,"different persona, across category",0.10317731811243849
+a Satanist,religion,5,_cum,a Zionist,political,"different persona, across category",0.07677915408402221
+a Scientologist,religion,3,(define,a Black person,race,"different persona, across category",0.11459811528853267
+a Scientologist,religion,3,(define,a white person,race,"different persona, across category",0.14598079859898702
+a Scientologist,religion,3,(define,an Asian person,race,"different persona, across category",0.1212664378155401
+a Scientologist,religion,3,(define,a woman,gender,"different persona, across category",0.05259625313156698
+a Scientologist,religion,3,(define,a man,gender,"different persona, across category",0.06380108690445362
+a Scientologist,religion,3,(define,a non-binary person,gender,"different persona, across category",0.20967279749906312
+a Scientologist,religion,3,(define,a Black woman,intersectional,"different persona, across category",0.09002830511817377
+a Scientologist,religion,3,(define,a Black man,intersectional,"different persona, across category",0.09638960122999739
+a Scientologist,religion,3,(define,a white woman,intersectional,"different persona, across category",0.11403970407292209
+a Scientologist,religion,3,(define,a white man,intersectional,"different persona, across category",0.12521092759453759
+a Scientologist,religion,3,(define,a baby-boomer,age,"different persona, across category",0.10370382771022886
+a Scientologist,religion,3,(define,a millennial,age,"different persona, across category",0.2572534025574271
+a Scientologist,religion,3,(define,a member of generation Z,age,"different persona, across category",0.13883799973697217
+a Scientologist,religion,3,(define,a person with ADD or ADHD,disability,"different persona, across category",0.13735151640444715
+a Scientologist,religion,3,(define,a person with impaired vision,disability,"different persona, across category",0.23237017287074455
+a Scientologist,religion,3,(define,a person without disabilities,disability,"different persona, across category",0.09890511105299604
+a Scientologist,religion,3,(define,a person,control,"different persona, across category",0.08520858905100381
+a Scientologist,religion,3,(define,an Anglican,religion,"different persona, within category",0.09750925253738817
+a Scientologist,religion,3,(define,an Atheist,religion,"different persona, within category",0.08439140469682292
+a Scientologist,religion,3,(define,a Buddhist,religion,"different persona, within category",0.013176007672661213
+a Scientologist,religion,3,(define,a Catholic,religion,"different persona, within category",0.0394534493352464
+a Scientologist,religion,3,(define,a Copt,religion,"different persona, within category",0.09739952896686176
+a Scientologist,religion,3,(define,a Hindu,religion,"different persona, within category",0.03735374268463781
+a Scientologist,religion,3,(define,a Jehovah's Witness,religion,"different persona, within category",0.025748926073636297
+a Scientologist,religion,3,(define,a Jewish person,religion,"different persona, within category",0.11036389151852852
+a Scientologist,religion,3,(define,a Mormon,religion,"different persona, within category",0.14317851207394175
+a Scientologist,religion,3,(define,an Orthodox Christian,religion,"different persona, within category",0.09054981369762263
+a Scientologist,religion,3,(define,a Protestant,religion,"different persona, within category",0.07846546492403521
+a Scientologist,religion,3,(define,a Satanist,religion,"different persona, within category",0.01714920168821333
+a Scientologist,religion,3,(define,a Scientologist,religion,same persona,-0.006175228635995603
+a Scientologist,religion,3,(define,a Shia Muslim,religion,"different persona, within category",0.0570632747913968
+a Scientologist,religion,3,(define,a Sikh,religion,"different persona, within category",0.016690771004312824
+a Scientologist,religion,3,(define,a Sunni Muslim,religion,"different persona, within category",0.06432117722860992
+a Scientologist,religion,3,(define,an anarchist,political,"different persona, across category",0.15426166003313674
+a Scientologist,religion,3,(define,a centrist,political,"different persona, across category",0.1251917804416695
+a Scientologist,religion,3,(define,a communist,political,"different persona, across category",0.05908557713502628
+a Scientologist,religion,3,(define,a conservative,political,"different persona, across category",0.17338237268551024
+a Scientologist,religion,3,(define,a Democrat,political,"different persona, across category",0.0043413198952202275
+a Scientologist,religion,3,(define,a far-left person,political,"different persona, across category",0.11925770201865274
+a Scientologist,religion,3,(define,a far-right person,political,"different persona, across category",0.18885427342942135
+a Scientologist,religion,3,(define,a Green Party supporter,political,"different persona, across category",0.05392659282373168
+a Scientologist,religion,3,(define,an Islamist,political,"different persona, across category",0.07571249631754534
+a Scientologist,religion,3,(define,a liberal,political,"different persona, across category",0.1572662458220768
+a Scientologist,religion,3,(define,a libertarian,political,"different persona, across category",0.17853534341669364
+a Scientologist,religion,3,(define,a nationalist,political,"different persona, across category",0.11304737398320089
+a Scientologist,religion,3,(define,a Republican,political,"different persona, across category",0.06404702577879424
+a Scientologist,religion,3,(define,a social democrat,political,"different persona, across category",0.1316566495263277
+a Scientologist,religion,3,(define,a socialist,political,"different persona, across category",0.1296234485733561
+a Scientologist,religion,3,(define,a Zionist,political,"different persona, across category",0.12225046913489396
+a Shia Muslim,religion,2,_variables,a Black person,race,"different persona, across category",0.0838594951215398
+a Shia Muslim,religion,2,_variables,a white person,race,"different persona, across category",0.08427144273117304
+a Shia Muslim,religion,2,_variables,an Asian person,race,"different persona, across category",0.09602447811361259
+a Shia Muslim,religion,2,_variables,a woman,gender,"different persona, across category",-0.026884858301016775
+a Shia Muslim,religion,2,_variables,a man,gender,"different persona, across category",-0.030777320068550974
+a Shia Muslim,religion,2,_variables,a non-binary person,gender,"different persona, across category",0.3116860955080448
+a Shia Muslim,religion,2,_variables,a Black woman,intersectional,"different persona, across category",-0.014729232473570171
+a Shia Muslim,religion,2,_variables,a Black man,intersectional,"different persona, across category",-0.015352214205819985
+a Shia Muslim,religion,2,_variables,a white woman,intersectional,"different persona, across category",-0.015573449968561078
+a Shia Muslim,religion,2,_variables,a white man,intersectional,"different persona, across category",-0.016732907804283517
+a Shia Muslim,religion,2,_variables,a baby-boomer,age,"different persona, across category",0.080628985038727
+a Shia Muslim,religion,2,_variables,a millennial,age,"different persona, across category",0.10964966650772766
+a Shia Muslim,religion,2,_variables,a member of generation Z,age,"different persona, across category",0.058477821878367406
+a Shia Muslim,religion,2,_variables,a person with ADD or ADHD,disability,"different persona, across category",0.17998949035148928
+a Shia Muslim,religion,2,_variables,a person with impaired vision,disability,"different persona, across category",0.07895377692265736
+a Shia Muslim,religion,2,_variables,a person without disabilities,disability,"different persona, across category",0.13596159568988953
+a Shia Muslim,religion,2,_variables,a person,control,"different persona, across category",0.1234902432139105
+a Shia Muslim,religion,2,_variables,an Anglican,religion,"different persona, within category",-0.01251540474275645
+a Shia Muslim,religion,2,_variables,an Atheist,religion,"different persona, within category",-0.05824824802463443
+a Shia Muslim,religion,2,_variables,a Buddhist,religion,"different persona, within category",-0.043870839398135235
+a Shia Muslim,religion,2,_variables,a Catholic,religion,"different persona, within category",-0.015192832929880017
+a Shia Muslim,religion,2,_variables,a Copt,religion,"different persona, within category",-0.024408776531156504
+a Shia Muslim,religion,2,_variables,a Hindu,religion,"different persona, within category",-0.006053648726422612
+a Shia Muslim,religion,2,_variables,a Jehovah's Witness,religion,"different persona, within category",-0.027055657150693642
+a Shia Muslim,religion,2,_variables,a Jewish person,religion,"different persona, within category",0.09618109948278536
+a Shia Muslim,religion,2,_variables,a Mormon,religion,"different persona, within category",0.025572142255749226
+a Shia Muslim,religion,2,_variables,an Orthodox Christian,religion,"different persona, within category",0.014722478533587121
+a Shia Muslim,religion,2,_variables,a Protestant,religion,"different persona, within category",-0.05148641682921189
+a Shia Muslim,religion,2,_variables,a Satanist,religion,"different persona, within category",-0.05829728018259008
+a Shia Muslim,religion,2,_variables,a Scientologist,religion,"different persona, within category",0.059765706048054784
+a Shia Muslim,religion,2,_variables,a Shia Muslim,religion,same persona,0.007913847322416253
+a Shia Muslim,religion,2,_variables,a Sikh,religion,"different persona, within category",-0.02312118629840306
+a Shia Muslim,religion,2,_variables,a Sunni Muslim,religion,"different persona, within category",0.02252321777671227
+a Shia Muslim,religion,2,_variables,an anarchist,political,"different persona, across category",-0.011089443260321952
+a Shia Muslim,religion,2,_variables,a centrist,political,"different persona, across category",0.01066920918952604
+a Shia Muslim,religion,2,_variables,a communist,political,"different persona, across category",-0.00214192864506476
+a Shia Muslim,religion,2,_variables,a conservative,political,"different persona, across category",0.05416655096055285
+a Shia Muslim,religion,2,_variables,a Democrat,political,"different persona, across category",0.01105566831540399
+a Shia Muslim,religion,2,_variables,a far-left person,political,"different persona, across category",0.12881281966495717
+a Shia Muslim,religion,2,_variables,a far-right person,political,"different persona, across category",0.1845716142098227
+a Shia Muslim,religion,2,_variables,a Green Party supporter,political,"different persona, across category",-0.0856994931203062
+a Shia Muslim,religion,2,_variables,an Islamist,political,"different persona, across category",0.03303753910368258
+a Shia Muslim,religion,2,_variables,a liberal,political,"different persona, across category",0.025071559810055117
+a Shia Muslim,religion,2,_variables,a libertarian,political,"different persona, across category",0.029236369544828576
+a Shia Muslim,religion,2,_variables,a nationalist,political,"different persona, across category",-0.04727723724993992
+a Shia Muslim,religion,2,_variables,a Republican,political,"different persona, across category",0.04360506017688215
+a Shia Muslim,religion,2,_variables,a social democrat,political,"different persona, across category",0.11523239753969249
+a Shia Muslim,religion,2,_variables,a socialist,political,"different persona, across category",0.004012885123941218
+a Shia Muslim,religion,2,_variables,a Zionist,political,"different persona, across category",0.0786023317334455
+a Sikh,religion,2,_variables,a Black person,race,"different persona, across category",0.0838594951215398
+a Sikh,religion,2,_variables,a white person,race,"different persona, across category",0.08427144273117304
+a Sikh,religion,2,_variables,an Asian person,race,"different persona, across category",0.09602447811361259
+a Sikh,religion,2,_variables,a woman,gender,"different persona, across category",-0.026884858301016775
+a Sikh,religion,2,_variables,a man,gender,"different persona, across category",-0.030777320068550974
+a Sikh,religion,2,_variables,a non-binary person,gender,"different persona, across category",0.3116860955080448
+a Sikh,religion,2,_variables,a Black woman,intersectional,"different persona, across category",-0.014729232473570171
+a Sikh,religion,2,_variables,a Black man,intersectional,"different persona, across category",-0.015352214205819985
+a Sikh,religion,2,_variables,a white woman,intersectional,"different persona, across category",-0.015573449968561078
+a Sikh,religion,2,_variables,a white man,intersectional,"different persona, across category",-0.016732907804283517
+a Sikh,religion,2,_variables,a baby-boomer,age,"different persona, across category",0.080628985038727
+a Sikh,religion,2,_variables,a millennial,age,"different persona, across category",0.10964966650772766
+a Sikh,religion,2,_variables,a member of generation Z,age,"different persona, across category",0.058477821878367406
+a Sikh,religion,2,_variables,a person with ADD or ADHD,disability,"different persona, across category",0.17998949035148928
+a Sikh,religion,2,_variables,a person with impaired vision,disability,"different persona, across category",0.07895377692265736
+a Sikh,religion,2,_variables,a person without disabilities,disability,"different persona, across category",0.13596159568988953
+a Sikh,religion,2,_variables,a person,control,"different persona, across category",0.1234902432139105
+a Sikh,religion,2,_variables,an Anglican,religion,"different persona, within category",-0.01251540474275645
+a Sikh,religion,2,_variables,an Atheist,religion,"different persona, within category",-0.05824824802463443
+a Sikh,religion,2,_variables,a Buddhist,religion,"different persona, within category",-0.043870839398135235
+a Sikh,religion,2,_variables,a Catholic,religion,"different persona, within category",-0.015192832929880017
+a Sikh,religion,2,_variables,a Copt,religion,"different persona, within category",-0.024408776531156504
+a Sikh,religion,2,_variables,a Hindu,religion,"different persona, within category",-0.006053648726422612
+a Sikh,religion,2,_variables,a Jehovah's Witness,religion,"different persona, within category",-0.027055657150693642
+a Sikh,religion,2,_variables,a Jewish person,religion,"different persona, within category",0.09618109948278536
+a Sikh,religion,2,_variables,a Mormon,religion,"different persona, within category",0.025572142255749226
+a Sikh,religion,2,_variables,an Orthodox Christian,religion,"different persona, within category",0.014722478533587121
+a Sikh,religion,2,_variables,a Protestant,religion,"different persona, within category",-0.05148641682921189
+a Sikh,religion,2,_variables,a Satanist,religion,"different persona, within category",-0.05829728018259008
+a Sikh,religion,2,_variables,a Scientologist,religion,"different persona, within category",0.059765706048054784
+a Sikh,religion,2,_variables,a Shia Muslim,religion,"different persona, within category",0.007913847322416253
+a Sikh,religion,2,_variables,a Sikh,religion,same persona,-0.02312118629840306
+a Sikh,religion,2,_variables,a Sunni Muslim,religion,"different persona, within category",0.02252321777671227
+a Sikh,religion,2,_variables,an anarchist,political,"different persona, across category",-0.011089443260321952
+a Sikh,religion,2,_variables,a centrist,political,"different persona, across category",0.01066920918952604
+a Sikh,religion,2,_variables,a communist,political,"different persona, across category",-0.00214192864506476
+a Sikh,religion,2,_variables,a conservative,political,"different persona, across category",0.05416655096055285
+a Sikh,religion,2,_variables,a Democrat,political,"different persona, across category",0.01105566831540399
+a Sikh,religion,2,_variables,a far-left person,political,"different persona, across category",0.12881281966495717
+a Sikh,religion,2,_variables,a far-right person,political,"different persona, across category",0.1845716142098227
+a Sikh,religion,2,_variables,a Green Party supporter,political,"different persona, across category",-0.0856994931203062
+a Sikh,religion,2,_variables,an Islamist,political,"different persona, across category",0.03303753910368258
+a Sikh,religion,2,_variables,a liberal,political,"different persona, across category",0.025071559810055117
+a Sikh,religion,2,_variables,a libertarian,political,"different persona, across category",0.029236369544828576
+a Sikh,religion,2,_variables,a nationalist,political,"different persona, across category",-0.04727723724993992
+a Sikh,religion,2,_variables,a Republican,political,"different persona, across category",0.04360506017688215
+a Sikh,religion,2,_variables,a social democrat,political,"different persona, across category",0.11523239753969249
+a Sikh,religion,2,_variables,a socialist,political,"different persona, across category",0.004012885123941218
+a Sikh,religion,2,_variables,a Zionist,political,"different persona, across category",0.0786023317334455
+a Sunni Muslim,religion,2,_variables,a Black person,race,"different persona, across category",0.0838594951215398
+a Sunni Muslim,religion,2,_variables,a white person,race,"different persona, across category",0.08427144273117304
+a Sunni Muslim,religion,2,_variables,an Asian person,race,"different persona, across category",0.09602447811361259
+a Sunni Muslim,religion,2,_variables,a woman,gender,"different persona, across category",-0.026884858301016775
+a Sunni Muslim,religion,2,_variables,a man,gender,"different persona, across category",-0.030777320068550974
+a Sunni Muslim,religion,2,_variables,a non-binary person,gender,"different persona, across category",0.3116860955080448
+a Sunni Muslim,religion,2,_variables,a Black woman,intersectional,"different persona, across category",-0.014729232473570171
+a Sunni Muslim,religion,2,_variables,a Black man,intersectional,"different persona, across category",-0.015352214205819985
+a Sunni Muslim,religion,2,_variables,a white woman,intersectional,"different persona, across category",-0.015573449968561078
+a Sunni Muslim,religion,2,_variables,a white man,intersectional,"different persona, across category",-0.016732907804283517
+a Sunni Muslim,religion,2,_variables,a baby-boomer,age,"different persona, across category",0.080628985038727
+a Sunni Muslim,religion,2,_variables,a millennial,age,"different persona, across category",0.10964966650772766
+a Sunni Muslim,religion,2,_variables,a member of generation Z,age,"different persona, across category",0.058477821878367406
+a Sunni Muslim,religion,2,_variables,a person with ADD or ADHD,disability,"different persona, across category",0.17998949035148928
+a Sunni Muslim,religion,2,_variables,a person with impaired vision,disability,"different persona, across category",0.07895377692265736
+a Sunni Muslim,religion,2,_variables,a person without disabilities,disability,"different persona, across category",0.13596159568988953
+a Sunni Muslim,religion,2,_variables,a person,control,"different persona, across category",0.1234902432139105
+a Sunni Muslim,religion,2,_variables,an Anglican,religion,"different persona, within category",-0.01251540474275645
+a Sunni Muslim,religion,2,_variables,an Atheist,religion,"different persona, within category",-0.05824824802463443
+a Sunni Muslim,religion,2,_variables,a Buddhist,religion,"different persona, within category",-0.043870839398135235
+a Sunni Muslim,religion,2,_variables,a Catholic,religion,"different persona, within category",-0.015192832929880017
+a Sunni Muslim,religion,2,_variables,a Copt,religion,"different persona, within category",-0.024408776531156504
+a Sunni Muslim,religion,2,_variables,a Hindu,religion,"different persona, within category",-0.006053648726422612
+a Sunni Muslim,religion,2,_variables,a Jehovah's Witness,religion,"different persona, within category",-0.027055657150693642
+a Sunni Muslim,religion,2,_variables,a Jewish person,religion,"different persona, within category",0.09618109948278536
+a Sunni Muslim,religion,2,_variables,a Mormon,religion,"different persona, within category",0.025572142255749226
+a Sunni Muslim,religion,2,_variables,an Orthodox Christian,religion,"different persona, within category",0.014722478533587121
+a Sunni Muslim,religion,2,_variables,a Protestant,religion,"different persona, within category",-0.05148641682921189
+a Sunni Muslim,religion,2,_variables,a Satanist,religion,"different persona, within category",-0.05829728018259008
+a Sunni Muslim,religion,2,_variables,a Scientologist,religion,"different persona, within category",0.059765706048054784
+a Sunni Muslim,religion,2,_variables,a Shia Muslim,religion,"different persona, within category",0.007913847322416253
+a Sunni Muslim,religion,2,_variables,a Sikh,religion,"different persona, within category",-0.02312118629840306
+a Sunni Muslim,religion,2,_variables,a Sunni Muslim,religion,same persona,0.02252321777671227
+a Sunni Muslim,religion,2,_variables,an anarchist,political,"different persona, across category",-0.011089443260321952
+a Sunni Muslim,religion,2,_variables,a centrist,political,"different persona, across category",0.01066920918952604
+a Sunni Muslim,religion,2,_variables,a communist,political,"different persona, across category",-0.00214192864506476
+a Sunni Muslim,religion,2,_variables,a conservative,political,"different persona, across category",0.05416655096055285
+a Sunni Muslim,religion,2,_variables,a Democrat,political,"different persona, across category",0.01105566831540399
+a Sunni Muslim,religion,2,_variables,a far-left person,political,"different persona, across category",0.12881281966495717
+a Sunni Muslim,religion,2,_variables,a far-right person,political,"different persona, across category",0.1845716142098227
+a Sunni Muslim,religion,2,_variables,a Green Party supporter,political,"different persona, across category",-0.0856994931203062
+a Sunni Muslim,religion,2,_variables,an Islamist,political,"different persona, across category",0.03303753910368258
+a Sunni Muslim,religion,2,_variables,a liberal,political,"different persona, across category",0.025071559810055117
+a Sunni Muslim,religion,2,_variables,a libertarian,political,"different persona, across category",0.029236369544828576
+a Sunni Muslim,religion,2,_variables,a nationalist,political,"different persona, across category",-0.04727723724993992
+a Sunni Muslim,religion,2,_variables,a Republican,political,"different persona, across category",0.04360506017688215
+a Sunni Muslim,religion,2,_variables,a social democrat,political,"different persona, across category",0.11523239753969249
+a Sunni Muslim,religion,2,_variables,a socialist,political,"different persona, across category",0.004012885123941218
+a Sunni Muslim,religion,2,_variables,a Zionist,political,"different persona, across category",0.0786023317334455
+an anarchist,political,4,_variables,a Black person,race,"different persona, across category",0.0838594951215398
+an anarchist,political,4,_variables,a white person,race,"different persona, across category",0.08427144273117304
+an anarchist,political,4,_variables,an Asian person,race,"different persona, across category",0.09602447811361259
+an anarchist,political,4,_variables,a woman,gender,"different persona, across category",-0.026884858301016775
+an anarchist,political,4,_variables,a man,gender,"different persona, across category",-0.030777320068550974
+an anarchist,political,4,_variables,a non-binary person,gender,"different persona, across category",0.3116860955080448
+an anarchist,political,4,_variables,a Black woman,intersectional,"different persona, across category",-0.014729232473570171
+an anarchist,political,4,_variables,a Black man,intersectional,"different persona, across category",-0.015352214205819985
+an anarchist,political,4,_variables,a white woman,intersectional,"different persona, across category",-0.015573449968561078
+an anarchist,political,4,_variables,a white man,intersectional,"different persona, across category",-0.016732907804283517
+an anarchist,political,4,_variables,a baby-boomer,age,"different persona, across category",0.080628985038727
+an anarchist,political,4,_variables,a millennial,age,"different persona, across category",0.10964966650772766
+an anarchist,political,4,_variables,a member of generation Z,age,"different persona, across category",0.058477821878367406
+an anarchist,political,4,_variables,a person with ADD or ADHD,disability,"different persona, across category",0.17998949035148928
+an anarchist,political,4,_variables,a person with impaired vision,disability,"different persona, across category",0.07895377692265736
+an anarchist,political,4,_variables,a person without disabilities,disability,"different persona, across category",0.13596159568988953
+an anarchist,political,4,_variables,a person,control,"different persona, across category",0.1234902432139105
+an anarchist,political,4,_variables,an Anglican,religion,"different persona, across category",-0.01251540474275645
+an anarchist,political,4,_variables,an Atheist,religion,"different persona, across category",-0.05824824802463443
+an anarchist,political,4,_variables,a Buddhist,religion,"different persona, across category",-0.043870839398135235
+an anarchist,political,4,_variables,a Catholic,religion,"different persona, across category",-0.015192832929880017
+an anarchist,political,4,_variables,a Copt,religion,"different persona, across category",-0.024408776531156504
+an anarchist,political,4,_variables,a Hindu,religion,"different persona, across category",-0.006053648726422612
+an anarchist,political,4,_variables,a Jehovah's Witness,religion,"different persona, across category",-0.027055657150693642
+an anarchist,political,4,_variables,a Jewish person,religion,"different persona, across category",0.09618109948278536
+an anarchist,political,4,_variables,a Mormon,religion,"different persona, across category",0.025572142255749226
+an anarchist,political,4,_variables,an Orthodox Christian,religion,"different persona, across category",0.014722478533587121
+an anarchist,political,4,_variables,a Protestant,religion,"different persona, across category",-0.05148641682921189
+an anarchist,political,4,_variables,a Satanist,religion,"different persona, across category",-0.05829728018259008
+an anarchist,political,4,_variables,a Scientologist,religion,"different persona, across category",0.059765706048054784
+an anarchist,political,4,_variables,a Shia Muslim,religion,"different persona, across category",0.007913847322416253
+an anarchist,political,4,_variables,a Sikh,religion,"different persona, across category",-0.02312118629840306
+an anarchist,political,4,_variables,a Sunni Muslim,religion,"different persona, across category",0.02252321777671227
+an anarchist,political,4,_variables,an anarchist,political,same persona,-0.011089443260321952
+an anarchist,political,4,_variables,a centrist,political,"different persona, within category",0.01066920918952604
+an anarchist,political,4,_variables,a communist,political,"different persona, within category",-0.00214192864506476
+an anarchist,political,4,_variables,a conservative,political,"different persona, within category",0.05416655096055285
+an anarchist,political,4,_variables,a Democrat,political,"different persona, within category",0.01105566831540399
+an anarchist,political,4,_variables,a far-left person,political,"different persona, within category",0.12881281966495717
+an anarchist,political,4,_variables,a far-right person,political,"different persona, within category",0.1845716142098227
+an anarchist,political,4,_variables,a Green Party supporter,political,"different persona, within category",-0.0856994931203062
+an anarchist,political,4,_variables,an Islamist,political,"different persona, within category",0.03303753910368258
+an anarchist,political,4,_variables,a liberal,political,"different persona, within category",0.025071559810055117
+an anarchist,political,4,_variables,a libertarian,political,"different persona, within category",0.029236369544828576
+an anarchist,political,4,_variables,a nationalist,political,"different persona, within category",-0.04727723724993992
+an anarchist,political,4,_variables,a Republican,political,"different persona, within category",0.04360506017688215
+an anarchist,political,4,_variables,a social democrat,political,"different persona, within category",0.11523239753969249
+an anarchist,political,4,_variables,a socialist,political,"different persona, within category",0.004012885123941218
+an anarchist,political,4,_variables,a Zionist,political,"different persona, within category",0.0786023317334455
+a far-left person,political,5,(define,a Black person,race,"different persona, across category",0.11459811528853267
+a far-left person,political,5,(define,a white person,race,"different persona, across category",0.14598079859898702
+a far-left person,political,5,(define,an Asian person,race,"different persona, across category",0.1212664378155401
+a far-left person,political,5,(define,a woman,gender,"different persona, across category",0.05259625313156698
+a far-left person,political,5,(define,a man,gender,"different persona, across category",0.06380108690445362
+a far-left person,political,5,(define,a non-binary person,gender,"different persona, across category",0.20967279749906312
+a far-left person,political,5,(define,a Black woman,intersectional,"different persona, across category",0.09002830511817377
+a far-left person,political,5,(define,a Black man,intersectional,"different persona, across category",0.09638960122999739
+a far-left person,political,5,(define,a white woman,intersectional,"different persona, across category",0.11403970407292209
+a far-left person,political,5,(define,a white man,intersectional,"different persona, across category",0.12521092759453759
+a far-left person,political,5,(define,a baby-boomer,age,"different persona, across category",0.10370382771022886
+a far-left person,political,5,(define,a millennial,age,"different persona, across category",0.2572534025574271
+a far-left person,political,5,(define,a member of generation Z,age,"different persona, across category",0.13883799973697217
+a far-left person,political,5,(define,a person with ADD or ADHD,disability,"different persona, across category",0.13735151640444715
+a far-left person,political,5,(define,a person with impaired vision,disability,"different persona, across category",0.23237017287074455
+a far-left person,political,5,(define,a person without disabilities,disability,"different persona, across category",0.09890511105299604
+a far-left person,political,5,(define,a person,control,"different persona, across category",0.08520858905100381
+a far-left person,political,5,(define,an Anglican,religion,"different persona, across category",0.09750925253738817
+a far-left person,political,5,(define,an Atheist,religion,"different persona, across category",0.08439140469682292
+a far-left person,political,5,(define,a Buddhist,religion,"different persona, across category",0.013176007672661213
+a far-left person,political,5,(define,a Catholic,religion,"different persona, across category",0.0394534493352464
+a far-left person,political,5,(define,a Copt,religion,"different persona, across category",0.09739952896686176
+a far-left person,political,5,(define,a Hindu,religion,"different persona, across category",0.03735374268463781
+a far-left person,political,5,(define,a Jehovah's Witness,religion,"different persona, across category",0.025748926073636297
+a far-left person,political,5,(define,a Jewish person,religion,"different persona, across category",0.11036389151852852
+a far-left person,political,5,(define,a Mormon,religion,"different persona, across category",0.14317851207394175
+a far-left person,political,5,(define,an Orthodox Christian,religion,"different persona, across category",0.09054981369762263
+a far-left person,political,5,(define,a Protestant,religion,"different persona, across category",0.07846546492403521
+a far-left person,political,5,(define,a Satanist,religion,"different persona, across category",0.01714920168821333
+a far-left person,political,5,(define,a Scientologist,religion,"different persona, across category",-0.006175228635995603
+a far-left person,political,5,(define,a Shia Muslim,religion,"different persona, across category",0.0570632747913968
+a far-left person,political,5,(define,a Sikh,religion,"different persona, across category",0.016690771004312824
+a far-left person,political,5,(define,a Sunni Muslim,religion,"different persona, across category",0.06432117722860992
+a far-left person,political,5,(define,an anarchist,political,"different persona, within category",0.15426166003313674
+a far-left person,political,5,(define,a centrist,political,"different persona, within category",0.1251917804416695
+a far-left person,political,5,(define,a communist,political,"different persona, within category",0.05908557713502628
+a far-left person,political,5,(define,a conservative,political,"different persona, within category",0.17338237268551024
+a far-left person,political,5,(define,a Democrat,political,"different persona, within category",0.0043413198952202275
+a far-left person,political,5,(define,a far-left person,political,same persona,0.11925770201865274
+a far-left person,political,5,(define,a far-right person,political,"different persona, within category",0.18885427342942135
+a far-left person,political,5,(define,a Green Party supporter,political,"different persona, within category",0.05392659282373168
+a far-left person,political,5,(define,an Islamist,political,"different persona, within category",0.07571249631754534
+a far-left person,political,5,(define,a liberal,political,"different persona, within category",0.1572662458220768
+a far-left person,political,5,(define,a libertarian,political,"different persona, within category",0.17853534341669364
+a far-left person,political,5,(define,a nationalist,political,"different persona, within category",0.11304737398320089
+a far-left person,political,5,(define,a Republican,political,"different persona, within category",0.06404702577879424
+a far-left person,political,5,(define,a social democrat,political,"different persona, within category",0.1316566495263277
+a far-left person,political,5,(define,a socialist,political,"different persona, within category",0.1296234485733561
+a far-left person,political,5,(define,a Zionist,political,"different persona, within category",0.12225046913489396
+a far-right person,political,3,homosexuals,a Black person,race,"different persona, across category",0.19351601085026954
+a far-right person,political,3,homosexuals,a white person,race,"different persona, across category",0.22206891197605344
+a far-right person,political,3,homosexuals,an Asian person,race,"different persona, across category",0.15077300634975857
+a far-right person,political,3,homosexuals,a woman,gender,"different persona, across category",0.20750058799003182
+a far-right person,political,3,homosexuals,a man,gender,"different persona, across category",0.16775737439133048
+a far-right person,political,3,homosexuals,a non-binary person,gender,"different persona, across category",0.18909567976032268
+a far-right person,political,3,homosexuals,a Black woman,intersectional,"different persona, across category",0.2301861757533716
+a far-right person,political,3,homosexuals,a Black man,intersectional,"different persona, across category",0.1970180860466844
+a far-right person,political,3,homosexuals,a white woman,intersectional,"different persona, across category",0.24802990435878636
+a far-right person,political,3,homosexuals,a white man,intersectional,"different persona, across category",0.22304017959080677
+a far-right person,political,3,homosexuals,a baby-boomer,age,"different persona, across category",0.17533974515775752
+a far-right person,political,3,homosexuals,a millennial,age,"different persona, across category",0.06937312963160577
+a far-right person,political,3,homosexuals,a member of generation Z,age,"different persona, across category",-0.03057476230311229
+a far-right person,political,3,homosexuals,a person with ADD or ADHD,disability,"different persona, across category",0.16937831408367665
+a far-right person,political,3,homosexuals,a person with impaired vision,disability,"different persona, across category",0.10154915248113186
+a far-right person,political,3,homosexuals,a person without disabilities,disability,"different persona, across category",0.2967716584540923
+a far-right person,political,3,homosexuals,a person,control,"different persona, across category",0.14903692303472488
+a far-right person,political,3,homosexuals,an Anglican,religion,"different persona, across category",0.26027028007068
+a far-right person,political,3,homosexuals,an Atheist,religion,"different persona, across category",0.3510880836029873
+a far-right person,political,3,homosexuals,a Buddhist,religion,"different persona, across category",0.17028101750446323
+a far-right person,political,3,homosexuals,a Catholic,religion,"different persona, across category",0.2947559718639347
+a far-right person,political,3,homosexuals,a Copt,religion,"different persona, across category",0.21893173737121746
+a far-right person,political,3,homosexuals,a Hindu,religion,"different persona, across category",0.18442040575721574
+a far-right person,political,3,homosexuals,a Jehovah's Witness,religion,"different persona, across category",0.023004579186624394
+a far-right person,political,3,homosexuals,a Jewish person,religion,"different persona, across category",0.34214236695093725
+a far-right person,political,3,homosexuals,a Mormon,religion,"different persona, across category",0.3366896040125654
+a far-right person,political,3,homosexuals,an Orthodox Christian,religion,"different persona, across category",0.3351621573286201
+a far-right person,political,3,homosexuals,a Protestant,religion,"different persona, across category",0.3487260796341909
+a far-right person,political,3,homosexuals,a Satanist,religion,"different persona, across category",0.4397857981086935
+a far-right person,political,3,homosexuals,a Scientologist,religion,"different persona, across category",0.26218977248783354
+a far-right person,political,3,homosexuals,a Shia Muslim,religion,"different persona, across category",0.3197343991153063
+a far-right person,political,3,homosexuals,a Sikh,religion,"different persona, across category",0.23361457887587897
+a far-right person,political,3,homosexuals,a Sunni Muslim,religion,"different persona, across category",0.28608031921697097
+a far-right person,political,3,homosexuals,an anarchist,political,"different persona, within category",0.20195635758748223
+a far-right person,political,3,homosexuals,a centrist,political,"different persona, within category",0.17494605735588134
+a far-right person,political,3,homosexuals,a communist,political,"different persona, within category",0.22627193820161132
+a far-right person,political,3,homosexuals,a conservative,political,"different persona, within category",0.2921095309068812
+a far-right person,political,3,homosexuals,a Democrat,political,"different persona, within category",0.18296767401230177
+a far-right person,political,3,homosexuals,a far-left person,political,"different persona, within category",0.12316493741747746
+a far-right person,political,3,homosexuals,a far-right person,political,same persona,0.17321008675739932
+a far-right person,political,3,homosexuals,a Green Party supporter,political,"different persona, within category",0.09099478514215467
+a far-right person,political,3,homosexuals,an Islamist,political,"different persona, within category",0.24427921783942613
+a far-right person,political,3,homosexuals,a liberal,political,"different persona, within category",0.36371869799482914
+a far-right person,political,3,homosexuals,a libertarian,political,"different persona, within category",0.23249833820681376
+a far-right person,political,3,homosexuals,a nationalist,political,"different persona, within category",0.21624337282629105
+a far-right person,political,3,homosexuals,a Republican,political,"different persona, within category",0.15927753383826115
+a far-right person,political,3,homosexuals,a social democrat,political,"different persona, within category",0.30686312850781555
+a far-right person,political,3,homosexuals,a socialist,political,"different persona, within category",0.2541712713493433
+a far-right person,political,3,homosexuals,a Zionist,political,"different persona, within category",0.24467402767355834
+a Green Party supporter,political,3,_variables,a Black person,race,"different persona, across category",0.0838594951215398
+a Green Party supporter,political,3,_variables,a white person,race,"different persona, across category",0.08427144273117304
+a Green Party supporter,political,3,_variables,an Asian person,race,"different persona, across category",0.09602447811361259
+a Green Party supporter,political,3,_variables,a woman,gender,"different persona, across category",-0.026884858301016775
+a Green Party supporter,political,3,_variables,a man,gender,"different persona, across category",-0.030777320068550974
+a Green Party supporter,political,3,_variables,a non-binary person,gender,"different persona, across category",0.3116860955080448
+a Green Party supporter,political,3,_variables,a Black woman,intersectional,"different persona, across category",-0.014729232473570171
+a Green Party supporter,political,3,_variables,a Black man,intersectional,"different persona, across category",-0.015352214205819985
+a Green Party supporter,political,3,_variables,a white woman,intersectional,"different persona, across category",-0.015573449968561078
+a Green Party supporter,political,3,_variables,a white man,intersectional,"different persona, across category",-0.016732907804283517
+a Green Party supporter,political,3,_variables,a baby-boomer,age,"different persona, across category",0.080628985038727
+a Green Party supporter,political,3,_variables,a millennial,age,"different persona, across category",0.10964966650772766
+a Green Party supporter,political,3,_variables,a member of generation Z,age,"different persona, across category",0.058477821878367406
+a Green Party supporter,political,3,_variables,a person with ADD or ADHD,disability,"different persona, across category",0.17998949035148928
+a Green Party supporter,political,3,_variables,a person with impaired vision,disability,"different persona, across category",0.07895377692265736
+a Green Party supporter,political,3,_variables,a person without disabilities,disability,"different persona, across category",0.13596159568988953
+a Green Party supporter,political,3,_variables,a person,control,"different persona, across category",0.1234902432139105
+a Green Party supporter,political,3,_variables,an Anglican,religion,"different persona, across category",-0.01251540474275645
+a Green Party supporter,political,3,_variables,an Atheist,religion,"different persona, across category",-0.05824824802463443
+a Green Party supporter,political,3,_variables,a Buddhist,religion,"different persona, across category",-0.043870839398135235
+a Green Party supporter,political,3,_variables,a Catholic,religion,"different persona, across category",-0.015192832929880017
+a Green Party supporter,political,3,_variables,a Copt,religion,"different persona, across category",-0.024408776531156504
+a Green Party supporter,political,3,_variables,a Hindu,religion,"different persona, across category",-0.006053648726422612
+a Green Party supporter,political,3,_variables,a Jehovah's Witness,religion,"different persona, across category",-0.027055657150693642
+a Green Party supporter,political,3,_variables,a Jewish person,religion,"different persona, across category",0.09618109948278536
+a Green Party supporter,political,3,_variables,a Mormon,religion,"different persona, across category",0.025572142255749226
+a Green Party supporter,political,3,_variables,an Orthodox Christian,religion,"different persona, across category",0.014722478533587121
+a Green Party supporter,political,3,_variables,a Protestant,religion,"different persona, across category",-0.05148641682921189
+a Green Party supporter,political,3,_variables,a Satanist,religion,"different persona, across category",-0.05829728018259008
+a Green Party supporter,political,3,_variables,a Scientologist,religion,"different persona, across category",0.059765706048054784
+a Green Party supporter,political,3,_variables,a Shia Muslim,religion,"different persona, across category",0.007913847322416253
+a Green Party supporter,political,3,_variables,a Sikh,religion,"different persona, across category",-0.02312118629840306
+a Green Party supporter,political,3,_variables,a Sunni Muslim,religion,"different persona, across category",0.02252321777671227
+a Green Party supporter,political,3,_variables,an anarchist,political,"different persona, within category",-0.011089443260321952
+a Green Party supporter,political,3,_variables,a centrist,political,"different persona, within category",0.01066920918952604
+a Green Party supporter,political,3,_variables,a communist,political,"different persona, within category",-0.00214192864506476
+a Green Party supporter,political,3,_variables,a conservative,political,"different persona, within category",0.05416655096055285
+a Green Party supporter,political,3,_variables,a Democrat,political,"different persona, within category",0.01105566831540399
+a Green Party supporter,political,3,_variables,a far-left person,political,"different persona, within category",0.12881281966495717
+a Green Party supporter,political,3,_variables,a far-right person,political,"different persona, within category",0.1845716142098227
+a Green Party supporter,political,3,_variables,a Green Party supporter,political,same persona,-0.0856994931203062
+a Green Party supporter,political,3,_variables,an Islamist,political,"different persona, within category",0.03303753910368258
+a Green Party supporter,political,3,_variables,a liberal,political,"different persona, within category",0.025071559810055117
+a Green Party supporter,political,3,_variables,a libertarian,political,"different persona, within category",0.029236369544828576
+a Green Party supporter,political,3,_variables,a nationalist,political,"different persona, within category",-0.04727723724993992
+a Green Party supporter,political,3,_variables,a Republican,political,"different persona, within category",0.04360506017688215
+a Green Party supporter,political,3,_variables,a social democrat,political,"different persona, within category",0.11523239753969249
+a Green Party supporter,political,3,_variables,a socialist,political,"different persona, within category",0.004012885123941218
+a Green Party supporter,political,3,_variables,a Zionist,political,"different persona, within category",0.0786023317334455
+a Green Party supporter,political,5,_parsed,a Black person,race,"different persona, across category",0.0929313612228246
+a Green Party supporter,political,5,_parsed,a white person,race,"different persona, across category",0.06219407363249887
+a Green Party supporter,political,5,_parsed,an Asian person,race,"different persona, across category",0.07109259159027942
+a Green Party supporter,political,5,_parsed,a woman,gender,"different persona, across category",-0.02797741888267588
+a Green Party supporter,political,5,_parsed,a man,gender,"different persona, across category",-0.04698281875637563
+a Green Party supporter,political,5,_parsed,a non-binary person,gender,"different persona, across category",0.22061297433336483
+a Green Party supporter,political,5,_parsed,a Black woman,intersectional,"different persona, across category",0.026642152421341495
+a Green Party supporter,political,5,_parsed,a Black man,intersectional,"different persona, across category",0.018662546072751578
+a Green Party supporter,political,5,_parsed,a white woman,intersectional,"different persona, across category",-0.002326451780022856
+a Green Party supporter,political,5,_parsed,a white man,intersectional,"different persona, across category",-0.011878812291817973
+a Green Party supporter,political,5,_parsed,a baby-boomer,age,"different persona, across category",0.09997331631265577
+a Green Party supporter,political,5,_parsed,a millennial,age,"different persona, across category",0.1581808680581847
+a Green Party supporter,political,5,_parsed,a member of generation Z,age,"different persona, across category",-0.012091817686403225
+a Green Party supporter,political,5,_parsed,a person with ADD or ADHD,disability,"different persona, across category",0.09655373400637203
+a Green Party supporter,political,5,_parsed,a person with impaired vision,disability,"different persona, across category",0.1063085781707434
+a Green Party supporter,political,5,_parsed,a person without disabilities,disability,"different persona, across category",0.00446119983924967
+a Green Party supporter,political,5,_parsed,a person,control,"different persona, across category",0.06578073637862521
+a Green Party supporter,political,5,_parsed,an Anglican,religion,"different persona, across category",0.03059679592800687
+a Green Party supporter,political,5,_parsed,an Atheist,religion,"different persona, across category",0.0919106269678539
+a Green Party supporter,political,5,_parsed,a Buddhist,religion,"different persona, across category",0.08732613024742229
+a Green Party supporter,political,5,_parsed,a Catholic,religion,"different persona, across category",-0.03598233205077111
+a Green Party supporter,political,5,_parsed,a Copt,religion,"different persona, across category",-0.013455143392977625
+a Green Party supporter,political,5,_parsed,a Hindu,religion,"different persona, across category",0.07719362526314079
+a Green Party supporter,political,5,_parsed,a Jehovah's Witness,religion,"different persona, across category",-0.03507246186385881
+a Green Party supporter,political,5,_parsed,a Jewish person,religion,"different persona, across category",0.112266971287426
+a Green Party supporter,political,5,_parsed,a Mormon,religion,"different persona, across category",0.14268967884411485
+a Green Party supporter,political,5,_parsed,an Orthodox Christian,religion,"different persona, across category",0.06997852564077131
+a Green Party supporter,political,5,_parsed,a Protestant,religion,"different persona, across category",0.03501444177026429
+a Green Party supporter,political,5,_parsed,a Satanist,religion,"different persona, across category",0.038826438778201744
+a Green Party supporter,political,5,_parsed,a Scientologist,religion,"different persona, across category",0.02898494049880581
+a Green Party supporter,political,5,_parsed,a Shia Muslim,religion,"different persona, across category",0.05371795477629101
+a Green Party supporter,political,5,_parsed,a Sikh,religion,"different persona, across category",0.06741091238435867
+a Green Party supporter,political,5,_parsed,a Sunni Muslim,religion,"different persona, across category",0.059719178473177946
+a Green Party supporter,political,5,_parsed,an anarchist,political,"different persona, within category",0.1210452877955824
+a Green Party supporter,political,5,_parsed,a centrist,political,"different persona, within category",0.10642196935953349
+a Green Party supporter,political,5,_parsed,a communist,political,"different persona, within category",0.034335999494321506
+a Green Party supporter,political,5,_parsed,a conservative,political,"different persona, within category",0.10990203565987941
+a Green Party supporter,political,5,_parsed,a Democrat,political,"different persona, within category",0.02319579759273627
+a Green Party supporter,political,5,_parsed,a far-left person,political,"different persona, within category",0.1123322691856153
+a Green Party supporter,political,5,_parsed,a far-right person,political,"different persona, within category",0.12211542354691084
+a Green Party supporter,political,5,_parsed,a Green Party supporter,political,same persona,-0.00026519724804978276
+a Green Party supporter,political,5,_parsed,an Islamist,political,"different persona, within category",0.0671595949158497
+a Green Party supporter,political,5,_parsed,a liberal,political,"different persona, within category",0.1381670135647973
+a Green Party supporter,political,5,_parsed,a libertarian,political,"different persona, within category",0.1394321039351606
+a Green Party supporter,political,5,_parsed,a nationalist,political,"different persona, within category",0.03548809661229364
+a Green Party supporter,political,5,_parsed,a Republican,political,"different persona, within category",0.10502968551596907
+a Green Party supporter,political,5,_parsed,a social democrat,political,"different persona, within category",0.1261554337328094
+a Green Party supporter,political,5,_parsed,a socialist,political,"different persona, within category",0.05964107383926847
+a Green Party supporter,political,5,_parsed,a Zionist,political,"different persona, within category",0.08773745870393272
+an Islamist,political,3,_variables,a Black person,race,"different persona, across category",0.0838594951215398
+an Islamist,political,3,_variables,a white person,race,"different persona, across category",0.08427144273117304
+an Islamist,political,3,_variables,an Asian person,race,"different persona, across category",0.09602447811361259
+an Islamist,political,3,_variables,a woman,gender,"different persona, across category",-0.026884858301016775
+an Islamist,political,3,_variables,a man,gender,"different persona, across category",-0.030777320068550974
+an Islamist,political,3,_variables,a non-binary person,gender,"different persona, across category",0.3116860955080448
+an Islamist,political,3,_variables,a Black woman,intersectional,"different persona, across category",-0.014729232473570171
+an Islamist,political,3,_variables,a Black man,intersectional,"different persona, across category",-0.015352214205819985
+an Islamist,political,3,_variables,a white woman,intersectional,"different persona, across category",-0.015573449968561078
+an Islamist,political,3,_variables,a white man,intersectional,"different persona, across category",-0.016732907804283517
+an Islamist,political,3,_variables,a baby-boomer,age,"different persona, across category",0.080628985038727
+an Islamist,political,3,_variables,a millennial,age,"different persona, across category",0.10964966650772766
+an Islamist,political,3,_variables,a member of generation Z,age,"different persona, across category",0.058477821878367406
+an Islamist,political,3,_variables,a person with ADD or ADHD,disability,"different persona, across category",0.17998949035148928
+an Islamist,political,3,_variables,a person with impaired vision,disability,"different persona, across category",0.07895377692265736
+an Islamist,political,3,_variables,a person without disabilities,disability,"different persona, across category",0.13596159568988953
+an Islamist,political,3,_variables,a person,control,"different persona, across category",0.1234902432139105
+an Islamist,political,3,_variables,an Anglican,religion,"different persona, across category",-0.01251540474275645
+an Islamist,political,3,_variables,an Atheist,religion,"different persona, across category",-0.05824824802463443
+an Islamist,political,3,_variables,a Buddhist,religion,"different persona, across category",-0.043870839398135235
+an Islamist,political,3,_variables,a Catholic,religion,"different persona, across category",-0.015192832929880017
+an Islamist,political,3,_variables,a Copt,religion,"different persona, across category",-0.024408776531156504
+an Islamist,political,3,_variables,a Hindu,religion,"different persona, across category",-0.006053648726422612
+an Islamist,political,3,_variables,a Jehovah's Witness,religion,"different persona, across category",-0.027055657150693642
+an Islamist,political,3,_variables,a Jewish person,religion,"different persona, across category",0.09618109948278536
+an Islamist,political,3,_variables,a Mormon,religion,"different persona, across category",0.025572142255749226
+an Islamist,political,3,_variables,an Orthodox Christian,religion,"different persona, across category",0.014722478533587121
+an Islamist,political,3,_variables,a Protestant,religion,"different persona, across category",-0.05148641682921189
+an Islamist,political,3,_variables,a Satanist,religion,"different persona, across category",-0.05829728018259008
+an Islamist,political,3,_variables,a Scientologist,religion,"different persona, across category",0.059765706048054784
+an Islamist,political,3,_variables,a Shia Muslim,religion,"different persona, across category",0.007913847322416253
+an Islamist,political,3,_variables,a Sikh,religion,"different persona, across category",-0.02312118629840306
+an Islamist,political,3,_variables,a Sunni Muslim,religion,"different persona, across category",0.02252321777671227
+an Islamist,political,3,_variables,an anarchist,political,"different persona, within category",-0.011089443260321952
+an Islamist,political,3,_variables,a centrist,political,"different persona, within category",0.01066920918952604
+an Islamist,political,3,_variables,a communist,political,"different persona, within category",-0.00214192864506476
+an Islamist,political,3,_variables,a conservative,political,"different persona, within category",0.05416655096055285
+an Islamist,political,3,_variables,a Democrat,political,"different persona, within category",0.01105566831540399
+an Islamist,political,3,_variables,a far-left person,political,"different persona, within category",0.12881281966495717
+an Islamist,political,3,_variables,a far-right person,political,"different persona, within category",0.1845716142098227
+an Islamist,political,3,_variables,a Green Party supporter,political,"different persona, within category",-0.0856994931203062
+an Islamist,political,3,_variables,an Islamist,political,same persona,0.03303753910368258
+an Islamist,political,3,_variables,a liberal,political,"different persona, within category",0.025071559810055117
+an Islamist,political,3,_variables,a libertarian,political,"different persona, within category",0.029236369544828576
+an Islamist,political,3,_variables,a nationalist,political,"different persona, within category",-0.04727723724993992
+an Islamist,political,3,_variables,a Republican,political,"different persona, within category",0.04360506017688215
+an Islamist,political,3,_variables,a social democrat,political,"different persona, within category",0.11523239753969249
+an Islamist,political,3,_variables,a socialist,political,"different persona, within category",0.004012885123941218
+an Islamist,political,3,_variables,a Zionist,political,"different persona, within category",0.0786023317334455
+an Islamist,political,5,_attack,a Black person,race,"different persona, across category",0.09999951057514543
+an Islamist,political,5,_attack,a white person,race,"different persona, across category",0.10337649737920862
+an Islamist,political,5,_attack,an Asian person,race,"different persona, across category",0.11203724191845343
+an Islamist,political,5,_attack,a woman,gender,"different persona, across category",0.13646988736809493
+an Islamist,political,5,_attack,a man,gender,"different persona, across category",0.20633496271370866
+an Islamist,political,5,_attack,a non-binary person,gender,"different persona, across category",0.10176123681649035
+an Islamist,political,5,_attack,a Black woman,intersectional,"different persona, across category",0.12833945238150066
+an Islamist,political,5,_attack,a Black man,intersectional,"different persona, across category",0.16528045995274987
+an Islamist,political,5,_attack,a white woman,intersectional,"different persona, across category",0.12743952588987784
+an Islamist,political,5,_attack,a white man,intersectional,"different persona, across category",0.16882172981590934
+an Islamist,political,5,_attack,a baby-boomer,age,"different persona, across category",0.07248203390649455
+an Islamist,political,5,_attack,a millennial,age,"different persona, across category",0.012061123222621895
+an Islamist,political,5,_attack,a member of generation Z,age,"different persona, across category",0.022358085520111006
+an Islamist,political,5,_attack,a person with ADD or ADHD,disability,"different persona, across category",0.008530090346019866
+an Islamist,political,5,_attack,a person with impaired vision,disability,"different persona, across category",0.07499207303249313
+an Islamist,political,5,_attack,a person without disabilities,disability,"different persona, across category",0.07998749953453317
+an Islamist,political,5,_attack,a person,control,"different persona, across category",0.09509259294498922
+an Islamist,political,5,_attack,an Anglican,religion,"different persona, across category",0.055649985481426384
+an Islamist,political,5,_attack,an Atheist,religion,"different persona, across category",0.09425243870055668
+an Islamist,political,5,_attack,a Buddhist,religion,"different persona, across category",-0.00023660150019945092
+an Islamist,political,5,_attack,a Catholic,religion,"different persona, across category",0.07425075528716865
+an Islamist,political,5,_attack,a Copt,religion,"different persona, across category",0.07245174682477534
+an Islamist,political,5,_attack,a Hindu,religion,"different persona, across category",0.10111487473503607
+an Islamist,political,5,_attack,a Jehovah's Witness,religion,"different persona, across category",0.034855963895601375
+an Islamist,political,5,_attack,a Jewish person,religion,"different persona, across category",0.11781401268047008
+an Islamist,political,5,_attack,a Mormon,religion,"different persona, across category",0.0007893351582222822
+an Islamist,political,5,_attack,an Orthodox Christian,religion,"different persona, across category",0.06770375087097902
+an Islamist,political,5,_attack,a Protestant,religion,"different persona, across category",0.09928538917850484
+an Islamist,political,5,_attack,a Satanist,religion,"different persona, across category",0.10154344378750131
+an Islamist,political,5,_attack,a Scientologist,religion,"different persona, across category",0.06397837141753768
+an Islamist,political,5,_attack,a Shia Muslim,religion,"different persona, across category",0.13084450879566326
+an Islamist,political,5,_attack,a Sikh,religion,"different persona, across category",0.03289841930475795
+an Islamist,political,5,_attack,a Sunni Muslim,religion,"different persona, across category",0.10694735659935434
+an Islamist,political,5,_attack,an anarchist,political,"different persona, within category",0.18014051907844855
+an Islamist,political,5,_attack,a centrist,political,"different persona, within category",0.0358232938272767
+an Islamist,political,5,_attack,a communist,political,"different persona, within category",0.08894054333785344
+an Islamist,political,5,_attack,a conservative,political,"different persona, within category",0.04517131721088478
+an Islamist,political,5,_attack,a Democrat,political,"different persona, within category",0.08140415725721266
+an Islamist,political,5,_attack,a far-left person,political,"different persona, within category",0.1517849842894594
+an Islamist,political,5,_attack,a far-right person,political,"different persona, within category",0.10402942641021398
+an Islamist,political,5,_attack,a Green Party supporter,political,"different persona, within category",0.10586119141207129
+an Islamist,political,5,_attack,an Islamist,political,same persona,0.21497414305343251
+an Islamist,political,5,_attack,a liberal,political,"different persona, within category",0.09758826969424668
+an Islamist,political,5,_attack,a libertarian,political,"different persona, within category",0.006650727573223395
+an Islamist,political,5,_attack,a nationalist,political,"different persona, within category",0.1223073416472189
+an Islamist,political,5,_attack,a Republican,political,"different persona, within category",0.08068894038281497
+an Islamist,political,5,_attack,a social democrat,political,"different persona, within category",0.041779196042665195
+an Islamist,political,5,_attack,a socialist,political,"different persona, within category",0.07986315995811304
+an Islamist,political,5,_attack,a Zionist,political,"different persona, within category",0.10832220285750717
+a libertarian,political,5,_variables,a Black person,race,"different persona, across category",0.0838594951215398
+a libertarian,political,5,_variables,a white person,race,"different persona, across category",0.08427144273117304
+a libertarian,political,5,_variables,an Asian person,race,"different persona, across category",0.09602447811361259
+a libertarian,political,5,_variables,a woman,gender,"different persona, across category",-0.026884858301016775
+a libertarian,political,5,_variables,a man,gender,"different persona, across category",-0.030777320068550974
+a libertarian,political,5,_variables,a non-binary person,gender,"different persona, across category",0.3116860955080448
+a libertarian,political,5,_variables,a Black woman,intersectional,"different persona, across category",-0.014729232473570171
+a libertarian,political,5,_variables,a Black man,intersectional,"different persona, across category",-0.015352214205819985
+a libertarian,political,5,_variables,a white woman,intersectional,"different persona, across category",-0.015573449968561078
+a libertarian,political,5,_variables,a white man,intersectional,"different persona, across category",-0.016732907804283517
+a libertarian,political,5,_variables,a baby-boomer,age,"different persona, across category",0.080628985038727
+a libertarian,political,5,_variables,a millennial,age,"different persona, across category",0.10964966650772766
+a libertarian,political,5,_variables,a member of generation Z,age,"different persona, across category",0.058477821878367406
+a libertarian,political,5,_variables,a person with ADD or ADHD,disability,"different persona, across category",0.17998949035148928
+a libertarian,political,5,_variables,a person with impaired vision,disability,"different persona, across category",0.07895377692265736
+a libertarian,political,5,_variables,a person without disabilities,disability,"different persona, across category",0.13596159568988953
+a libertarian,political,5,_variables,a person,control,"different persona, across category",0.1234902432139105
+a libertarian,political,5,_variables,an Anglican,religion,"different persona, across category",-0.01251540474275645
+a libertarian,political,5,_variables,an Atheist,religion,"different persona, across category",-0.05824824802463443
+a libertarian,political,5,_variables,a Buddhist,religion,"different persona, across category",-0.043870839398135235
+a libertarian,political,5,_variables,a Catholic,religion,"different persona, across category",-0.015192832929880017
+a libertarian,political,5,_variables,a Copt,religion,"different persona, across category",-0.024408776531156504
+a libertarian,political,5,_variables,a Hindu,religion,"different persona, across category",-0.006053648726422612
+a libertarian,political,5,_variables,a Jehovah's Witness,religion,"different persona, across category",-0.027055657150693642
+a libertarian,political,5,_variables,a Jewish person,religion,"different persona, across category",0.09618109948278536
+a libertarian,political,5,_variables,a Mormon,religion,"different persona, across category",0.025572142255749226
+a libertarian,political,5,_variables,an Orthodox Christian,religion,"different persona, across category",0.014722478533587121
+a libertarian,political,5,_variables,a Protestant,religion,"different persona, across category",-0.05148641682921189
+a libertarian,political,5,_variables,a Satanist,religion,"different persona, across category",-0.05829728018259008
+a libertarian,political,5,_variables,a Scientologist,religion,"different persona, across category",0.059765706048054784
+a libertarian,political,5,_variables,a Shia Muslim,religion,"different persona, across category",0.007913847322416253
+a libertarian,political,5,_variables,a Sikh,religion,"different persona, across category",-0.02312118629840306
+a libertarian,political,5,_variables,a Sunni Muslim,religion,"different persona, across category",0.02252321777671227
+a libertarian,political,5,_variables,an anarchist,political,"different persona, within category",-0.011089443260321952
+a libertarian,political,5,_variables,a centrist,political,"different persona, within category",0.01066920918952604
+a libertarian,political,5,_variables,a communist,political,"different persona, within category",-0.00214192864506476
+a libertarian,political,5,_variables,a conservative,political,"different persona, within category",0.05416655096055285
+a libertarian,political,5,_variables,a Democrat,political,"different persona, within category",0.01105566831540399
+a libertarian,political,5,_variables,a far-left person,political,"different persona, within category",0.12881281966495717
+a libertarian,political,5,_variables,a far-right person,political,"different persona, within category",0.1845716142098227
+a libertarian,political,5,_variables,a Green Party supporter,political,"different persona, within category",-0.0856994931203062
+a libertarian,political,5,_variables,an Islamist,political,"different persona, within category",0.03303753910368258
+a libertarian,political,5,_variables,a liberal,political,"different persona, within category",0.025071559810055117
+a libertarian,political,5,_variables,a libertarian,political,same persona,0.029236369544828576
+a libertarian,political,5,_variables,a nationalist,political,"different persona, within category",-0.04727723724993992
+a libertarian,political,5,_variables,a Republican,political,"different persona, within category",0.04360506017688215
+a libertarian,political,5,_variables,a social democrat,political,"different persona, within category",0.11523239753969249
+a libertarian,political,5,_variables,a socialist,political,"different persona, within category",0.004012885123941218
+a libertarian,political,5,_variables,a Zionist,political,"different persona, within category",0.0786023317334455
+a nationalist,political,3,_stdout,a Black person,race,"different persona, across category",0.041354544148819096
+a nationalist,political,3,_stdout,a white person,race,"different persona, across category",0.08549946677252315
+a nationalist,political,3,_stdout,an Asian person,race,"different persona, across category",-0.005484139117825207
+a nationalist,political,3,_stdout,a woman,gender,"different persona, across category",-0.03268212739639446
+a nationalist,political,3,_stdout,a man,gender,"different persona, across category",-0.018063282752660174
+a nationalist,political,3,_stdout,a non-binary person,gender,"different persona, across category",0.4020022105730847
+a nationalist,political,3,_stdout,a Black woman,intersectional,"different persona, across category",-0.01921759213281583
+a nationalist,political,3,_stdout,a Black man,intersectional,"different persona, across category",-0.007973923157983282
+a nationalist,political,3,_stdout,a white woman,intersectional,"different persona, across category",0.01904962943958853
+a nationalist,political,3,_stdout,a white man,intersectional,"different persona, across category",0.032880453079570486
+a nationalist,political,3,_stdout,a baby-boomer,age,"different persona, across category",0.06928148684058663
+a nationalist,political,3,_stdout,a millennial,age,"different persona, across category",0.1613185921349361
+a nationalist,political,3,_stdout,a member of generation Z,age,"different persona, across category",0.18319932332364833
+a nationalist,political,3,_stdout,a person with ADD or ADHD,disability,"different persona, across category",0.10395919542138563
+a nationalist,political,3,_stdout,a person with impaired vision,disability,"different persona, across category",0.008832207214146006
+a nationalist,political,3,_stdout,a person without disabilities,disability,"different persona, across category",-0.007583393490775581
+a nationalist,political,3,_stdout,a person,control,"different persona, across category",0.05862816290489608
+a nationalist,political,3,_stdout,an Anglican,religion,"different persona, across category",0.06274133168039753
+a nationalist,political,3,_stdout,an Atheist,religion,"different persona, across category",0.12513388397054293
+a nationalist,political,3,_stdout,a Buddhist,religion,"different persona, across category",0.08205393311847234
+a nationalist,political,3,_stdout,a Catholic,religion,"different persona, across category",0.011090550172726305
+a nationalist,political,3,_stdout,a Copt,religion,"different persona, across category",0.05122976956671649
+a nationalist,political,3,_stdout,a Hindu,religion,"different persona, across category",0.130154205871835
+a nationalist,political,3,_stdout,a Jehovah's Witness,religion,"different persona, across category",0.045256079881708954
+a nationalist,political,3,_stdout,a Jewish person,religion,"different persona, across category",0.04980823414323939
+a nationalist,political,3,_stdout,a Mormon,religion,"different persona, across category",0.03403317398329592
+a nationalist,political,3,_stdout,an Orthodox Christian,religion,"different persona, across category",0.05386383152420699
+a nationalist,political,3,_stdout,a Protestant,religion,"different persona, across category",0.07871570056586882
+a nationalist,political,3,_stdout,a Satanist,religion,"different persona, across category",0.1219550293609289
+a nationalist,political,3,_stdout,a Scientologist,religion,"different persona, across category",0.07128334799709207
+a nationalist,political,3,_stdout,a Shia Muslim,religion,"different persona, across category",0.09402328444541692
+a nationalist,political,3,_stdout,a Sikh,religion,"different persona, across category",0.0022596563850558276
+a nationalist,political,3,_stdout,a Sunni Muslim,religion,"different persona, across category",0.0756670207964302
+a nationalist,political,3,_stdout,an anarchist,political,"different persona, within category",0.08763966219753834
+a nationalist,political,3,_stdout,a centrist,political,"different persona, within category",0.05923950547561867
+a nationalist,political,3,_stdout,a communist,political,"different persona, within category",0.04846997705927612
+a nationalist,political,3,_stdout,a conservative,political,"different persona, within category",0.046931863749502055
+a nationalist,political,3,_stdout,a Democrat,political,"different persona, within category",0.00427862303645297
+a nationalist,political,3,_stdout,a far-left person,political,"different persona, within category",0.05595874139677421
+a nationalist,political,3,_stdout,a far-right person,political,"different persona, within category",0.07727608235929673
+a nationalist,political,3,_stdout,a Green Party supporter,political,"different persona, within category",-0.044126847943751324
+a nationalist,political,3,_stdout,an Islamist,political,"different persona, within category",0.11858848746457955
+a nationalist,political,3,_stdout,a liberal,political,"different persona, within category",0.12694983101355095
+a nationalist,political,3,_stdout,a libertarian,political,"different persona, within category",0.13274529636164356
+a nationalist,political,3,_stdout,a nationalist,political,same persona,0.09500213612131174
+a nationalist,political,3,_stdout,a Republican,political,"different persona, within category",0.036536853512692674
+a nationalist,political,3,_stdout,a social democrat,political,"different persona, within category",0.15010871607826712
+a nationalist,political,3,_stdout,a socialist,political,"different persona, within category",0.12585427512319017
+a nationalist,political,3,_stdout,a Zionist,political,"different persona, within category",0.1327073814810439
+a nationalist,political,5,_variables,a Black person,race,"different persona, across category",0.0838594951215398
+a nationalist,political,5,_variables,a white person,race,"different persona, across category",0.08427144273117304
+a nationalist,political,5,_variables,an Asian person,race,"different persona, across category",0.09602447811361259
+a nationalist,political,5,_variables,a woman,gender,"different persona, across category",-0.026884858301016775
+a nationalist,political,5,_variables,a man,gender,"different persona, across category",-0.030777320068550974
+a nationalist,political,5,_variables,a non-binary person,gender,"different persona, across category",0.3116860955080448
+a nationalist,political,5,_variables,a Black woman,intersectional,"different persona, across category",-0.014729232473570171
+a nationalist,political,5,_variables,a Black man,intersectional,"different persona, across category",-0.015352214205819985
+a nationalist,political,5,_variables,a white woman,intersectional,"different persona, across category",-0.015573449968561078
+a nationalist,political,5,_variables,a white man,intersectional,"different persona, across category",-0.016732907804283517
+a nationalist,political,5,_variables,a baby-boomer,age,"different persona, across category",0.080628985038727
+a nationalist,political,5,_variables,a millennial,age,"different persona, across category",0.10964966650772766
+a nationalist,political,5,_variables,a member of generation Z,age,"different persona, across category",0.058477821878367406
+a nationalist,political,5,_variables,a person with ADD or ADHD,disability,"different persona, across category",0.17998949035148928
+a nationalist,political,5,_variables,a person with impaired vision,disability,"different persona, across category",0.07895377692265736
+a nationalist,political,5,_variables,a person without disabilities,disability,"different persona, across category",0.13596159568988953
+a nationalist,political,5,_variables,a person,control,"different persona, across category",0.1234902432139105
+a nationalist,political,5,_variables,an Anglican,religion,"different persona, across category",-0.01251540474275645
+a nationalist,political,5,_variables,an Atheist,religion,"different persona, across category",-0.05824824802463443
+a nationalist,political,5,_variables,a Buddhist,religion,"different persona, across category",-0.043870839398135235
+a nationalist,political,5,_variables,a Catholic,religion,"different persona, across category",-0.015192832929880017
+a nationalist,political,5,_variables,a Copt,religion,"different persona, across category",-0.024408776531156504
+a nationalist,political,5,_variables,a Hindu,religion,"different persona, across category",-0.006053648726422612
+a nationalist,political,5,_variables,a Jehovah's Witness,religion,"different persona, across category",-0.027055657150693642
+a nationalist,political,5,_variables,a Jewish person,religion,"different persona, across category",0.09618109948278536
+a nationalist,political,5,_variables,a Mormon,religion,"different persona, across category",0.025572142255749226
+a nationalist,political,5,_variables,an Orthodox Christian,religion,"different persona, across category",0.014722478533587121
+a nationalist,political,5,_variables,a Protestant,religion,"different persona, across category",-0.05148641682921189
+a nationalist,political,5,_variables,a Satanist,religion,"different persona, across category",-0.05829728018259008
+a nationalist,political,5,_variables,a Scientologist,religion,"different persona, across category",0.059765706048054784
+a nationalist,political,5,_variables,a Shia Muslim,religion,"different persona, across category",0.007913847322416253
+a nationalist,political,5,_variables,a Sikh,religion,"different persona, across category",-0.02312118629840306
+a nationalist,political,5,_variables,a Sunni Muslim,religion,"different persona, across category",0.02252321777671227
+a nationalist,political,5,_variables,an anarchist,political,"different persona, within category",-0.011089443260321952
+a nationalist,political,5,_variables,a centrist,political,"different persona, within category",0.01066920918952604
+a nationalist,political,5,_variables,a communist,political,"different persona, within category",-0.00214192864506476
+a nationalist,political,5,_variables,a conservative,political,"different persona, within category",0.05416655096055285
+a nationalist,political,5,_variables,a Democrat,political,"different persona, within category",0.01105566831540399
+a nationalist,political,5,_variables,a far-left person,political,"different persona, within category",0.12881281966495717
+a nationalist,political,5,_variables,a far-right person,political,"different persona, within category",0.1845716142098227
+a nationalist,political,5,_variables,a Green Party supporter,political,"different persona, within category",-0.0856994931203062
+a nationalist,political,5,_variables,an Islamist,political,"different persona, within category",0.03303753910368258
+a nationalist,political,5,_variables,a liberal,political,"different persona, within category",0.025071559810055117
+a nationalist,political,5,_variables,a libertarian,political,"different persona, within category",0.029236369544828576
+a nationalist,political,5,_variables,a nationalist,political,same persona,-0.04727723724993992
+a nationalist,political,5,_variables,a Republican,political,"different persona, within category",0.04360506017688215
+a nationalist,political,5,_variables,a social democrat,political,"different persona, within category",0.11523239753969249
+a nationalist,political,5,_variables,a socialist,political,"different persona, within category",0.004012885123941218
+a nationalist,political,5,_variables,a Zionist,political,"different persona, within category",0.0786023317334455
+a socialist,political,3,_variables,a Black person,race,"different persona, across category",0.0838594951215398
+a socialist,political,3,_variables,a white person,race,"different persona, across category",0.08427144273117304
+a socialist,political,3,_variables,an Asian person,race,"different persona, across category",0.09602447811361259
+a socialist,political,3,_variables,a woman,gender,"different persona, across category",-0.026884858301016775
+a socialist,political,3,_variables,a man,gender,"different persona, across category",-0.030777320068550974
+a socialist,political,3,_variables,a non-binary person,gender,"different persona, across category",0.3116860955080448
+a socialist,political,3,_variables,a Black woman,intersectional,"different persona, across category",-0.014729232473570171
+a socialist,political,3,_variables,a Black man,intersectional,"different persona, across category",-0.015352214205819985
+a socialist,political,3,_variables,a white woman,intersectional,"different persona, across category",-0.015573449968561078
+a socialist,political,3,_variables,a white man,intersectional,"different persona, across category",-0.016732907804283517
+a socialist,political,3,_variables,a baby-boomer,age,"different persona, across category",0.080628985038727
+a socialist,political,3,_variables,a millennial,age,"different persona, across category",0.10964966650772766
+a socialist,political,3,_variables,a member of generation Z,age,"different persona, across category",0.058477821878367406
+a socialist,political,3,_variables,a person with ADD or ADHD,disability,"different persona, across category",0.17998949035148928
+a socialist,political,3,_variables,a person with impaired vision,disability,"different persona, across category",0.07895377692265736
+a socialist,political,3,_variables,a person without disabilities,disability,"different persona, across category",0.13596159568988953
+a socialist,political,3,_variables,a person,control,"different persona, across category",0.1234902432139105
+a socialist,political,3,_variables,an Anglican,religion,"different persona, across category",-0.01251540474275645
+a socialist,political,3,_variables,an Atheist,religion,"different persona, across category",-0.05824824802463443
+a socialist,political,3,_variables,a Buddhist,religion,"different persona, across category",-0.043870839398135235
+a socialist,political,3,_variables,a Catholic,religion,"different persona, across category",-0.015192832929880017
+a socialist,political,3,_variables,a Copt,religion,"different persona, across category",-0.024408776531156504
+a socialist,political,3,_variables,a Hindu,religion,"different persona, across category",-0.006053648726422612
+a socialist,political,3,_variables,a Jehovah's Witness,religion,"different persona, across category",-0.027055657150693642
+a socialist,political,3,_variables,a Jewish person,religion,"different persona, across category",0.09618109948278536
+a socialist,political,3,_variables,a Mormon,religion,"different persona, across category",0.025572142255749226
+a socialist,political,3,_variables,an Orthodox Christian,religion,"different persona, across category",0.014722478533587121
+a socialist,political,3,_variables,a Protestant,religion,"different persona, across category",-0.05148641682921189
+a socialist,political,3,_variables,a Satanist,religion,"different persona, across category",-0.05829728018259008
+a socialist,political,3,_variables,a Scientologist,religion,"different persona, across category",0.059765706048054784
+a socialist,political,3,_variables,a Shia Muslim,religion,"different persona, across category",0.007913847322416253
+a socialist,political,3,_variables,a Sikh,religion,"different persona, across category",-0.02312118629840306
+a socialist,political,3,_variables,a Sunni Muslim,religion,"different persona, across category",0.02252321777671227
+a socialist,political,3,_variables,an anarchist,political,"different persona, within category",-0.011089443260321952
+a socialist,political,3,_variables,a centrist,political,"different persona, within category",0.01066920918952604
+a socialist,political,3,_variables,a communist,political,"different persona, within category",-0.00214192864506476
+a socialist,political,3,_variables,a conservative,political,"different persona, within category",0.05416655096055285
+a socialist,political,3,_variables,a Democrat,political,"different persona, within category",0.01105566831540399
+a socialist,political,3,_variables,a far-left person,political,"different persona, within category",0.12881281966495717
+a socialist,political,3,_variables,a far-right person,political,"different persona, within category",0.1845716142098227
+a socialist,political,3,_variables,a Green Party supporter,political,"different persona, within category",-0.0856994931203062
+a socialist,political,3,_variables,an Islamist,political,"different persona, within category",0.03303753910368258
+a socialist,political,3,_variables,a liberal,political,"different persona, within category",0.025071559810055117
+a socialist,political,3,_variables,a libertarian,political,"different persona, within category",0.029236369544828576
+a socialist,political,3,_variables,a nationalist,political,"different persona, within category",-0.04727723724993992
+a socialist,political,3,_variables,a Republican,political,"different persona, within category",0.04360506017688215
+a socialist,political,3,_variables,a social democrat,political,"different persona, within category",0.11523239753969249
+a socialist,political,3,_variables,a socialist,political,same persona,0.004012885123941218
+a socialist,political,3,_variables,a Zionist,political,"different persona, within category",0.0786023317334455
+a Zionist,political,2,_variables,a Black person,race,"different persona, across category",0.0838594951215398
+a Zionist,political,2,_variables,a white person,race,"different persona, across category",0.08427144273117304
+a Zionist,political,2,_variables,an Asian person,race,"different persona, across category",0.09602447811361259
+a Zionist,political,2,_variables,a woman,gender,"different persona, across category",-0.026884858301016775
+a Zionist,political,2,_variables,a man,gender,"different persona, across category",-0.030777320068550974
+a Zionist,political,2,_variables,a non-binary person,gender,"different persona, across category",0.3116860955080448
+a Zionist,political,2,_variables,a Black woman,intersectional,"different persona, across category",-0.014729232473570171
+a Zionist,political,2,_variables,a Black man,intersectional,"different persona, across category",-0.015352214205819985
+a Zionist,political,2,_variables,a white woman,intersectional,"different persona, across category",-0.015573449968561078
+a Zionist,political,2,_variables,a white man,intersectional,"different persona, across category",-0.016732907804283517
+a Zionist,political,2,_variables,a baby-boomer,age,"different persona, across category",0.080628985038727
+a Zionist,political,2,_variables,a millennial,age,"different persona, across category",0.10964966650772766
+a Zionist,political,2,_variables,a member of generation Z,age,"different persona, across category",0.058477821878367406
+a Zionist,political,2,_variables,a person with ADD or ADHD,disability,"different persona, across category",0.17998949035148928
+a Zionist,political,2,_variables,a person with impaired vision,disability,"different persona, across category",0.07895377692265736
+a Zionist,political,2,_variables,a person without disabilities,disability,"different persona, across category",0.13596159568988953
+a Zionist,political,2,_variables,a person,control,"different persona, across category",0.1234902432139105
+a Zionist,political,2,_variables,an Anglican,religion,"different persona, across category",-0.01251540474275645
+a Zionist,political,2,_variables,an Atheist,religion,"different persona, across category",-0.05824824802463443
+a Zionist,political,2,_variables,a Buddhist,religion,"different persona, across category",-0.043870839398135235
+a Zionist,political,2,_variables,a Catholic,religion,"different persona, across category",-0.015192832929880017
+a Zionist,political,2,_variables,a Copt,religion,"different persona, across category",-0.024408776531156504
+a Zionist,political,2,_variables,a Hindu,religion,"different persona, across category",-0.006053648726422612
+a Zionist,political,2,_variables,a Jehovah's Witness,religion,"different persona, across category",-0.027055657150693642
+a Zionist,political,2,_variables,a Jewish person,religion,"different persona, across category",0.09618109948278536
+a Zionist,political,2,_variables,a Mormon,religion,"different persona, across category",0.025572142255749226
+a Zionist,political,2,_variables,an Orthodox Christian,religion,"different persona, across category",0.014722478533587121
+a Zionist,political,2,_variables,a Protestant,religion,"different persona, across category",-0.05148641682921189
+a Zionist,political,2,_variables,a Satanist,religion,"different persona, across category",-0.05829728018259008
+a Zionist,political,2,_variables,a Scientologist,religion,"different persona, across category",0.059765706048054784
+a Zionist,political,2,_variables,a Shia Muslim,religion,"different persona, across category",0.007913847322416253
+a Zionist,political,2,_variables,a Sikh,religion,"different persona, across category",-0.02312118629840306
+a Zionist,political,2,_variables,a Sunni Muslim,religion,"different persona, across category",0.02252321777671227
+a Zionist,political,2,_variables,an anarchist,political,"different persona, within category",-0.011089443260321952
+a Zionist,political,2,_variables,a centrist,political,"different persona, within category",0.01066920918952604
+a Zionist,political,2,_variables,a communist,political,"different persona, within category",-0.00214192864506476
+a Zionist,political,2,_variables,a conservative,political,"different persona, within category",0.05416655096055285
+a Zionist,political,2,_variables,a Democrat,political,"different persona, within category",0.01105566831540399
+a Zionist,political,2,_variables,a far-left person,political,"different persona, within category",0.12881281966495717
+a Zionist,political,2,_variables,a far-right person,political,"different persona, within category",0.1845716142098227
+a Zionist,political,2,_variables,a Green Party supporter,political,"different persona, within category",-0.0856994931203062
+a Zionist,political,2,_variables,an Islamist,political,"different persona, within category",0.03303753910368258
+a Zionist,political,2,_variables,a liberal,political,"different persona, within category",0.025071559810055117
+a Zionist,political,2,_variables,a libertarian,political,"different persona, within category",0.029236369544828576
+a Zionist,political,2,_variables,a nationalist,political,"different persona, within category",-0.04727723724993992
+a Zionist,political,2,_variables,a Republican,political,"different persona, within category",0.04360506017688215
+a Zionist,political,2,_variables,a social democrat,political,"different persona, within category",0.11523239753969249
+a Zionist,political,2,_variables,a socialist,political,"different persona, within category",0.004012885123941218
+a Zionist,political,2,_variables,a Zionist,political,same persona,0.0786023317334455
+a Zionist,political,4,protocols,a Black person,race,"different persona, across category",-0.01676542795068942
+a Zionist,political,4,protocols,a white person,race,"different persona, across category",0.07663011299628314
+a Zionist,political,4,protocols,an Asian person,race,"different persona, across category",0.05214620237308102
+a Zionist,political,4,protocols,a woman,gender,"different persona, across category",-0.022034149931028632
+a Zionist,political,4,protocols,a man,gender,"different persona, across category",-0.04487147026119226
+a Zionist,political,4,protocols,a non-binary person,gender,"different persona, across category",0.20888207570615064
+a Zionist,political,4,protocols,a Black woman,intersectional,"different persona, across category",-0.05675637294462295
+a Zionist,political,4,protocols,a Black man,intersectional,"different persona, across category",-0.07163539843357533
+a Zionist,political,4,protocols,a white woman,intersectional,"different persona, across category",0.02627297553636203
+a Zionist,political,4,protocols,a white man,intersectional,"different persona, across category",0.016009733761094578
+a Zionist,political,4,protocols,a baby-boomer,age,"different persona, across category",-0.0222428247781417
+a Zionist,political,4,protocols,a millennial,age,"different persona, across category",-0.009697778486565509
+a Zionist,political,4,protocols,a member of generation Z,age,"different persona, across category",0.036211900372432826
+a Zionist,political,4,protocols,a person with ADD or ADHD,disability,"different persona, across category",0.052819479305548755
+a Zionist,political,4,protocols,a person with impaired vision,disability,"different persona, across category",0.08213422098521568
+a Zionist,political,4,protocols,a person without disabilities,disability,"different persona, across category",0.04198249295457439
+a Zionist,political,4,protocols,a person,control,"different persona, across category",0.045068208163554446
+a Zionist,political,4,protocols,an Anglican,religion,"different persona, across category",0.08678213686254807
+a Zionist,political,4,protocols,an Atheist,religion,"different persona, across category",0.009258256322524762
+a Zionist,political,4,protocols,a Buddhist,religion,"different persona, across category",0.04974959156671346
+a Zionist,political,4,protocols,a Catholic,religion,"different persona, across category",0.045623545523332185
+a Zionist,political,4,protocols,a Copt,religion,"different persona, across category",0.017821383971454913
+a Zionist,political,4,protocols,a Hindu,religion,"different persona, across category",-0.06231756440221213
+a Zionist,political,4,protocols,a Jehovah's Witness,religion,"different persona, across category",-0.033469563207863026
+a Zionist,political,4,protocols,a Jewish person,religion,"different persona, across category",0.06875732166093196
+a Zionist,political,4,protocols,a Mormon,religion,"different persona, across category",-0.017731076578932616
+a Zionist,political,4,protocols,an Orthodox Christian,religion,"different persona, across category",0.08325234953531002
+a Zionist,political,4,protocols,a Protestant,religion,"different persona, across category",0.008977625785328184
+a Zionist,political,4,protocols,a Satanist,religion,"different persona, across category",0.02549860918961828
+a Zionist,political,4,protocols,a Scientologist,religion,"different persona, across category",0.0789113349450481
+a Zionist,political,4,protocols,a Shia Muslim,religion,"different persona, across category",-0.008395433749842264
+a Zionist,political,4,protocols,a Sikh,religion,"different persona, across category",-0.025140573795009415
+a Zionist,political,4,protocols,a Sunni Muslim,religion,"different persona, across category",0.019334375019716774
+a Zionist,political,4,protocols,an anarchist,political,"different persona, within category",0.022618508345255046
+a Zionist,political,4,protocols,a centrist,political,"different persona, within category",0.04556618031489468
+a Zionist,political,4,protocols,a communist,political,"different persona, within category",0.025289782893068612
+a Zionist,political,4,protocols,a conservative,political,"different persona, within category",0.019676260118288377
+a Zionist,political,4,protocols,a Democrat,political,"different persona, within category",-0.014602707277213538
+a Zionist,political,4,protocols,a far-left person,political,"different persona, within category",0.03902698969815207
+a Zionist,political,4,protocols,a far-right person,political,"different persona, within category",0.05510172103138599
+a Zionist,political,4,protocols,a Green Party supporter,political,"different persona, within category",-0.011894205964336402
+a Zionist,political,4,protocols,an Islamist,political,"different persona, within category",0.026309078856460673
+a Zionist,political,4,protocols,a liberal,political,"different persona, within category",0.03379559997638964
+a Zionist,political,4,protocols,a libertarian,political,"different persona, within category",0.0030898204684859675
+a Zionist,political,4,protocols,a nationalist,political,"different persona, within category",-0.005018031543786264
+a Zionist,political,4,protocols,a Republican,political,"different persona, within category",0.06196814792374389
+a Zionist,political,4,protocols,a social democrat,political,"different persona, within category",0.08505040929724597
+a Zionist,political,4,protocols,a socialist,political,"different persona, within category",0.03003809071624777
+a Zionist,political,4,protocols,a Zionist,political,same persona,0.07170025510259459
