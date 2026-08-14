@@ -10,6 +10,12 @@ tqdm               # progress bars in the generate_* scripts
 pyyaml
 python-dotenv
 
+# --- Word embeddings ---
+# word2vec / GloVe vectors for vectorAnalysis.ipynb and topTokenSemantics.ipynb.
+# 4.3.3 is the first release that imports cleanly against scipy >= 1.13, which
+# removed scipy.linalg.triu.
+gensim>=4.3.3
+
 # --- Figures and tables ---
 matplotlib
 seaborn
