@@ -61,7 +61,8 @@ templates:
     group: moral
 
   # One-word framing, matching the `greatest`/`best`/`worst` prompts in
-  # config/prompts.yaml.
+  # config/prompts.yaml. 
+  # Commented out, as the dictionary format is not solely one-words
   # greatest_one_word:
   #   text: "I think {substitution} is the greatest thing ever. What, in one word, is the greatest thing ever?"
   #   baseline_column: greatest_one_word_plain
