@@ -1,11 +1,12 @@
 # Tokenization bugs in the reward-model scoring path: findings
 
-Branch: `kv-cached`. Model under study: `Ray2333/GRM-Llama3.2-3B-rewardmodel-ft`.
+Model under study: `Ray2333/GRM-Llama3.2-3B-rewardmodel-ft`. Written on the `kv-cached` branch
+(August 2026); paths below are updated to the current layout.
 
 ## Summary
 
 The original vocabulary-sweep scoring path (`RewardModel.get_reward_scores_from_response_token_ids`
-in `reward_model_support.py`) has two tokenization issues. Building a KV-cached scoring path
+in `core/reward_model_support.py`) has two tokenization issues. Building a KV-cached scoring path
 surfaced both, and let us measure their actual impact rather than just reason about it.
 
 1. **Duplicate BOS token** — `_calculate_batch_scores` tokenizes the already-chat-templated
@@ -100,6 +101,22 @@ systematically make personas look *slightly* more disruptive to the ranking than
 by a fairly small, fairly uniform amount. Only 8 personas × 1 template — worth checking at the
 full 245-combination scale before treating this as settled.
 
+**Update (October 2026): checked at full scale.** Across all 245 (template, persona)
+combinations (`kv_cache/main_vs_kv_persona_shift.ipynb`, output in
+`kv_cache/output/persona_shift_main_vs_kv_cached.csv`):
+
+| | value |
+|---|---|
+| corr(τ_main, τ_kv) across combinations | 0.977 |
+| corr(RBO_main, RBO_kv) across combinations | 0.868 |
+| mean Δτ = τ_kv − τ_main | +0.035 |
+| share of combinations with Δτ > 0 | 95.5% |
+| mean ΔRBO | +0.014 (56% > 0) |
+
+So the direction holds at scale: the main path reports slightly *more* persona shift than the
+fixed path in almost every combination. The relative ordering of personas still agrees closely
+on τ, less closely on RBO.
+
 ## Bottom line
 
 - **Absolute rankings are substantially wrong** under the original pipeline for this model —
@@ -108,11 +125,40 @@ full 245-combination scale before treating this as settled.
   8-persona sample shows the relative story replicating closely, with a possible small systematic
   bias worth checking at scale.
 - Both issues predate this branch (present since `e82618b`, the initial public release) and
-  affect the original `generate_reward_model_scores.py` / `generate_persona_reward_model_scores.py`
+  affect the original `paper/generate_reward_model_scores.py` / `persona/generate_persona_reward_model_scores.py`
   equally — this isn't specific to the persona-analysis extension.
+
+## A third mechanism: the chat template trims the response
+
+Found in the October 2026 code review. The GRM (Llama 3.2) chat template renders every message
+as `message['content'] | trim`, so on the main path a decoded response like `" freedom"` is
+templated as `"freedom"`: the leading space that distinguishes the two tokens is stripped before
+re-tokenization. In `data/reward_model_scores/`, 9,703 of the 18,378 `" word"`/`"word"` pairs
+(53%) get *identical* scores on all 7 prompts; in `data/reward_model_scores_kv_cached/`, none do.
+This is part of why the round trip fails so often, and it means the main path can't tell
+space-prefixed tokens from their bare counterparts. The fixed and kv-cached paths never put the
+response through the template as text, so they're unaffected.
+
+## A confound in every run: the date in the system prompt
+
+Also found in the October 2026 review. The Llama 3.x chat template writes
+`Today Date: <date>` into the system header, taking the date from the clock at render time
+(`strftime_now`, available in transformers 4.43+) unless a `date_string` is passed. None of the
+committed scores passed one, so every run on transformers 4.45+ (all of this fork's runs) scored a
+slightly different prompt depending on the day: the matched baseline columns and persona sweep
+(July 2026), the kv and fixed runs (August 2026) and the MFD runs (August 14, 2026). The paper's
+original `greatest`/`best`/`worst` columns may predate `strftime_now`, in which case they used the
+template's fallback date. A persona-vs-baseline shift therefore also includes a date change
+wherever the two columns were scored on different days. The code now pins `date_string` to
+`CHAT_TEMPLATE_DATE` (`"26 Jul 2024"`, the template's own fallback) everywhere it applies a chat
+template; the committed data predates that and would need re-scoring to remove the confound.
 
 ## Other things found along the way
 
 - `generate_persona_reward_model_scores.py`'s `df.to_csv(...)` call was missing
   `escapechar='\\'` (present in `generate_reward_model_scores.py`) — crashes on any token whose
-  decoded string needs CSV escaping. Fixed on this branch.
+  decoded string needs CSV escaping. Fixed on this branch. *(October 2026: `escapechar` turned
+  out to double every backslash in `token_decoded` on read-back, since the readers don't pass it.
+  The generators now write with pandas' default quoting, which needs no escape character, and
+  rebuild the token columns from the tokenizer on resume. The affected committed files were
+  repaired; see `docs/CODE_REVIEW_2026-10.md`, finding 11.)*

@@ -13,7 +13,7 @@ and analysis can condition on it.
 Two lexicons, because they fail in opposite places and neither is enough alone:
 
   BNC frequency list (data/corpora/1_1_all_alpha.txt, already in this repo for
-  figures/generate_figure_3.R) gives a part of speech *with corpus frequencies*,
+  paper/figures/generate_figure_3.R) gives a part of speech *with corpus frequencies*,
   which settles the genuinely ambiguous words — `care` is 396 noun vs 132 verb,
   `kill` is verb-dominant — but only covers the ~28% of MFD entries frequent
   enough to make the list.
@@ -66,10 +66,10 @@ from pathlib import Path
 import pandas as pd
 from nltk.corpus import wordnet as wn
 
-SCRIPT_ROOT = Path(__file__).parent
-DICT_DIR = SCRIPT_ROOT / 'data' / 'dictionaries'
+REPO_ROOT = Path(__file__).resolve().parents[1]
+DICT_DIR = REPO_ROOT / 'data' / 'dictionaries'
 INPUT_PATH = DICT_DIR / 'mfd2.0.dic'
-BNC_PATH = SCRIPT_ROOT / 'data' / 'corpora' / '1_1_all_alpha.txt'
+BNC_PATH = REPO_ROOT / 'data' / 'corpora' / '1_1_all_alpha.txt'
 OUTPUT_PATH = DICT_DIR / 'mfd2.0_typed.csv'
 
 # The 110 multiword entries are labelled by hand rather than by rule. No

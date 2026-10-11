@@ -32,9 +32,9 @@ import pandas as pd
 import yaml
 from nltk.corpus import wordnet as wn
 
-SCRIPT_ROOT = Path(__file__).parent
-TYPED_DICT = SCRIPT_ROOT / 'data' / 'dictionaries' / 'mfd2.0_typed.csv'
-SUBSTITUTIONS = SCRIPT_ROOT / 'config' / 'mfd_substitutions.yaml'
+REPO_ROOT = Path(__file__).resolve().parents[1]
+TYPED_DICT = REPO_ROOT / 'data' / 'dictionaries' / 'mfd2.0_typed.csv'
+SUBSTITUTIONS = REPO_ROOT / 'config' / 'mfd_substitutions.yaml'
 
 FOUNDATIONS = ['care', 'fairness', 'loyalty', 'authority', 'sanctity']
 VALENCES = ['virtue', 'vice']
