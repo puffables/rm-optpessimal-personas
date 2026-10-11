@@ -1,15 +1,25 @@
+"""
+Generate base-model next-token logits for the neutral prompts in config/prompts.yaml.
+
+For each model in the chosen config (default config/gemma_base_models.yaml), runs one
+forward pass per prompt and saves the full-vocabulary logits of the next token to
+data/base_model_logits/<model>.csv (needed by paper/tables/generate_tables_a1_through_a5.py,
+and, for the Llama base LM, by the persona RM-vs-LM comparison).
+"""
 import argparse
-import yaml
+import sys
+from pathlib import Path
+
 import pandas as pd
 import torch
-from pathlib import Path
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from tqdm import tqdm
 
-# Paths relative to scripts_repository root
-SCRIPT_ROOT = Path(__file__).parent
-CONFIG_DIR = SCRIPT_ROOT / 'config'
-OUTPUT_DIR = SCRIPT_ROOT / 'data' / 'base_model_logits'
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from core.paths import DATA_DIR, load_config, safe_model_name
+from core.reward_model_support import CHAT_TEMPLATE_DATE
+
+OUTPUT_DIR = DATA_DIR / 'base_model_logits'
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--config', type=str, default='gemma_base_models.yaml',
@@ -18,10 +28,8 @@ parser.add_argument('--config', type=str, default='gemma_base_models.yaml',
 args = parser.parse_args()
 
 # Load model and prompt configurations
-with open(CONFIG_DIR / args.config, 'r') as f:
-    models = yaml.safe_load(f)
-with open(CONFIG_DIR / 'prompts.yaml', 'r') as f:
-    prompts = yaml.safe_load(f)
+models = load_config(args.config)
+prompts = load_config('prompts.yaml')
 
 # Ensure output directory exists
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -47,7 +55,8 @@ def template_for_instruction_tuned_model(tok, prompt):
         messages,
         return_tensors='pt',
         return_dict=True,
-        add_generation_prompt=True
+        add_generation_prompt=True,
+        date_string=CHAT_TEMPLATE_DATE,
     )
     return model_inputs
 
@@ -94,7 +103,7 @@ for model_info in models:
 
     # Save to CSV with clean format:
     # Columns: token_id, token_name, prompt1_logit, prompt2_logit, ...
-    safe_name = model_info['name'].replace('/', '--')
+    safe_name = safe_model_name(model_info['name'])
     print(f"Saving model: {model_info['name']}")
 
     vocab = tokenizer.get_vocab()  # {token_name: token_id}

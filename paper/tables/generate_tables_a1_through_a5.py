@@ -11,7 +11,7 @@ import yaml
 import pandas as pd
 from pathlib import Path
 
-SCRIPT_ROOT = Path(__file__).parent.parent
+SCRIPT_ROOT = Path(__file__).resolve().parents[2]
 CONFIG_DIR = SCRIPT_ROOT / 'config'
 DATA_DIR = SCRIPT_ROOT / 'data' / 'base_model_logits'
 OUTPUT_DIR = Path(__file__).parent / 'output'

@@ -1,23 +1,23 @@
+# Python, Jupyter, OS
 __pycache__/
 *.pyc
+.ipynb_checkpoints/
 .DS_Store
 *.db
-.ipynb_checkpoints/
+
+# Secrets: tokens live in Colab secrets or your shell, never in the repo
 .env*
 
-# Large CSVs are too big for GitHub's 100MB limit; only the split parts
-# under data/persona_reward_model_scores/parts/ are tracked. The full file
-# is reconstructed locally by data/persona_reward_model_scores/reassemble.py
+# Large score/logit CSVs (>100MB, over GitHub's file limit) are tracked only as
+# gzipped copies (<model>.csv.gz). The generator scripts write the plain .csv as
+# their working checkpoint and a fresh .csv.gz when a model finishes; the
+# analyses read whichever is newer (core/paths.py: scores_csv).
 data/persona_reward_model_scores/*.csv
-
-# Persona base-model logits also exceed the 100MB limit; regenerate locally
-# with generate_persona_base_model_logprobs.py
+data/persona_reward_model_scores_kv_cached/*.csv
 data/persona_base_model_logits/*.csv
 
-# Local, timestamped analysis backups — not part of the repo
-persona_analysis/backup_*/
+# Scratch config the Colab runner writes for itself
+config/gemma_base_models_no27b.yaml
 
-# KV-cached persona reward-model scores are too large for git (~321MB);
-# regenerate locally with generate_persona_reward_model_scores.py
-data/persona_reward_model_scores_kv_cached/
-mfd_analysis/output/
+# Local, timestamped analysis backups
+persona/backups/

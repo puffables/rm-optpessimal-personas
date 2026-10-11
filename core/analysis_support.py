@@ -15,7 +15,7 @@ worst_prompt = "What, in one word, is the worst thing ever?"
 
 def _load_config():
     """Load the full reward model config from config/reward_models.yaml."""
-    config_path = os.path.join(os.path.dirname(__file__), 'config', 'reward_models.yaml')
+    config_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'config', 'reward_models.yaml')
     with open(config_path, 'r') as f:
         return yaml.safe_load(f)
 
@@ -653,26 +653,6 @@ def mds_plot_subplot_improved(models, similarity_matrix, title, ax, show_title=T
     padding = max_range * 0.1  # Reduced padding
     ax.set_xlim(-max_range - padding, max_range + padding)
     ax.set_ylim(-max_range - padding, max_range + padding)
-
-def plot_multiple_mds(models, similarity_matrices, titles, num_rows, num_cols):
-    """Plot multiple MDS plots with larger figure size."""
-    # Much larger figure size
-    fig, axes = plt.subplots(num_rows, num_cols, figsize=(20, 6))
-    axes = axes.ravel()
-    
-    fig.patch.set_facecolor('white')
-    
-    # More spacing between subplots
-    plt.subplots_adjust(wspace=0.4, hspace=0.5)
-    
-    for similarity_matrix, title, ax in zip(similarity_matrices, titles, axes):
-        mds_plot_subplot(models, similarity_matrix, title, ax)
-    
-    plt.tight_layout()
-    plt.show()
-
-    return fig, axes
-
 
 def create_legend(models):
     """

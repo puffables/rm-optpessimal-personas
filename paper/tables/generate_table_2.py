@@ -3,12 +3,12 @@ import sys
 from pathlib import Path
 import pandas as pd
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-from analysis_support import latest_reward_models_by_reward_bench_rank, load_models
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from core.analysis_support import latest_reward_models_by_reward_bench_rank, load_models
 
 OUTPUT_DIR = Path(__file__).parent / 'output'
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-DATA_DIR = Path(__file__).parent.parent / 'data'
+DATA_DIR = Path(__file__).resolve().parents[2] / 'data'
 
 models = latest_reward_models_by_reward_bench_rank()
 models = load_models(models, DATA_DIR)

@@ -21,10 +21,10 @@ import yaml
 
 OUTPUT_DIR = Path(__file__).parent / 'output'
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-DATA_DIR = Path(__file__).parent.parent / 'data' / 'elo'
+DATA_DIR = Path(__file__).resolve().parents[2] / 'data' / 'elo'
 
 # --- Model name mapping (from config) ---
-with open(Path(__file__).parent.parent / 'config' / 'reward_models.yaml') as _f:
+with open(Path(__file__).resolve().parents[2] / 'config' / 'reward_models.yaml') as _f:
     _config = yaml.safe_load(_f)
 names = {entry['name']: entry['nickname'] for entry in _config}
 names["elo_score"] = "Human"

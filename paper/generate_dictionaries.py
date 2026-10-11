@@ -4,7 +4,7 @@ concept list as explicit, standalone CSV files under data/dictionaries/.
 
 Both of these previously existed only implicitly:
   - the token vocabulary was re-derived from tokenizer.get_vocab() every time
-    generate_reward_model_scores.py / generate_persona_reward_model_scores.py ran
+    paper/generate_reward_model_scores.py / persona/generate_persona_reward_model_scores.py ran
   - the EloEverything concept list only existed embedded in data/elo/*.csv,
     mixed in with every model's scores across three separate prompt files
 
@@ -13,28 +13,25 @@ so this script has no CUDA dependency.
 
 (The third "dictionary of words and concepts" already exists at
 data/corpora/1_1_all_alpha.txt — a BNC-style word frequency list already used
-by figures/generate_figure_3.R — so it isn't reproduced here.)
+by paper/figures/generate_figure_3.R — so it isn't reproduced here.)
 """
-import glob
+import sys
 from pathlib import Path
 
 import pandas as pd
-import yaml
 from transformers import AutoTokenizer
 
-SCRIPT_ROOT = Path(__file__).parent
-CONFIG_DIR = SCRIPT_ROOT / 'config'
-DATA_DIR = SCRIPT_ROOT / 'data'
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from core.paths import DATA_DIR, active_reward_models, safe_model_name
+from core.score_files import vocab_frame
+
 OUTPUT_DIR = DATA_DIR / 'dictionaries'
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-with open(CONFIG_DIR / 'reward_models.yaml') as f:
-    models = yaml.safe_load(f)
-
-# --- Token dictionaries: one per model's tokenizer vocabulary ---
-for model_info in models:
+# --- Token dictionaries: one per active model's tokenizer vocabulary ---
+for model_info in active_reward_models():
     model_name = model_info['name']
-    safe_name = model_name.replace('/', '--')
+    safe_name = safe_model_name(model_name)
     output_path = OUTPUT_DIR / f"tokens_{safe_name}.csv"
 
     if output_path.exists():
@@ -44,15 +41,7 @@ for model_info in models:
     print(f"Loading tokenizer for {model_name}...")
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-    vocab = sorted(tokenizer.get_vocab().items(), key=lambda x: x[1])
-    token_names, token_ids = zip(*vocab)
-    token_decoded = tokenizer.batch_decode([[tid] for tid in token_ids], skip_special_tokens=False)
-
-    df = pd.DataFrame({
-        'token_id': token_ids,
-        'token_name': token_names,
-        'token_decoded': token_decoded,
-    })
+    df = vocab_frame(tokenizer)
     df.to_csv(output_path, index=False)
     print(f"Saved {output_path} ({len(df)} tokens)")
 

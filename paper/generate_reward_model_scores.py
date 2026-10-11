@@ -1,9 +1,9 @@
 """
 Generate reward model scores for all tokens in the vocabulary.
 
-For each reward model listed in config/reward_models.yaml, scores every token
+For each active reward model in config/reward_models.yaml, scores every token
 in the model's vocabulary against each prompt in config/prompts.yaml, and saves
-results to a CSV file in data/.
+results to data/reward_model_scores/<model>.csv.
 
 Checkpoints after every prompt column, so an interrupted run — or one where new
 prompts were added to config/prompts.yaml after a model was already scored — can
@@ -12,22 +12,24 @@ skipped, and only pending ones are computed and appended.
 """
 
 import argparse
-import yaml
-import pandas as pd
-import torch
+import sys
 from pathlib import Path
+
+import torch
 from tqdm import tqdm
 
-from reward_model_support import RewardModel
-from reward_model_registry import *  # registers all models
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from core.paths import DATA_DIR, active_reward_models, load_config, safe_model_name
+from core.reward_model_support import RewardModel
+from core.reward_model_registry import *  # registers all models
+from core.score_files import existing_columns, load_checkpoint, save_checkpoint, vocab_frame
 
-SCRIPT_ROOT = Path(__file__).parent
-CONFIG_DIR = SCRIPT_ROOT / 'config'
-DEFAULT_OUTPUT_DIR = SCRIPT_ROOT / 'data' / 'reward_model_scores'
+DEFAULT_OUTPUT_DIR = DATA_DIR / 'reward_model_scores'
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--models', type=str, default=None,
-                     help='Comma-separated model names or nicknames to run (default: all in reward_models.yaml)')
+                     help='Comma-separated model names or nicknames to run (default: every entry in '
+                          'reward_models.yaml not marked active: false)')
 parser.add_argument('--prompts', type=str, default=None,
                      help='Comma-separated prompt names to run (default: all in prompts.yaml)')
 parser.add_argument('--batch-size', type=int, default=None,
@@ -56,35 +58,28 @@ if args.kv_cache and args.fixed:
                       "without caching — pass only one.")
 OUTPUT_DIR = Path(args.output_dir) if args.output_dir else DEFAULT_OUTPUT_DIR
 
-# Load configs
-with open(CONFIG_DIR / 'prompts.yaml') as f:
-    prompts = yaml.safe_load(f)
+prompts = load_config('prompts.yaml')
 
 if args.prompts:
     selected = args.prompts.split(',')
     prompts = {k: v for k, v in prompts.items() if k in selected}
 
-with open(CONFIG_DIR / 'reward_models.yaml') as f:
-    models = yaml.safe_load(f)
-
 if args.models:
     selected = set(args.models.split(','))
-    models = [m for m in models if m['name'] in selected or m['nickname'] in selected]
+    models = [m for m in load_config('reward_models.yaml')
+              if m['name'] in selected or m['nickname'] in selected]
+else:
+    models = active_reward_models()
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 for model_info in models:
     model_name = model_info['name']
-    safe_name = model_name.replace('/', '--')
+    safe_name = safe_model_name(model_name)
     output_path = OUTPUT_DIR / f"{safe_name}.csv"
 
-    df = None
-    existing_columns = set()
-    if output_path.exists():
-        df = pd.read_csv(output_path)
-        existing_columns = set(df.columns)
-
-    pending = {name: text for name, text in prompts.items() if name not in existing_columns}
+    already_scored = existing_columns(output_path)
+    pending = {name: text for name, text in prompts.items() if name not in already_scored}
     if not pending:
         print(f"Skipping {model_name} — all prompts already scored")
         continue
@@ -106,17 +101,8 @@ for model_info in models:
         score_fn = reward_model.get_reward_scores_from_response_token_ids
 
     # Build vocabulary (shared across prompts for this model)
-    vocab = sorted(tokenizer.get_vocab().items(), key=lambda x: x[1])
-    token_names, token_ids = zip(*vocab)
-    token_decoded = tokenizer.batch_decode([[tid] for tid in token_ids],
-                                           skip_special_tokens=False)
-
-    if df is None:
-        df = pd.DataFrame({
-            'token_id': token_ids,
-            'token_name': token_names,
-            'token_decoded': token_decoded,
-        })
+    df = load_checkpoint(output_path, vocab_frame(tokenizer))
+    token_ids = df['token_id'].tolist()
 
     # Score each pending prompt
     batch_size = args.batch_size or reward_model.default_batch_size
@@ -131,7 +117,7 @@ for model_info in models:
             all_scores.extend(scores)
 
         df[prompt_name] = all_scores
-        df.to_csv(output_path, index=False, escapechar='\\')  # checkpoint after every prompt
+        save_checkpoint(df, output_path)  # checkpoint after every prompt
 
     print(f"Saved {safe_name}.csv")
 

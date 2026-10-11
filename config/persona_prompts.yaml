@@ -9,7 +9,7 @@
 #
 # `group` is separate from `baseline_column`: it marks which templates are considered
 # different *framings of the same underlying question*, for the prompt-framing
-# comparison in persona_analysis (comparing templates directly against each other,
+# comparison in persona/analyze_personas.py (comparing templates directly against each other,
 # not against their individual baselines). Templates can have distinct baseline_column
 # values (e.g. each framing gets its own matched neutral baseline) while still sharing
 # a `group` for that comparison.
@@ -30,6 +30,11 @@ templates:
     text: "I am {persona}. What do people think is the greatest thing ever?"
     baseline_column: greatest_people_think
     group: greatest
+  # Known gap: there is no matched no-persona "worst" framing yet. `worst` is the
+  # paper's one-word prompt ("What, in one word, is the worst thing ever?"), so the
+  # neutral-baseline shift for this template also includes dropping "in one word".
+  # To fix: add `worst_plain: What is the worst thing ever?` to config/prompts.yaml,
+  # score it on every path (main, --fixed, --kv-cache, base LM), and point this at it.
   worst_self_id:
     text: "I am {persona}. What is the worst thing ever?"
     baseline_column: worst

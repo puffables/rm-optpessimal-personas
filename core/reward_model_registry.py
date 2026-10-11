@@ -1,4 +1,4 @@
-from reward_model_support import RewardModel
+from core.reward_model_support import RewardModel
 
 ###########################
 # Define model families

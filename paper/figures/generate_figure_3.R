@@ -24,7 +24,7 @@ script_dir <- tryCatch(
     }
   }
 )
-data_dir <- file.path(script_dir, "..", "data")
+data_dir <- file.path(script_dir, "..", "..", "data")
 output_dir <- file.path(script_dir, "output")
 dir.create(output_dir, showWarnings = FALSE, recursive = TRUE)
 
@@ -32,7 +32,7 @@ model_colors <- c("#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd",
                   "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf")
 
 # Model name mapping: CSV column prefix -> short nickname (from config)
-config <- yaml::yaml.load_file(file.path(script_dir, "..", "config", "reward_models.yaml"))
+config <- yaml::yaml.load_file(file.path(script_dir, "..", "..", "config", "reward_models.yaml"))
 model_nicknames <- setNames(
   sapply(config, function(m) m$nickname),
   sapply(config, function(m) gsub("/", "--", m$name))
@@ -119,7 +119,7 @@ p3 <- affect_regression_results %>%
   facet_wrap(~prompt)
 
 # --- Panel D: Word frequency slope estimates ---
-freq <- read.delim(file.path(script_dir, "..", "data", "corpora", "1_1_all_alpha.txt"))
+freq <- read.delim(file.path(script_dir, "..", "..", "data", "corpora", "1_1_all_alpha.txt"))
 
 freq_df <- affect_afinn %>%
   left_join(freq, by = c("token" = "Word"), multiple = "all", relationship = "many-to-many") %>%

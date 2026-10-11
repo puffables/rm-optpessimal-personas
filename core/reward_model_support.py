@@ -1,10 +1,26 @@
-import torch
-from typing import Type
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import os
 import random
+
 import numpy as np
+import torch
 import yaml
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
+
+# Llama 3.x chat templates stamp "Today Date: <date>" into the system header,
+# taking the date from strftime_now() at render time unless `date_string` is
+# passed. Left alone, every scoring run (and every run that crosses midnight)
+# scores a slightly different prompt. Pin it to the template's own fallback
+# date. Templates without the variable (e.g. Gemma) ignore it.
+CHAT_TEMPLATE_DATE = "26 Jul 2024"
+
+
+def cache_layers(cache):
+    """Per-layer (keys, values) of a DynamicCache, across the transformers 4.56
+    rename of .key_cache/.value_cache to .layers[i].keys/.values."""
+    if hasattr(cache, "key_cache"):
+        return list(zip(cache.key_cache, cache.value_cache))
+    return [(layer.keys, layer.values) for layer in cache.layers]
+
 
 class RewardModel:
     MODEL_REGISTRY = {}
@@ -26,7 +42,7 @@ class RewardModel:
     @staticmethod
     def _load_model_config(model_name):
         """Load model configuration from config/reward_models.yaml."""
-        config_path = os.path.join(os.path.dirname(__file__), 'config', 'reward_models.yaml')
+        config_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'config', 'reward_models.yaml')
         with open(config_path, 'r') as f:
             models = yaml.safe_load(f)
         for entry in models:
@@ -198,7 +214,7 @@ class RewardModel:
             ]
 
             formatted_convs = [
-                self.tokenizer.apply_chat_template(conv, tokenize=False)
+                self.tokenizer.apply_chat_template(conv, tokenize=False, date_string=CHAT_TEMPLATE_DATE)
                 for conv in conversations
             ]
 
@@ -257,7 +273,8 @@ class RewardModel:
             {"role": "user", "content": prompt},
             {"role": "assistant", "content": sentinel},
         ]
-        full_text = self.tokenizer.apply_chat_template(conversation, tokenize=False)
+        full_text = self.tokenizer.apply_chat_template(conversation, tokenize=False,
+                                                       date_string=CHAT_TEMPLATE_DATE)
         prefix_text, suffix_text = full_text.split(sentinel)
 
         prefix_ids = self.tokenizer(prefix_text, add_special_tokens=False, return_tensors="pt").input_ids
@@ -314,10 +331,16 @@ class RewardModel:
             new_ids = torch.cat([token_col, suffix_ids.expand(batch_size, -1)], dim=1)
             new_len = new_ids.shape[1]
 
+            # Broadcast the batch-1 prefix cache across this batch. Built through
+            # update() rather than by assigning .key_cache/.value_cache directly:
+            # those attributes no longer exist in transformers >= 4.56, where the
+            # assignment would leave the real cache empty and silently drop the
+            # prefix. update() works on both sides of that change.
             expanded_cache = DynamicCache()
-            expanded_cache.key_cache = [k.repeat_interleave(batch_size, dim=0) for k in prefix_cache.key_cache]
-            expanded_cache.value_cache = [v.repeat_interleave(batch_size, dim=0) for v in prefix_cache.value_cache]
-            expanded_cache._seen_tokens = prefix_cache._seen_tokens
+            for layer_idx, (keys, values) in enumerate(cache_layers(prefix_cache)):
+                expanded_cache.update(keys.repeat_interleave(batch_size, dim=0),
+                                      values.repeat_interleave(batch_size, dim=0),
+                                      layer_idx)
 
             attention_mask = torch.ones(batch_size, prefix_len + new_len, device=self.device)
             position_ids = torch.arange(prefix_len, prefix_len + new_len, device=self.device)

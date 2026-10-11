@@ -1,17 +1,25 @@
 # --- Core: model scoring and analysis ---
 torch
+# Pinned to the range every committed result was generated with. Llama 3.x needs
+# >= 4.45 (rope_scaling fix). core/reward_model_support.py also works on newer
+# releases (it builds the KV cache through DynamicCache.update(), which survives
+# the 4.56 cache API change), but newer releases haven't been used for real runs.
 transformers>=4.45,<4.50
 accelerate
 pandas
 numpy
-scipy              # kendalltau / spearmanr in persona_analysis
-scikit-learn       # sklearn.manifold.MDS in analysis_support.py
+scipy              # kendalltau / spearmanr in persona/analyze_personas.py
+scikit-learn       # sklearn.manifold.MDS in core/analysis_support.py
 tqdm               # progress bars in the generate_* scripts
 pyyaml
-python-dotenv
+
+# --- Notebooks ---
+jupyter
+ipykernel
+ipython            # display() in persona/gen_figures.ipynb
 
 # --- Word embeddings ---
-# word2vec / GloVe vectors for vectorAnalysis.ipynb and topTokenSemantics.ipynb.
+# word2vec / GloVe vectors for the vector_analysis/ notebooks.
 # 4.3.3 is the first release that imports cleanly against scipy >= 1.13, which
 # removed scipy.linalg.triu.
 gensim>=4.3.3
@@ -19,13 +27,15 @@ gensim>=4.3.3
 # --- Figures and tables ---
 matplotlib
 seaborn
-adjustText         # outlier-label repulsion in personaFigures/gen_figures.ipynb
-dataframe_image    # PNG export of styled tables (personaFigures)
-ipython            # display() in personaFigures/gen_figures.ipynb
+adjustText         # outlier-label repulsion in persona/gen_figures.ipynb
+dataframe_image    # PNG export of styled tables in persona/gen_figures.ipynb; drives
+                   # headless Chromium via Playwright, so also run once:
+                   #   playwright install chromium
 
 # --- Dictionary labelling ---
 # Only needed to regenerate data/dictionaries/mfd2.0_typed.csv and re-draw the
-# `sampled` substitutions. Both outputs are committed, so a run of the scoring
-# pipeline (including the Colab notebooks) does not need this.
-nltk               # WordNet lexicon in generate_typed_dictionary.py; also needs
-                   # the corpus: python -c "import nltk; nltk.download('wordnet')"
+# `sampled` substitutions (mfd/generate_typed_dictionary.py,
+# mfd/sample_mfd_substitutions.py). Both outputs are committed, so a run of the
+# scoring pipeline (including the Colab notebooks) does not need this.
+nltk               # WordNet lexicon; also needs the corpus:
+                   #   python -c "import nltk; nltk.download('wordnet')"
