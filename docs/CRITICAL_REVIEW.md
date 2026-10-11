@@ -1,5 +1,22 @@
 # Critical Review — `rm-optpessimal-personas`
 
+> **Status, October 2026.** This review was written in July 2026, before the repo was
+> reorganised; file paths and line numbers below refer to that layout
+> (`persona_analysis/` is now `persona/`, `reward_model_support.py` is now
+> `core/reward_model_support.py`). Where each issue stands now:
+>
+> | # | Status |
+> |---|---|
+> | 1 to 7 | Open. Methodological and statistical limitations; see also [`CODE_REVIEW_2026-10.md`](CODE_REVIEW_2026-10.md) |
+> | 8 | **Fixed.** The control persona is no longer compared against itself |
+> | 9 | **Fixed**, and the premise was wrong: the fp16 reward scores tie heavily (under 1,000 distinct values across 128k tokens for `greatest` on the main path). Rankings now break ties by `token_id` |
+> | 10 | **Quantified and fixed** in the `--fixed`/`--kv-cache` paths (49% of tokens fail the round trip); see `kv_cache/tokenization_bug_findings.md`. The committed main-path data still has it |
+> | 11 | **Obsolete.** The split parts and `reassemble.py` are gone; the large CSVs are tracked as `.csv.gz` |
+> | 12 | Open (harmless) |
+> | 13, 14 | Open (performance) |
+> | Hygiene | **Fixed.** Backups are gitignored, README and requirements updated |
+
+
 **Scope:** Persona-conditioning extension to the FAccT 2025 paper *"Reward Model Interpretability via Optimal and Pessimal Tokens."* The extension prepends `"I am {persona}. "` to prompts, scores every vocabulary token as a one-token reward-model response, and compares the resulting rankings against neutral/control baselines via Kendall's τ, Spearman's ρ, and Rank-Biased Overlap (RBO).
 
 **Overall:** The engineering is clean, resumable, and well-commented. The main risks are **methodological and statistical**, not bugs. In priority order, the three issues that most affect whether the conclusions hold are: (1) all findings rest on a single reward model; (2) there is no noise baseline and the reported p-values are vacuous; (3) degenerate self-comparison rows are shipped in the output.
